@@ -1,0 +1,142 @@
+[
+ {
+  "id": "faros",
+  "nombre": "Faros delanteros",
+  "x": 1.8,
+  "y": 0.68,
+  "z": 0.58,
+  "sistemas": [
+   "Iluminación"
+  ]
+ },
+ {
+  "id": "susp_del",
+  "nombre": "Suspensión delantera",
+  "x": 1.17,
+  "y": 0.62,
+  "z": -0.58,
+  "sistemas": [
+   "Suspensión"
+  ]
+ },
+ {
+  "id": "motor",
+  "nombre": "Motor",
+  "x": 0.8,
+  "y": 0.78,
+  "z": 0.0,
+  "sistemas": [
+   "Motor",
+   "Admisión",
+   "Encendido",
+   "Combustible",
+   "Refrigeración",
+   "Lubricación",
+   "Distribución variable",
+   "Sondas lambda"
+  ]
+ },
+ {
+  "id": "direccion",
+  "nombre": "Dirección",
+  "x": 1.25,
+  "y": 0.32,
+  "z": 0.45,
+  "sistemas": [
+   "Dirección"
+  ]
+ },
+ {
+  "id": "transmision",
+  "nombre": "Transmisión",
+  "x": 0.3,
+  "y": 0.5,
+  "z": 0.0,
+  "sistemas": [
+   "Transmisión"
+  ]
+ },
+ {
+  "id": "susp_tras",
+  "nombre": "Suspensión trasera",
+  "x": -1.16,
+  "y": 0.62,
+  "z": 0.58,
+  "sistemas": [
+   "Suspensión"
+  ]
+ },
+ {
+  "id": "frenos_tras",
+  "nombre": "Frenos",
+  "x": -1.16,
+  "y": 0.31,
+  "z": -0.7,
+  "sistemas": [
+   "Frenos"
+  ]
+ },
+ {
+  "id": "bateria",
+  "nombre": "Batería y carga",
+  "x": 1.53,
+  "y": 0.7,
+  "z": -0.55,
+  "sistemas": [
+   "Eléctrico"
+  ]
+ },
+ {
+  "id": "pilotos",
+  "nombre": "Pilotos traseros",
+  "x": -2.0,
+  "y": 0.76,
+  "z": -0.55,
+  "sistemas": [
+   "Iluminación"
+  ]
+ },
+ {
+  "id": "escape",
+  "nombre": "Escape (doble salida)",
+  "x": -1.72,
+  "y": 0.23,
+  "z": 0.0,
+  "sistemas": [
+   "Escape",
+   "Sondas lambda"
+  ]
+ },
+ {
+  "id": "combustible",
+  "nombre": "Depósito y EVAP",
+  "x": -0.77,
+  "y": 0.57,
+  "z": 0.0,
+  "sistemas": [
+   "Combustible",
+   "EVAP"
+  ]
+ },
+ {
+  "id": "electrico",
+  "nombre": "Centralitas y red CAN",
+  "x": 0.2,
+  "y": 0.8,
+  "z": 0.3,
+  "sistemas": [
+   "Centralita",
+   "Comunicación"
+  ]
+ },
+ {
+  "id": "ruedas",
+  "nombre": "Neumáticos",
+  "x": -1.16,
+  "y": 0.58,
+  "z": 0.86,
+  "sistemas": [
+   "Neumáticos"
+  ]
+ }
+]

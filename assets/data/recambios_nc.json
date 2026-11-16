@@ -1,0 +1,137 @@
+[
+ {
+  "categoria": "Batería",
+  "nombre": "Original Panasonic",
+  "referencia": "46B24L(S)-MF",
+  "notas": "45 Ah, 330 CCA",
+  "zona": "bateria",
+  "url": "https://www.google.com/search?q=bateria+mazda+mx5+nc+site%3Aoscaro.es",
+  "fuente": "https://forum.mx5oc.co.uk/t/favour-with-a-battery/102205"
+ },
+ {
+  "categoria": "Batería",
+  "nombre": "Yuasa YBX5053",
+  "referencia": "YBX5053",
+  "notas": "50 Ah. Vista en Oscaro a 103,41 € (nov. 2026).",
+  "zona": "bateria",
+  "url": "https://www.oscaro.es/bateria-mazda-mx5-nc-2-0-i-coupe-descapotable-16v-160-cv-2585-38294-0-gt",
+  "fuente": "https://www.oscaro.es/bateria-mazda-mx5-nc-2-0-i-coupe-descapotable-16v-160-cv-2585-38294-0-gt"
+ },
+ {
+  "categoria": "Batería",
+  "nombre": "Bosch S4 021",
+  "referencia": "0 092 S40 210",
+  "notas": "45 Ah. Oscaro la indica para coches desde 01/2011.",
+  "zona": "bateria",
+  "url": "https://www.oscaro.es/bateria-mazda-mx5-nc-2-0-i-coupe-descapotable-16v-160-cv-2585-38294-0-gt",
+  "fuente": "https://www.oscaro.es/bateria-mazda-mx5-nc-2-0-i-coupe-descapotable-16v-160-cv-2585-38294-0-gt"
+ },
+ {
+  "categoria": "Batería",
+  "nombre": "Exide EA456",
+  "referencia": "EA456",
+  "notas": "45 Ah",
+  "zona": "bateria",
+  "url": "https://www.oscaro.es/bateria-mazda-mx5-nc-2-0-i-coupe-descapotable-16v-160-cv-2585-38294-0-gt",
+  "fuente": "https://www.oscaro.es/bateria-mazda-mx5-nc-2-0-i-coupe-descapotable-16v-160-cv-2585-38294-0-gt"
+ },
+ {
+  "categoria": "Batería",
+  "nombre": "Varta Blue Dynamic B32",
+  "referencia": "545 156 033",
+  "notas": "45 Ah, 330 A",
+  "zona": "bateria",
+  "url": "https://www.google.com/search?q=varta+b32+site%3Aoscaro.es",
+  "fuente": "https://baterianueva.es/mazda-mx-5-iii-nc-2005-2014-baterias/"
+ },
+ {
+  "categoria": "Iluminación",
+  "nombre": "Lámpara carretera NC2/NC3",
+  "referencia": "HB3 12V 60W",
+  "notas": "",
+  "zona": "faros",
+  "url": "https://www.google.com/search?q=bombilla+HB3+mazda+mx5+site%3Aoscaro.es",
+  "fuente": "https://ilmotorsport.de/en/nc/spare-parts-electrical-lighting-spare-bulbs/l/2041"
+ },
+ {
+  "categoria": "Iluminación",
+  "nombre": "Lámpara carretera NC1",
+  "referencia": "H9 12V 65W",
+  "notas": "",
+  "zona": "faros",
+  "url": "https://www.google.com/search?q=bombilla+H9+site%3Aoscaro.es",
+  "fuente": "https://ilmotorsport.de/en/nc/spare-parts-electrical-lighting-spare-bulbs/l/2041"
+ },
+ {
+  "categoria": "Iluminación",
+  "nombre": "Lámpara cruce",
+  "referencia": "H7",
+  "notas": "Verificar en el faro antes de comprar.",
+  "zona": "faros",
+  "url": "https://www.google.com/search?q=bombilla+H7+mazda+mx5+site%3Aoscaro.es",
+  "fuente": "https://lightninglab.net/mazda/mx-5/2006"
+ },
+ {
+  "categoria": "Iluminación",
+  "nombre": "Antiniebla",
+  "referencia": "H11 12V 24W",
+  "notas": "",
+  "zona": "faros",
+  "url": "https://www.google.com/search?q=bombilla+H11+site%3Aoscaro.es",
+  "fuente": "https://ilmotorsport.de/en/nc/spare-parts-electrical-lighting-spare-bulbs/l/2041"
+ },
+ {
+  "categoria": "Neumáticos",
+  "nombre": "Neumático 16\"",
+  "referencia": "205/50 R16",
+  "notas": "2,0 bar",
+  "zona": "ruedas",
+  "url": "https://www.google.com/search?q=neumatico+205+50+r16+site%3Aoscaro.es",
+  "fuente": "https://tirepressure.com/2007-mazda-mx-5-miata-tire-pressure"
+ },
+ {
+  "categoria": "Neumáticos",
+  "nombre": "Neumático 17\"",
+  "referencia": "205/45 R17",
+  "notas": "2,0 bar",
+  "zona": "ruedas",
+  "url": "https://www.google.com/search?q=neumatico+205+45+r17+site%3Aoscaro.es",
+  "fuente": "https://tirepressure.com/2007-mazda-mx-5-miata-tire-pressure"
+ },
+ {
+  "categoria": "Motor",
+  "nombre": "Aceite motor",
+  "referencia": "4,55 L con filtro",
+  "notas": "Viscosidad: la indicada en el tapón/libro (no verificada aquí).",
+  "zona": "motor",
+  "url": "https://www.google.com/search?q=aceite+mazda+mx5+nc+site%3Aoscaro.es",
+  "fuente": "https://2008-mx-5-wiring-diagram-and-workshop-manual.pages.dev/src/g5w01/html/id015045800100"
+ },
+ {
+  "categoria": "Refrigeración",
+  "nombre": "Refrigerante",
+  "referencia": "Mazda FL22",
+  "notas": "",
+  "zona": "motor",
+  "url": "https://www.google.com/search?q=refrigerante+FL22+site%3Aoscaro.es",
+  "fuente": "https://www.mazdausa.com/siteassets/global-resources/vehicle-resources/owner-manuals/2015/mx-5/2015-mx-5-scheduled-maintainance.pdf"
+ },
+ {
+  "categoria": "Frenos",
+  "nombre": "Pastillas traseras",
+  "referencia": "—",
+  "notas": "Buscar por matrícula/bastidor en Oscaro.",
+  "zona": "frenos_tras",
+  "url": "https://www.google.com/search?q=pastillas+freno+traseras+mazda+mx5+nc+site%3Aoscaro.es",
+  "fuente": ""
+ },
+ {
+  "categoria": "Suspensión",
+  "nombre": "Amortiguadores delanteros",
+  "referencia": "—",
+  "notas": "Cambiar por pares.",
+  "zona": "susp_del",
+  "url": "https://www.google.com/search?q=amortiguador+delantero+mazda+mx5+nc+site%3Aoscaro.es",
+  "fuente": ""
+ }
+]

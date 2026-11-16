@@ -1,0 +1,1122 @@
+[
+ {
+  "codigo": "P0010",
+  "descripcion": "Actuador de árbol de levas \"A\" (admisión, banco 1): circuito",
+  "sistema": "Distribución variable",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar conector y electroválvula OCV del VVT."
+ },
+ {
+  "codigo": "P0011",
+  "descripcion": "Árbol de levas \"A\" (admisión, banco 1): avance excesivo o rendimiento del sistema",
+  "sistema": "Distribución variable",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Comprobar nivel y estado del aceite; revisar electroválvula OCV."
+ },
+ {
+  "codigo": "P0012",
+  "descripcion": "Árbol de levas \"A\" (admisión, banco 1): retardo excesivo",
+  "sistema": "Distribución variable",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Comprobar aceite y electroválvula OCV."
+ },
+ {
+  "codigo": "P0016",
+  "descripcion": "Correlación cigüeñal / árbol de levas (banco 1, sensor A)",
+  "sistema": "Distribución variable",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Posible cadena estirada o sensor; revisar en taller."
+ },
+ {
+  "codigo": "P0030",
+  "descripcion": "Calentador sonda lambda (banco 1, sensor 1): circuito de control",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar fusible, conector y sonda delantera."
+ },
+ {
+  "codigo": "P0031",
+  "descripcion": "Calentador sonda lambda (banco 1, sensor 1): circuito de control, señal baja",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar fusible, conector y sonda delantera."
+ },
+ {
+  "codigo": "P0032",
+  "descripcion": "Calentador sonda lambda (banco 1, sensor 1): circuito de control, señal alta",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar fusible, conector y sonda delantera."
+ },
+ {
+  "codigo": "P0036",
+  "descripcion": "Calentador sonda lambda (banco 1, sensor 2): circuito de control",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar fusible, conector y sonda trasera."
+ },
+ {
+  "codigo": "P0037",
+  "descripcion": "Calentador sonda lambda (banco 1, sensor 2): circuito de control, señal baja",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar fusible, conector y sonda trasera."
+ },
+ {
+  "codigo": "P0038",
+  "descripcion": "Calentador sonda lambda (banco 1, sensor 2): circuito de control, señal alta",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar fusible, conector y sonda trasera."
+ },
+ {
+  "codigo": "P0100",
+  "descripcion": "Caudalímetro (MAF): circuito",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Limpiar el caudalímetro con limpiador específico y revisar fugas de admisión."
+ },
+ {
+  "codigo": "P0101",
+  "descripcion": "Caudalímetro (MAF): rango/rendimiento",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Limpiar el caudalímetro con limpiador específico y revisar fugas de admisión."
+ },
+ {
+  "codigo": "P0102",
+  "descripcion": "Caudalímetro (MAF): señal baja",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Limpiar el caudalímetro con limpiador específico y revisar fugas de admisión."
+ },
+ {
+  "codigo": "P0103",
+  "descripcion": "Caudalímetro (MAF): señal alta",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Limpiar el caudalímetro con limpiador específico y revisar fugas de admisión."
+ },
+ {
+  "codigo": "P0104",
+  "descripcion": "Caudalímetro (MAF): señal intermitente",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Limpiar el caudalímetro con limpiador específico y revisar fugas de admisión."
+ },
+ {
+  "codigo": "P0105",
+  "descripcion": "Sensor de presión absoluta del colector (MAP) / barométrico: circuito",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor, tubo de vacío y conector."
+ },
+ {
+  "codigo": "P0106",
+  "descripcion": "Sensor de presión absoluta del colector (MAP) / barométrico: rango/rendimiento",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor, tubo de vacío y conector."
+ },
+ {
+  "codigo": "P0107",
+  "descripcion": "Sensor de presión absoluta del colector (MAP) / barométrico: señal baja",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor, tubo de vacío y conector."
+ },
+ {
+  "codigo": "P0108",
+  "descripcion": "Sensor de presión absoluta del colector (MAP) / barométrico: señal alta",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor, tubo de vacío y conector."
+ },
+ {
+  "codigo": "P0109",
+  "descripcion": "Sensor de presión absoluta del colector (MAP) / barométrico: señal intermitente",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor, tubo de vacío y conector."
+ },
+ {
+  "codigo": "P0110",
+  "descripcion": "Sensor de temperatura del aire de admisión (IAT): circuito",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar conector del sensor IAT (integrado en el caudalímetro en muchos modelos)."
+ },
+ {
+  "codigo": "P0111",
+  "descripcion": "Sensor de temperatura del aire de admisión (IAT): rango/rendimiento",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar conector del sensor IAT (integrado en el caudalímetro en muchos modelos)."
+ },
+ {
+  "codigo": "P0112",
+  "descripcion": "Sensor de temperatura del aire de admisión (IAT): señal baja",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar conector del sensor IAT (integrado en el caudalímetro en muchos modelos)."
+ },
+ {
+  "codigo": "P0113",
+  "descripcion": "Sensor de temperatura del aire de admisión (IAT): señal alta",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar conector del sensor IAT (integrado en el caudalímetro en muchos modelos)."
+ },
+ {
+  "codigo": "P0114",
+  "descripcion": "Sensor de temperatura del aire de admisión (IAT): señal intermitente",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar conector del sensor IAT (integrado en el caudalímetro en muchos modelos)."
+ },
+ {
+  "codigo": "P0115",
+  "descripcion": "Sensor de temperatura del refrigerante (ECT): circuito",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor y nivel de refrigerante."
+ },
+ {
+  "codigo": "P0116",
+  "descripcion": "Sensor de temperatura del refrigerante (ECT): rango/rendimiento",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor y nivel de refrigerante."
+ },
+ {
+  "codigo": "P0117",
+  "descripcion": "Sensor de temperatura del refrigerante (ECT): señal baja",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor y nivel de refrigerante."
+ },
+ {
+  "codigo": "P0118",
+  "descripcion": "Sensor de temperatura del refrigerante (ECT): señal alta",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor y nivel de refrigerante."
+ },
+ {
+  "codigo": "P0119",
+  "descripcion": "Sensor de temperatura del refrigerante (ECT): señal intermitente",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sensor y nivel de refrigerante."
+ },
+ {
+  "codigo": "P0120",
+  "descripcion": "Sensor de posición de mariposa / pedal \"A\": circuito",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar cuerpo de mariposa y conector."
+ },
+ {
+  "codigo": "P0121",
+  "descripcion": "Sensor de posición de mariposa / pedal \"A\": rango/rendimiento",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar cuerpo de mariposa y conector."
+ },
+ {
+  "codigo": "P0122",
+  "descripcion": "Sensor de posición de mariposa / pedal \"A\": señal baja",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar cuerpo de mariposa y conector."
+ },
+ {
+  "codigo": "P0123",
+  "descripcion": "Sensor de posición de mariposa / pedal \"A\": señal alta",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar cuerpo de mariposa y conector."
+ },
+ {
+  "codigo": "P0124",
+  "descripcion": "Sensor de posición de mariposa / pedal \"A\": señal intermitente",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar cuerpo de mariposa y conector."
+ },
+ {
+  "codigo": "P0125",
+  "descripcion": "Temperatura del refrigerante insuficiente para control en lazo cerrado",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Termostato posiblemente abierto; revisar."
+ },
+ {
+  "codigo": "P0128",
+  "descripcion": "Temperatura del refrigerante por debajo de la del termostato",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Termostato bloqueado abierto: sustituir."
+ },
+ {
+  "codigo": "P0130",
+  "descripcion": "Sonda lambda (banco 1, sensor 1): circuito",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda delantera, conector y fugas de escape."
+ },
+ {
+  "codigo": "P0131",
+  "descripcion": "Sonda lambda (banco 1, sensor 1): tensión baja",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda delantera, conector y fugas de escape."
+ },
+ {
+  "codigo": "P0132",
+  "descripcion": "Sonda lambda (banco 1, sensor 1): tensión alta",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda delantera, conector y fugas de escape."
+ },
+ {
+  "codigo": "P0133",
+  "descripcion": "Sonda lambda (banco 1, sensor 1): respuesta lenta",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda delantera, conector y fugas de escape."
+ },
+ {
+  "codigo": "P0134",
+  "descripcion": "Sonda lambda (banco 1, sensor 1): sin actividad",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda delantera, conector y fugas de escape."
+ },
+ {
+  "codigo": "P0135",
+  "descripcion": "Sonda lambda (banco 1, sensor 1): circuito del calentador",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda delantera, conector y fugas de escape."
+ },
+ {
+  "codigo": "P0136",
+  "descripcion": "Sonda lambda (banco 1, sensor 2): circuito",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda trasera (post-catalizador) y conector."
+ },
+ {
+  "codigo": "P0137",
+  "descripcion": "Sonda lambda (banco 1, sensor 2): tensión baja",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda trasera (post-catalizador) y conector."
+ },
+ {
+  "codigo": "P0138",
+  "descripcion": "Sonda lambda (banco 1, sensor 2): tensión alta",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda trasera (post-catalizador) y conector."
+ },
+ {
+  "codigo": "P0139",
+  "descripcion": "Sonda lambda (banco 1, sensor 2): respuesta lenta",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda trasera (post-catalizador) y conector."
+ },
+ {
+  "codigo": "P0140",
+  "descripcion": "Sonda lambda (banco 1, sensor 2): sin actividad",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda trasera (post-catalizador) y conector."
+ },
+ {
+  "codigo": "P0141",
+  "descripcion": "Sonda lambda (banco 1, sensor 2): circuito del calentador",
+  "sistema": "Sondas lambda",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sonda trasera (post-catalizador) y conector."
+ },
+ {
+  "codigo": "P0171",
+  "descripcion": "Mezcla demasiado pobre (banco 1)",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Buscar fugas de vacío/admisión, limpiar caudalímetro, revisar presión de combustible."
+ },
+ {
+  "codigo": "P0172",
+  "descripcion": "Mezcla demasiado rica (banco 1)",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Revisar caudalímetro, inyectores, presión de combustible y sonda lambda."
+ },
+ {
+  "codigo": "P0174",
+  "descripcion": "Mezcla demasiado pobre (banco 2)",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Igual que P0171 (no aplica a motores de 4 cilindros en línea con un solo banco)."
+ },
+ {
+  "codigo": "P0175",
+  "descripcion": "Mezcla demasiado rica (banco 2)",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Igual que P0172 (no aplica a motores con un solo banco)."
+ },
+ {
+  "codigo": "P0180",
+  "descripcion": "Sensor de temperatura del combustible \"A\": circuito",
+  "sistema": "Combustible",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0190",
+  "descripcion": "Sensor de presión del raíl de combustible: circuito",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0201",
+  "descripcion": "Inyector del cilindro 1: circuito",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar conector e inyector; puede provocar fallos de encendido."
+ },
+ {
+  "codigo": "P0202",
+  "descripcion": "Inyector del cilindro 2: circuito",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar conector e inyector; puede provocar fallos de encendido."
+ },
+ {
+  "codigo": "P0203",
+  "descripcion": "Inyector del cilindro 3: circuito",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar conector e inyector; puede provocar fallos de encendido."
+ },
+ {
+  "codigo": "P0204",
+  "descripcion": "Inyector del cilindro 4: circuito",
+  "sistema": "Combustible",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar conector e inyector; puede provocar fallos de encendido."
+ },
+ {
+  "codigo": "P0217",
+  "descripcion": "Sobretemperatura del motor",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Parar el motor. Revisar refrigerante, ventilador, termostato y bomba de agua."
+ },
+ {
+  "codigo": "P0219",
+  "descripcion": "Exceso de régimen del motor (sobrerrevoluciones)",
+  "sistema": "Motor",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0220",
+  "descripcion": "Sensor de posición de mariposa / pedal \"B\": circuito",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0221",
+  "descripcion": "Sensor de posición de mariposa / pedal \"B\": rango/rendimiento",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0222",
+  "descripcion": "Sensor de posición de mariposa / pedal \"B\": señal baja",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0223",
+  "descripcion": "Sensor de posición de mariposa / pedal \"B\": señal alta",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0230",
+  "descripcion": "Relé de la bomba de combustible: circuito primario",
+  "sistema": "Combustible",
+  "zona": "combustible",
+  "gravedad": "rojo",
+  "consejo": "Revisar relé y fusible de la bomba."
+ },
+ {
+  "codigo": "P0300",
+  "descripcion": "Fallos de encendido aleatorios / en varios cilindros",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar bujías, bobinas, inyectores y compresión. Evitar cargas altas: puede dañar el catalizador."
+ },
+ {
+  "codigo": "P0301",
+  "descripcion": "Fallo de encendido en el cilindro 1",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Intercambiar bobina/bujía del cilindro 1 con otro para localizar la avería."
+ },
+ {
+  "codigo": "P0302",
+  "descripcion": "Fallo de encendido en el cilindro 2",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Intercambiar bobina/bujía del cilindro 2 con otro para localizar la avería."
+ },
+ {
+  "codigo": "P0303",
+  "descripcion": "Fallo de encendido en el cilindro 3",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Intercambiar bobina/bujía del cilindro 3 con otro para localizar la avería."
+ },
+ {
+  "codigo": "P0304",
+  "descripcion": "Fallo de encendido en el cilindro 4",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Intercambiar bobina/bujía del cilindro 4 con otro para localizar la avería."
+ },
+ {
+  "codigo": "P0325",
+  "descripcion": "Sensor de picado 1 (banco 1): circuito",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0326",
+  "descripcion": "Sensor de picado 1 (banco 1): rango/rendimiento",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0327",
+  "descripcion": "Sensor de picado 1 (banco 1): señal baja",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0328",
+  "descripcion": "Sensor de picado 1 (banco 1): señal alta",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0335",
+  "descripcion": "Sensor de posición del cigüeñal (CKP) \"A\": circuito",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "El motor puede no arrancar o calarse."
+ },
+ {
+  "codigo": "P0336",
+  "descripcion": "Sensor de posición del cigüeñal (CKP) \"A\": rango/rendimiento",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0340",
+  "descripcion": "Sensor de posición del árbol de levas (CMP) \"A\" (banco 1): circuito",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0341",
+  "descripcion": "Sensor de posición del árbol de levas (CMP) \"A\" (banco 1): rango/rendimiento",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0351",
+  "descripcion": "Bobina de encendido \"A\": circuito primario/secundario",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar la bobina del cilindro 1 y su conector."
+ },
+ {
+  "codigo": "P0352",
+  "descripcion": "Bobina de encendido \"B\": circuito primario/secundario",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar la bobina del cilindro 2 y su conector."
+ },
+ {
+  "codigo": "P0353",
+  "descripcion": "Bobina de encendido \"C\": circuito primario/secundario",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar la bobina del cilindro 3 y su conector."
+ },
+ {
+  "codigo": "P0354",
+  "descripcion": "Bobina de encendido \"D\": circuito primario/secundario",
+  "sistema": "Encendido",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Revisar la bobina del cilindro 4 y su conector."
+ },
+ {
+  "codigo": "P0400",
+  "descripcion": "Recirculación de gases de escape (EGR): caudal",
+  "sistema": "Escape",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0401",
+  "descripcion": "EGR: caudal insuficiente",
+  "sistema": "Escape",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0402",
+  "descripcion": "EGR: caudal excesivo",
+  "sistema": "Escape",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0403",
+  "descripcion": "EGR: circuito de control",
+  "sistema": "Escape",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0420",
+  "descripcion": "Rendimiento del catalizador por debajo del umbral (banco 1)",
+  "sistema": "Escape",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": "Revisar sondas lambda antes de cambiar el catalizador."
+ },
+ {
+  "codigo": "P0421",
+  "descripcion": "Rendimiento del catalizador de calentamiento por debajo del umbral (banco 1)",
+  "sistema": "Escape",
+  "zona": "escape",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0440",
+  "descripcion": "Sistema de control de emisiones evaporativas (EVAP): fallo",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0441",
+  "descripcion": "EVAP: caudal de purga incorrecto",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": "Revisar electroválvula de purga."
+ },
+ {
+  "codigo": "P0442",
+  "descripcion": "EVAP: fuga pequeña detectada",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": "Comprobar que el tapón de combustible cierra bien."
+ },
+ {
+  "codigo": "P0443",
+  "descripcion": "EVAP: circuito de la válvula de purga",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0446",
+  "descripcion": "EVAP: circuito de control de ventilación",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0450",
+  "descripcion": "EVAP: sensor de presión, circuito",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0455",
+  "descripcion": "EVAP: fuga grande detectada",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": "Revisar tapón de combustible y tubos del canister."
+ },
+ {
+  "codigo": "P0456",
+  "descripcion": "EVAP: fuga muy pequeña detectada",
+  "sistema": "EVAP",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": "Revisar tapón de combustible."
+ },
+ {
+  "codigo": "P0460",
+  "descripcion": "Sensor de nivel de combustible \"A\": circuito",
+  "sistema": "Combustible",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0461",
+  "descripcion": "Sensor de nivel de combustible \"A\": rango/rendimiento",
+  "sistema": "Combustible",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0462",
+  "descripcion": "Sensor de nivel de combustible \"A\": señal baja",
+  "sistema": "Combustible",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0463",
+  "descripcion": "Sensor de nivel de combustible \"A\": señal alta",
+  "sistema": "Combustible",
+  "zona": "combustible",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0480",
+  "descripcion": "Ventilador de refrigeración 1: circuito de control",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Vigilar temperatura; revisar relé y ventilador."
+ },
+ {
+  "codigo": "P0481",
+  "descripcion": "Ventilador de refrigeración 2: circuito de control",
+  "sistema": "Refrigeración",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0500",
+  "descripcion": "Sensor de velocidad del vehículo \"A\"",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0505",
+  "descripcion": "Sistema de control del ralentí",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Limpiar cuerpo de mariposa; revisar fugas de vacío."
+ },
+ {
+  "codigo": "P0506",
+  "descripcion": "Régimen de ralentí inferior al esperado",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0507",
+  "descripcion": "Régimen de ralentí superior al esperado",
+  "sistema": "Admisión",
+  "zona": "motor",
+  "gravedad": "amarillo",
+  "consejo": "Buscar fugas de vacío."
+ },
+ {
+  "codigo": "P0520",
+  "descripcion": "Sensor/interruptor de presión de aceite: circuito",
+  "sistema": "Lubricación",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Comprobar nivel de aceite inmediatamente."
+ },
+ {
+  "codigo": "P0524",
+  "descripcion": "Presión de aceite del motor demasiado baja",
+  "sistema": "Lubricación",
+  "zona": "motor",
+  "gravedad": "rojo",
+  "consejo": "Parar el motor y revisar aceite."
+ },
+ {
+  "codigo": "P0550",
+  "descripcion": "Sensor de presión de la dirección asistida: circuito",
+  "sistema": "Dirección",
+  "zona": "direccion",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0560",
+  "descripcion": "Tensión del sistema",
+  "sistema": "Eléctrico",
+  "zona": "bateria",
+  "gravedad": "amarillo",
+  "consejo": "Comprobar batería y alternador."
+ },
+ {
+  "codigo": "P0562",
+  "descripcion": "Tensión del sistema baja",
+  "sistema": "Eléctrico",
+  "zona": "bateria",
+  "gravedad": "amarillo",
+  "consejo": "Batería descargada o alternador con poca carga."
+ },
+ {
+  "codigo": "P0563",
+  "descripcion": "Tensión del sistema alta",
+  "sistema": "Eléctrico",
+  "zona": "bateria",
+  "gravedad": "amarillo",
+  "consejo": "Posible regulador del alternador defectuoso."
+ },
+ {
+  "codigo": "P0571",
+  "descripcion": "Interruptor de freno \"A\": circuito",
+  "sistema": "Frenos",
+  "zona": "frenos_tras",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0600",
+  "descripcion": "Enlace de comunicación serie",
+  "sistema": "Centralita",
+  "zona": "electrico",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0601",
+  "descripcion": "Módulo de control interno: error de suma de memoria",
+  "sistema": "Centralita",
+  "zona": "electrico",
+  "gravedad": "rojo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0602",
+  "descripcion": "Módulo de control: error de programación",
+  "sistema": "Centralita",
+  "zona": "electrico",
+  "gravedad": "rojo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0603",
+  "descripcion": "Módulo de control interno: error de memoria KAM",
+  "sistema": "Centralita",
+  "zona": "electrico",
+  "gravedad": "amarillo",
+  "consejo": "Puede aparecer tras desconectar la batería."
+ },
+ {
+  "codigo": "P0604",
+  "descripcion": "Módulo de control interno: error de memoria RAM",
+  "sistema": "Centralita",
+  "zona": "electrico",
+  "gravedad": "rojo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0605",
+  "descripcion": "Módulo de control interno: error de memoria ROM",
+  "sistema": "Centralita",
+  "zona": "electrico",
+  "gravedad": "rojo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0606",
+  "descripcion": "Procesador del módulo de control",
+  "sistema": "Centralita",
+  "zona": "electrico",
+  "gravedad": "rojo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0615",
+  "descripcion": "Relé del motor de arranque: circuito",
+  "sistema": "Eléctrico",
+  "zona": "bateria",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0620",
+  "descripcion": "Generador (alternador): circuito de control",
+  "sistema": "Eléctrico",
+  "zona": "bateria",
+  "gravedad": "amarillo",
+  "consejo": "Comprobar tensión de carga (13,8–14,7 V)."
+ },
+ {
+  "codigo": "P0700",
+  "descripcion": "Sistema de control de la transmisión (petición de MIL)",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": "Leer códigos del módulo de transmisión (solo cambio automático)."
+ },
+ {
+  "codigo": "P0705",
+  "descripcion": "Sensor de posición de la palanca de cambios: circuito",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0715",
+  "descripcion": "Sensor de velocidad de turbina/entrada: circuito",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0720",
+  "descripcion": "Sensor de velocidad de salida: circuito",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0731",
+  "descripcion": "Relación de marcha 1 incorrecta",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0732",
+  "descripcion": "Relación de marcha 2 incorrecta",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0733",
+  "descripcion": "Relación de marcha 3 incorrecta",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0734",
+  "descripcion": "Relación de marcha 4 incorrecta",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0740",
+  "descripcion": "Embrague del convertidor de par: circuito",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "P0850",
+  "descripcion": "Interruptor de posición neutra / estacionamiento: circuito",
+  "sistema": "Transmisión",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": ""
+ },
+ {
+  "codigo": "U0001",
+  "descripcion": "Bus CAN de alta velocidad: comunicación",
+  "sistema": "Comunicación",
+  "zona": "electrico",
+  "gravedad": "amarillo",
+  "consejo": "Revisar masas, conectores y tensión de batería."
+ },
+ {
+  "codigo": "U0073",
+  "descripcion": "Bus de comunicación del módulo de control \"A\" desactivado",
+  "sistema": "Comunicación",
+  "zona": "electrico",
+  "gravedad": "amarillo",
+  "consejo": "Revisar masas, conectores y tensión de batería."
+ },
+ {
+  "codigo": "U0100",
+  "descripcion": "Pérdida de comunicación con la centralita del motor (ECM/PCM) \"A\"",
+  "sistema": "Comunicación",
+  "zona": "electrico",
+  "gravedad": "amarillo",
+  "consejo": "Revisar masas, conectores y tensión de batería."
+ },
+ {
+  "codigo": "U0101",
+  "descripcion": "Pérdida de comunicación con la centralita de la transmisión (TCM)",
+  "sistema": "Comunicación",
+  "zona": "transmision",
+  "gravedad": "amarillo",
+  "consejo": "Revisar masas, conectores y tensión de batería."
+ },
+ {
+  "codigo": "U0121",
+  "descripcion": "Pérdida de comunicación con el módulo del ABS",
+  "sistema": "Comunicación",
+  "zona": "frenos_tras",
+  "gravedad": "amarillo",
+  "consejo": "Revisar masas, conectores y tensión de batería."
+ },
+ {
+  "codigo": "U0140",
+  "descripcion": "Pérdida de comunicación con el módulo de carrocería (BCM)",
+  "sistema": "Comunicación",
+  "zona": "electrico",
+  "gravedad": "amarillo",
+  "consejo": "Revisar masas, conectores y tensión de batería."
+ },
+ {
+  "codigo": "U0155",
+  "descripcion": "Pérdida de comunicación con el cuadro de instrumentos",
+  "sistema": "Comunicación",
+  "zona": "electrico",
+  "gravedad": "amarillo",
+  "consejo": "Revisar masas, conectores y tensión de batería."
+ }
+]

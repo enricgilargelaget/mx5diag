@@ -1,0 +1,102 @@
+[
+ {
+  "id": "aceite",
+  "tarea": "Cambio de aceite y filtro",
+  "km": 20000,
+  "meses": 12,
+  "zona": "motor",
+  "fuente": "https://www.auto-abc.eu/Mazda-MX5/v12884-2013/service",
+  "verificado": false,
+  "nota": "Intervalo europeo indicado para MX-5 2.0 de 2013. Con uso deportivo o trayectos cortos, acortar."
+ },
+ {
+  "id": "bujias",
+  "tarea": "Sustituir bujías",
+  "km": 120000,
+  "meses": null,
+  "zona": "motor",
+  "fuente": "https://www.mazdausa.com/siteassets/global-resources/vehicle-resources/owner-manuals/2015/mx-5/2015-mx-5-scheduled-maintainance.pdf",
+  "verificado": true,
+  "nota": ""
+ },
+ {
+  "id": "valvulas",
+  "tarea": "Escuchar holgura de válvulas (ajustar si hacen ruido)",
+  "km": 120000,
+  "meses": null,
+  "zona": "motor",
+  "fuente": "https://www.mazdausa.com/siteassets/global-resources/vehicle-resources/owner-manuals/2015/mx-5/2015-mx-5-scheduled-maintainance.pdf",
+  "verificado": true,
+  "nota": ""
+ },
+ {
+  "id": "bateria_rev",
+  "tarea": "Revisar batería (tensión en reposo y arranque)",
+  "km": null,
+  "meses": 6,
+  "zona": "bateria",
+  "fuente": "",
+  "verificado": false,
+  "nota": "Recomendación de la app; la app lo mide sola con el OBD."
+ },
+ {
+  "id": "bateria_cambio",
+  "tarea": "Valorar cambio de batería por antigüedad",
+  "km": null,
+  "meses": 48,
+  "zona": "bateria",
+  "fuente": "https://vehicle.firestonecompleteautocare.com/mazda/mx-5-miata/2012/maintenance/batteries",
+  "verificado": true,
+  "nota": "Vida típica de 3 a 5 años."
+ },
+ {
+  "id": "liq_frenos",
+  "tarea": "Cambiar líquido de frenos",
+  "km": null,
+  "meses": 24,
+  "zona": "frenos_tras",
+  "fuente": "",
+  "verificado": false,
+  "nota": "Intervalo habitual de Mazda en Europa; confirmar en el libro de mantenimiento."
+ },
+ {
+  "id": "filtro_aire",
+  "tarea": "Revisar/cambiar filtro de aire",
+  "km": 40000,
+  "meses": null,
+  "zona": "motor",
+  "fuente": "",
+  "verificado": false,
+  "nota": "Confirmar en el libro de mantenimiento."
+ },
+ {
+  "id": "luces",
+  "tarea": "Comprobar funcionamiento de todas las luces",
+  "km": null,
+  "meses": 6,
+  "zona": "faros",
+  "fuente": "",
+  "verificado": false,
+  "nota": ""
+ },
+ {
+  "id": "neumaticos",
+  "tarea": "Presión y desgaste de neumáticos",
+  "km": null,
+  "meses": 1,
+  "zona": "ruedas",
+  "fuente": "https://tirepressure.com/2007-mazda-mx-5-miata-tire-pressure",
+  "verificado": true,
+  "nota": "2,0 bar en frío."
+ },
+ {
+  "id": "suspension",
+  "tarea": "Inspeccionar suspensión, rótulas y amortiguadores",
+  "km": 20000,
+  "meses": 12,
+  "zona": "susp_del",
+  "fuente": "",
+  "verificado": false,
+  "nota": ""
+ }
+]

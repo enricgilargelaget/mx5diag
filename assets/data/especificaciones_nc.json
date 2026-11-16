@@ -1,0 +1,107 @@
+[
+ {
+  "grupo": "Batería",
+  "nombre": "Batería original",
+  "valor": "Panasonic 46B24L(S)-MF, 12 V 45 Ah, plomo-ácido",
+  "fuente": "https://forum.mx5oc.co.uk/t/favour-with-a-battery/102205",
+  "verificado": true
+ },
+ {
+  "grupo": "Batería",
+  "nombre": "Arranque en frío (CCA)",
+  "valor": "330 A",
+  "fuente": "https://low-offset.com/mazda/best-miata-battery-replacement",
+  "verificado": true
+ },
+ {
+  "grupo": "Batería",
+  "nombre": "Medidas originales",
+  "valor": "238 × 129 × 204 mm",
+  "fuente": "https://low-offset.com/mazda/best-miata-battery-replacement",
+  "verificado": true
+ },
+ {
+  "grupo": "Batería",
+  "nombre": "Medidas compatibles",
+  "valor": "237×127×227, 238×129×223 o 238×129×227 mm; > 42 Ah",
+  "fuente": "https://baterianueva.es/mazda-mx-5-iii-nc-2005-2014-baterias/",
+  "verificado": true
+ },
+ {
+  "grupo": "Batería",
+  "nombre": "Ubicación",
+  "valor": "Vano motor",
+  "fuente": "https://jdcustomsusa.com/collections/nc-miata-battery",
+  "verificado": true
+ },
+ {
+  "grupo": "Aceite motor",
+  "nombre": "Capacidad con filtro (2.0, 6MT)",
+  "valor": "4,55 L",
+  "fuente": "https://2008-mx-5-wiring-diagram-and-workshop-manual.pages.dev/src/g5w01/html/id015045800100",
+  "verificado": true
+ },
+ {
+  "grupo": "Aceite motor",
+  "nombre": "Capacidad sin filtro (2.0, 6MT)",
+  "valor": "4,05 L",
+  "fuente": "https://2008-mx-5-wiring-diagram-and-workshop-manual.pages.dev/src/g5w01/html/id015045800100",
+  "verificado": true
+ },
+ {
+  "grupo": "Aceite motor",
+  "nombre": "Capacidad en seco",
+  "valor": "4,85 L",
+  "fuente": "https://2008-mx-5-wiring-diagram-and-workshop-manual.pages.dev/src/g5w01/html/id015045800100",
+  "verificado": true
+ },
+ {
+  "grupo": "Refrigeración",
+  "nombre": "Tipo de refrigerante",
+  "valor": "Mazda FL22 (si el tapón del radiador lo indica)",
+  "fuente": "https://www.mazdausa.com/siteassets/global-resources/vehicle-resources/owner-manuals/2015/mx-5/2015-mx-5-scheduled-maintainance.pdf",
+  "verificado": true
+ },
+ {
+  "grupo": "Neumáticos",
+  "nombre": "Medidas de serie",
+  "valor": "205/50 R16 o 205/45 R17 (según acabado)",
+  "fuente": "https://tirepressure.com/2007-mazda-mx-5-miata-tire-pressure",
+  "verificado": true
+ },
+ {
+  "grupo": "Neumáticos",
+  "nombre": "Presión",
+  "valor": "29 psi (2,0 bar) delante y detrás",
+  "fuente": "https://tirepressure.com/2007-mazda-mx-5-miata-tire-pressure",
+  "verificado": true
+ },
+ {
+  "grupo": "Iluminación",
+  "nombre": "Cruce (halógeno)",
+  "valor": "H7 (algunas versiones con xenón)",
+  "fuente": "https://lightninglab.net/mazda/mx-5/2006",
+  "verificado": false
+ },
+ {
+  "grupo": "Iluminación",
+  "nombre": "Carretera NC1 (2005–2008)",
+  "valor": "H9 12 V 65 W",
+  "fuente": "https://ilmotorsport.de/en/nc/spare-parts-electrical-lighting-spare-bulbs/l/2041",
+  "verificado": true
+ },
+ {
+  "grupo": "Iluminación",
+  "nombre": "Carretera NC2/NC3 (2008–2015)",
+  "valor": "HB3 12 V 60 W",
+  "fuente": "https://ilmotorsport.de/en/nc/spare-parts-electrical-lighting-spare-bulbs/l/2041",
+  "verificado": true
+ },
+ {
+  "grupo": "Iluminación",
+  "nombre": "Antiniebla (bastidor desde 400.000)",
+  "valor": "H11 12 V 24 W",
+  "fuente": "https://ilmotorsport.de/en/nc/spare-parts-electrical-lighting-spare-bulbs/l/2041",
+  "verificado": true
+ }
+]

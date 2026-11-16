@@ -1,0 +1,33 @@
+format_version: "13"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: flutter
+
+workflows:
+  android_apk:
+    summary: Prepara Android, pasa las pruebas y genera el APK instalable.
+    steps:
+    - git-clone@8: {}
+    - flutter-installer@0:
+        inputs:
+        - version: stable
+    - script@1:
+        title: Preparar plataformas y permisos Bluetooth
+        inputs:
+        - content: |-
+            set -ex
+            bash tool/preparar_plataformas.sh
+            flutter pub get
+    - script@1:
+        title: Pruebas
+        inputs:
+        - content: |-
+            set -ex
+            flutter test
+    - script@1:
+        title: Compilar APK
+        inputs:
+        - content: |-
+            set -ex
+            flutter build apk --release
+            cp build/app/outputs/flutter-apk/app-release.apk "$BITRISE_DEPLOY_DIR/mx5diag.apk"
+    - deploy-to-bitrise-io@2: {}
