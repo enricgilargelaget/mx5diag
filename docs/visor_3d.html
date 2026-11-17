@@ -69,7 +69,7 @@ footer{margin-top:24px;font-size:12px;color:#C4D6F0}
   <div class="stage">
     <div class="toolbar">
       <div class="thumbs" id="thumbs" role="group" aria-label="Vistas"></div>
-      <button class="tog" id="tStyle" aria-pressed="true">Ver Modelo 1</button>
+      <button class="tog" id="tStyle" aria-pressed="true">Ver Azul simple</button>
       <button class="tog" id="tMech" aria-pressed="true">Mecánica</button>
       <button class="tog" id="tWire" aria-pressed="true">Cableado</button>
       <button class="tog" id="tSpin" aria-pressed="false">Girar solo</button>
@@ -493,7 +493,7 @@ function render() {
 
   $('yaw').value = Math.round(c.yaw);
   $('tMech').setAttribute('aria-pressed', st.mech);
-  $('tStyle').textContent = st.metal ? 'Ver Modelo 1' : 'Ver cromado';
+  $('tStyle').textContent = st.metal ? 'Ver Azul simple' : 'Ver cromado';
   document.body.classList.toggle('metal', st.metal);
   $('tWire').setAttribute('aria-pressed', st.wire);
   $('tSpin').setAttribute('aria-pressed', st.spin);

@@ -29,6 +29,14 @@ s = m.read_text()
 s = re.sub(r'android:label="[^"]*"', 'android:label="%s"' % NOMBRE, s, count=1)
 m.write_text(s)
 
+# --- Android: fondo azul en el arranque (antes del splash animado) ---
+for f in ['android/app/src/main/res/drawable/launch_background.xml', 'android/app/src/main/res/drawable-v21/launch_background.xml']:
+    lb = pathlib.Path(f)
+    if lb.exists():
+        t = lb.read_text()
+        t = re.sub(r'<item android:drawable="[^"]*"\s*/>', '<item><color android:color="#2F4C70" /></item>', t, count=1)
+        lb.write_text(t)
+
 # --- Android: minSdk 21 como mínimo ---
 for g in [pathlib.Path('android/app/build.gradle.kts'), pathlib.Path('android/app/build.gradle')]:
     if g.exists():

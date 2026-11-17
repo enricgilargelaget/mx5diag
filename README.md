@@ -7,6 +7,9 @@ lectura OBD-II con adaptador ELM327 Bluetooth LE y base de datos **100 % offline
 
 | Pantalla | Qué hace |
 |---|---|
+| **Inicio** | Pantalla de arranque con el coche en wireframe latiendo. |
+| **Cabecera** | Botón **OBD** arriba a la derecha (bajo «Fácil») y el coche elegido. |
+| **Coches** | Enciclopedia offline: 36 marcas del mercado europeo, ~200 modelos y ~370 generaciones con años y motores; mantenimiento solo donde está verificado; botón «Usar como mi coche». |
 | **Plano** | Coche wireframe en 3D (arrastrar para girar), vistas 3D / lateral / planta / frente / trasera con cotas, mecánica en gris, cableado, puntos de estado y etiquetas. Ficha por zona, revisión manual y acceso a recambios. |
 | **Códigos** | Buscador offline de códigos de avería en español, con gravedad, zona del coche y qué hacer. Muestra primero los detectados en tu coche. |
 | **Mantenimiento** | Plan de mantenimiento con avisos de vencimiento y botón "Hecho". Datos técnicos del MX-5 NC con enlace a su fuente y marca de "sin verificar". |
@@ -18,6 +21,7 @@ lectura OBD-II con adaptador ELM327 Bluetooth LE y base de datos **100 % offline
 | Archivo | Contenido |
 |---|---|
 | `dtc_genericos.json` | 140 códigos genéricos OBD-II (P0xxx y U0xxx) en español, con sistema, zona, gravedad y consejo. |
+| `enciclopedia.json` | Marcas, modelos y generaciones del mercado europeo. |
 | `zonas.json` | 12 zonas del coche con su posición 3D. |
 | `especificaciones_nc.json` | Batería, aceite, refrigerante, neumáticos y lámparas del MX-5 NC, cada dato con su fuente. |
 | `mantenimiento_nc.json` | Intervalos de mantenimiento (los no verificados van marcados). |

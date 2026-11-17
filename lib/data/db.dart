@@ -105,6 +105,16 @@ class AppDb {
 
   // ---------- Datos del usuario ----------
 
+  Future<String?> meta(String clave) async {
+    final r = await (await db).query('meta', where: 'clave = ?', whereArgs: [clave]);
+    return r.isEmpty ? null : r.first['valor'] as String;
+  }
+
+  Future<void> setMeta(String clave, String valor) async {
+    await (await db).insert('meta', {'clave': clave, 'valor': valor}, conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+
   Future<void> guardarRevision({required String zona, required Estado estado, required String hallazgo, String accion = '', String fuente = 'Revisión manual', int? km}) async {
     await (await db).insert('revision', {
       'fecha': DateTime.now().toIso8601String(),

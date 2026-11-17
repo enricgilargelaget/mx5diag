@@ -1,0 +1,3693 @@
+{
+ "version": 1,
+ "nota": "Años aproximados de comercialización en Europa. Motores: familias principales, no todas las versiones. El mantenimiento solo figura donde está verificado.",
+ "marcas": [
+  {
+   "marca": "Alfa Romeo",
+   "pais": "Italia",
+   "modelos": [
+    {
+     "modelo": "Giulietta",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "alfa-romeo-giulietta-940",
+       "gen": "940",
+       "anos": "2010–2020",
+       "motores": "1.4 TB/MultiAir, 1.75 TBi, 1.6/2.0 JTDm"
+      }
+     ]
+    },
+    {
+     "modelo": "Giulia",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "alfa-romeo-giulia-952",
+       "gen": "952",
+       "anos": "2016–",
+       "motores": "2.0 Turbo, 2.9 V6, 2.2 JTD"
+      }
+     ]
+    },
+    {
+     "modelo": "Stelvio",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "alfa-romeo-stelvio-949",
+       "gen": "949",
+       "anos": "2017–",
+       "motores": "2.0 Turbo, 2.9 V6, 2.2 JTD"
+      }
+     ]
+    },
+    {
+     "modelo": "Tonale",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "alfa-romeo-tonale-965",
+       "gen": "965",
+       "anos": "2022–",
+       "motores": "1.5 Hybrid, 1.6 diésel, PHEV Q4"
+      }
+     ]
+    },
+    {
+     "modelo": "MiTo",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "alfa-romeo-mito-955",
+       "gen": "955",
+       "anos": "2008–2018",
+       "motores": "1.4, 1.4 TB/MultiAir, 0.9 TwinAir, 1.3 JTDm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Audi",
+   "pais": "Alemania",
+   "modelos": [
+    {
+     "modelo": "A1",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "audi-a1-8x",
+       "gen": "8X",
+       "anos": "2010–2018",
+       "motores": "1.0/1.2/1.4 TFSI, 1.6 TDI"
+      },
+      {
+       "id": "audi-a1-gb",
+       "gen": "GB",
+       "anos": "2018–",
+       "motores": "1.0/1.5/2.0 TFSI"
+      }
+     ]
+    },
+    {
+     "modelo": "A3",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "audi-a3-8p",
+       "gen": "8P",
+       "anos": "2003–2013",
+       "motores": "1.4/1.8/2.0 TFSI, 1.6/1.9/2.0 TDI"
+      },
+      {
+       "id": "audi-a3-8v",
+       "gen": "8V",
+       "anos": "2012–2020",
+       "motores": "1.0/1.4/1.5/2.0 TFSI, 1.6/2.0 TDI, e-tron"
+      },
+      {
+       "id": "audi-a3-8y",
+       "gen": "8Y",
+       "anos": "2020–",
+       "motores": "1.0/1.5 TFSI, 2.0 TFSI, 2.0 TDI, TFSI e"
+      }
+     ]
+    },
+    {
+     "modelo": "A4",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "audi-a4-b8-8k",
+       "gen": "B8 (8K)",
+       "anos": "2007–2015",
+       "motores": "1.8/2.0 TFSI, 2.0/2.7/3.0 TDI"
+      },
+      {
+       "id": "audi-a4-b9-8w",
+       "gen": "B9 (8W)",
+       "anos": "2015–2024",
+       "motores": "1.4/2.0 TFSI, 2.0/3.0 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "A6",
+     "segmento": "Berlina grande",
+     "generaciones": [
+      {
+       "id": "audi-a6-c7-4g",
+       "gen": "C7 (4G)",
+       "anos": "2011–2018",
+       "motores": "2.0/3.0 TFSI, 2.0/3.0 TDI"
+      },
+      {
+       "id": "audi-a6-c8-4a",
+       "gen": "C8 (4A)",
+       "anos": "2018–",
+       "motores": "2.0/3.0 TFSI, 2.0/3.0 TDI, TFSI e"
+      }
+     ]
+    },
+    {
+     "modelo": "Q2",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "audi-q2-ga",
+       "gen": "GA",
+       "anos": "2016–",
+       "motores": "1.0/1.5/2.0 TFSI, 1.6/2.0 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Q3",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "audi-q3-8u",
+       "gen": "8U",
+       "anos": "2011–2018",
+       "motores": "1.4/2.0 TFSI, 2.0 TDI"
+      },
+      {
+       "id": "audi-q3-f3",
+       "gen": "F3",
+       "anos": "2018–",
+       "motores": "1.5/2.0 TFSI, 2.0 TDI, TFSI e"
+      }
+     ]
+    },
+    {
+     "modelo": "Q5",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "audi-q5-8r",
+       "gen": "8R",
+       "anos": "2008–2017",
+       "motores": "2.0/3.0 TFSI, 2.0/3.0 TDI"
+      },
+      {
+       "id": "audi-q5-fy",
+       "gen": "FY",
+       "anos": "2017–2024",
+       "motores": "2.0 TFSI, 2.0/3.0 TDI, TFSI e"
+      }
+     ]
+    },
+    {
+     "modelo": "Q4 e-tron",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "audi-q4-e-tron-f4",
+       "gen": "F4",
+       "anos": "2021–",
+       "motores": "Eléctrico 125–250 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "TT",
+     "segmento": "Deportivo",
+     "generaciones": [
+      {
+       "id": "audi-tt-8j",
+       "gen": "8J",
+       "anos": "2006–2014",
+       "motores": "1.8/2.0 TFSI, 2.5 TFSI, 2.0 TDI"
+      },
+      {
+       "id": "audi-tt-8s",
+       "gen": "8S",
+       "anos": "2014–2023",
+       "motores": "1.8/2.0 TFSI, 2.5 TFSI, 2.0 TDI"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "BMW",
+   "pais": "Alemania",
+   "modelos": [
+    {
+     "modelo": "Serie 1",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "bmw-serie-1-e87",
+       "gen": "E87",
+       "anos": "2004–2011",
+       "motores": "116i/118i/120i, 118d/120d/123d"
+      },
+      {
+       "id": "bmw-serie-1-f20",
+       "gen": "F20",
+       "anos": "2011–2019",
+       "motores": "116i/118i/120i, M135i, 116d/118d/120d"
+      },
+      {
+       "id": "bmw-serie-1-f40",
+       "gen": "F40",
+       "anos": "2019–2024",
+       "motores": "118i, 128ti, M135i, 116d/118d"
+      },
+      {
+       "id": "bmw-serie-1-f70",
+       "gen": "F70",
+       "anos": "2024–",
+       "motores": "120, M135, 118d/120d"
+      }
+     ]
+    },
+    {
+     "modelo": "Serie 2 Active/Gran Tourer",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "bmw-serie-2-active-gran-tourer-f45-f46",
+       "gen": "F45/F46",
+       "anos": "2014–2021",
+       "motores": "216i/218i/220i, 216d/218d/220d, 225xe"
+      },
+      {
+       "id": "bmw-serie-2-active-gran-tourer-u06",
+       "gen": "U06",
+       "anos": "2021–",
+       "motores": "218i/220i, 218d, 225e/230e"
+      }
+     ]
+    },
+    {
+     "modelo": "Serie 3",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "bmw-serie-3-e90",
+       "gen": "E90",
+       "anos": "2005–2012",
+       "motores": "318i/320i/325i/330i, 318d/320d/330d"
+      },
+      {
+       "id": "bmw-serie-3-f30",
+       "gen": "F30",
+       "anos": "2011–2019",
+       "motores": "316i/320i/328i/330i/335i, 316d/318d/320d/330d, 330e"
+      },
+      {
+       "id": "bmw-serie-3-g20",
+       "gen": "G20",
+       "anos": "2019–",
+       "motores": "318i/320i/330i, M340i, 318d/320d/330d, 330e"
+      }
+     ]
+    },
+    {
+     "modelo": "Serie 5",
+     "segmento": "Berlina grande",
+     "generaciones": [
+      {
+       "id": "bmw-serie-5-e60",
+       "gen": "E60",
+       "anos": "2003–2010",
+       "motores": "520i/525i/530i, 520d/525d/530d"
+      },
+      {
+       "id": "bmw-serie-5-f10",
+       "gen": "F10",
+       "anos": "2010–2017",
+       "motores": "520i/528i/535i, 518d/520d/525d/530d/535d"
+      },
+      {
+       "id": "bmw-serie-5-g30",
+       "gen": "G30",
+       "anos": "2017–2023",
+       "motores": "520i/530i/540i, 520d/530d, 530e"
+      },
+      {
+       "id": "bmw-serie-5-g60",
+       "gen": "G60",
+       "anos": "2023–",
+       "motores": "520i, 520d, 530e, i5"
+      }
+     ]
+    },
+    {
+     "modelo": "X1",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "bmw-x1-e84",
+       "gen": "E84",
+       "anos": "2009–2015",
+       "motores": "18i/20i, 16d/18d/20d"
+      },
+      {
+       "id": "bmw-x1-f48",
+       "gen": "F48",
+       "anos": "2015–2022",
+       "motores": "18i/20i, 16d/18d/20d, 25e"
+      },
+      {
+       "id": "bmw-x1-u11",
+       "gen": "U11",
+       "anos": "2022–",
+       "motores": "18i/20i, 18d/20d, 25e/30e, iX1"
+      }
+     ]
+    },
+    {
+     "modelo": "X3",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "bmw-x3-f25",
+       "gen": "F25",
+       "anos": "2010–2017",
+       "motores": "20i/28i, 18d/20d/30d/35d"
+      },
+      {
+       "id": "bmw-x3-g01",
+       "gen": "G01",
+       "anos": "2017–2024",
+       "motores": "20i/30i, 20d/30d, 30e, M40i"
+      },
+      {
+       "id": "bmw-x3-g45",
+       "gen": "G45",
+       "anos": "2024–",
+       "motores": "20, 20d, 30e, M50"
+      }
+     ]
+    },
+    {
+     "modelo": "X5",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "bmw-x5-f15",
+       "gen": "F15",
+       "anos": "2013–2018",
+       "motores": "35i/50i, 25d/30d/40d, 40e"
+      },
+      {
+       "id": "bmw-x5-g05",
+       "gen": "G05",
+       "anos": "2018–",
+       "motores": "40i, 30d, 45e/50e, M60i"
+      }
+     ]
+    },
+    {
+     "modelo": "i3",
+     "segmento": "Urbano eléctrico",
+     "generaciones": [
+      {
+       "id": "bmw-i3-i01",
+       "gen": "I01",
+       "anos": "2013–2022",
+       "motores": "Eléctrico, REx 0.65"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "BYD",
+   "pais": "China",
+   "modelos": [
+    {
+     "modelo": "Atto 3",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "byd-atto-3-i",
+       "gen": "I",
+       "anos": "2022–",
+       "motores": "Eléctrico 150 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Dolphin",
+     "segmento": "Compacto eléctrico",
+     "generaciones": [
+      {
+       "id": "byd-dolphin-i",
+       "gen": "I",
+       "anos": "2023–",
+       "motores": "Eléctrico 70–150 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Seal U DM-i",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "byd-seal-u-dm-i-i",
+       "gen": "I",
+       "anos": "2024–",
+       "motores": "1.5 PHEV"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Citroën",
+   "pais": "Francia",
+   "modelos": [
+    {
+     "modelo": "C3",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "citroen-c3-ii",
+       "gen": "II",
+       "anos": "2009–2016",
+       "motores": "1.0/1.2 PureTech, 1.4/1.6 VTi, 1.4/1.6 HDi"
+      },
+      {
+       "id": "citroen-c3-iii",
+       "gen": "III",
+       "anos": "2016–2024",
+       "motores": "1.2 PureTech, 1.5/1.6 BlueHDi"
+      },
+      {
+       "id": "citroen-c3-iv",
+       "gen": "IV",
+       "anos": "2024–",
+       "motores": "1.2 PureTech/Hybrid, ë-C3"
+      }
+     ]
+    },
+    {
+     "modelo": "C4",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "citroen-c4-ii",
+       "gen": "II",
+       "anos": "2010–2018",
+       "motores": "1.2 PureTech, 1.6 VTi/THP, 1.6 HDi"
+      },
+      {
+       "id": "citroen-c4-iii",
+       "gen": "III",
+       "anos": "2020–",
+       "motores": "1.2 PureTech, 1.5 BlueHDi, ë-C4"
+      }
+     ]
+    },
+    {
+     "modelo": "C3 Aircross",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "citroen-c3-aircross-i",
+       "gen": "I",
+       "anos": "2017–2024",
+       "motores": "1.2 PureTech, 1.5/1.6 BlueHDi"
+      }
+     ]
+    },
+    {
+     "modelo": "C5 Aircross",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "citroen-c5-aircross-i",
+       "gen": "I",
+       "anos": "2018–",
+       "motores": "1.2 PureTech, 1.5/2.0 BlueHDi, Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Berlingo",
+     "segmento": "Furgoneta/combi",
+     "generaciones": [
+      {
+       "id": "citroen-berlingo-ii",
+       "gen": "II",
+       "anos": "2008–2018",
+       "motores": "1.6 VTi, 1.6 HDi"
+      },
+      {
+       "id": "citroen-berlingo-iii",
+       "gen": "III",
+       "anos": "2018–",
+       "motores": "1.2 PureTech, 1.5 BlueHDi, ë-Berlingo"
+      }
+     ]
+    },
+    {
+     "modelo": "C4 Picasso/SpaceTourer",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "citroen-c4-picasso-spacetourer-ii",
+       "gen": "II",
+       "anos": "2013–2022",
+       "motores": "1.2 PureTech, 1.6 THP, 1.6/2.0 BlueHDi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Cupra",
+   "pais": "España",
+   "modelos": [
+    {
+     "modelo": "Formentor",
+     "segmento": "SUV coupé",
+     "generaciones": [
+      {
+       "id": "cupra-formentor-km7",
+       "gen": "KM7",
+       "anos": "2020–",
+       "motores": "1.5/2.0 TSI, 2.5 TSI, 1.4/1.5 e-Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Born",
+     "segmento": "Compacto eléctrico",
+     "generaciones": [
+      {
+       "id": "cupra-born-k11",
+       "gen": "K11",
+       "anos": "2021–",
+       "motores": "Eléctrico 150–240 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Leon",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "cupra-leon-kl",
+       "gen": "KL",
+       "anos": "2020–",
+       "motores": "1.5/2.0 TSI, 1.4/1.5 e-Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Tavascan",
+     "segmento": "SUV coupé eléctrico",
+     "generaciones": [
+      {
+       "id": "cupra-tavascan-kr1",
+       "gen": "KR1",
+       "anos": "2024–",
+       "motores": "Eléctrico 210–250 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Terramar",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "cupra-terramar-kf",
+       "gen": "KF",
+       "anos": "2024–",
+       "motores": "1.5 eTSI, 2.0 TSI, 1.5 e-Hybrid"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Dacia",
+   "pais": "Rumanía",
+   "modelos": [
+    {
+     "modelo": "Sandero",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "dacia-sandero-ii",
+       "gen": "II",
+       "anos": "2012–2020",
+       "motores": "1.0 SCe, 0.9 TCe, 1.5 dCi"
+      },
+      {
+       "id": "dacia-sandero-iii",
+       "gen": "III",
+       "anos": "2020–",
+       "motores": "1.0 SCe/TCe, 1.0 ECO-G (GLP)"
+      }
+     ]
+    },
+    {
+     "modelo": "Duster",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "dacia-duster-i",
+       "gen": "I",
+       "anos": "2010–2017",
+       "motores": "1.6 16V, 1.2 TCe, 1.5 dCi"
+      },
+      {
+       "id": "dacia-duster-ii",
+       "gen": "II",
+       "anos": "2017–2024",
+       "motores": "1.0/1.3 TCe, 1.0 ECO-G, 1.5 Blue dCi"
+      },
+      {
+       "id": "dacia-duster-iii",
+       "gen": "III",
+       "anos": "2024–",
+       "motores": "1.0 ECO-G, 1.2 TCe mild hybrid, 1.6 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Logan",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "dacia-logan-ii",
+       "gen": "II",
+       "anos": "2012–2020",
+       "motores": "1.0 SCe, 0.9 TCe, 1.5 dCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Jogger",
+     "segmento": "Familiar 7 plazas",
+     "generaciones": [
+      {
+       "id": "dacia-jogger-i",
+       "gen": "I",
+       "anos": "2021–",
+       "motores": "1.0 TCe, 1.0 ECO-G, 1.6 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Spring",
+     "segmento": "Urbano eléctrico",
+     "generaciones": [
+      {
+       "id": "dacia-spring-i",
+       "gen": "I",
+       "anos": "2021–",
+       "motores": "Eléctrico 33–48 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Lodgy",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "dacia-lodgy-i",
+       "gen": "I",
+       "anos": "2012–2022",
+       "motores": "1.2/1.3 TCe, 1.6, 1.5 dCi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "DS",
+   "pais": "Francia",
+   "modelos": [
+    {
+     "modelo": "DS 3 / DS 3 Crossback",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "ds-ds-3-ds-3-crossback-i",
+       "gen": "I",
+       "anos": "2019–",
+       "motores": "1.2 PureTech, 1.5 BlueHDi, E-Tense"
+      }
+     ]
+    },
+    {
+     "modelo": "DS 7",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "ds-ds-7-i",
+       "gen": "I",
+       "anos": "2017–",
+       "motores": "1.2/1.6 PureTech, 1.5/2.0 BlueHDi, E-Tense"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Fiat",
+   "pais": "Italia",
+   "modelos": [
+    {
+     "modelo": "500",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "fiat-500-312",
+       "gen": "312",
+       "anos": "2007–2024",
+       "motores": "1.2 8V, 0.9 TwinAir, 1.0 Hybrid, 1.3 Multijet"
+      },
+      {
+       "id": "fiat-500-332-500e",
+       "gen": "332 (500e)",
+       "anos": "2020–",
+       "motores": "Eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Panda",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "fiat-panda-169",
+       "gen": "169",
+       "anos": "2003–2012",
+       "motores": "1.1, 1.2, 1.3 Multijet"
+      },
+      {
+       "id": "fiat-panda-319",
+       "gen": "319",
+       "anos": "2012–",
+       "motores": "1.2, 0.9 TwinAir, 1.0 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Tipo",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "fiat-tipo-356",
+       "gen": "356",
+       "anos": "2015–",
+       "motores": "1.4, 1.0 T3, 1.3/1.6 Multijet, 1.5 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Punto",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "fiat-punto-199",
+       "gen": "199",
+       "anos": "2005–2018",
+       "motores": "1.2/1.4, 1.4 T-Jet, 1.3 Multijet"
+      }
+     ]
+    },
+    {
+     "modelo": "500X",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "fiat-500x-334",
+       "gen": "334",
+       "anos": "2014–",
+       "motores": "1.0/1.3 FireFly, 1.4 MultiAir, 1.3/1.6 Multijet, Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Doblò",
+     "segmento": "Furgoneta/combi",
+     "generaciones": [
+      {
+       "id": "fiat-dobl-263",
+       "gen": "263",
+       "anos": "2010–2022",
+       "motores": "1.4, 1.3/1.6/2.0 Multijet"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Ford",
+   "pais": "EE. UU./Europa",
+   "modelos": [
+    {
+     "modelo": "Fiesta",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "ford-fiesta-mk6",
+       "gen": "Mk6",
+       "anos": "2008–2017",
+       "motores": "1.25/1.4/1.6, 1.0 EcoBoost, 1.4/1.5/1.6 TDCi"
+      },
+      {
+       "id": "ford-fiesta-mk7",
+       "gen": "Mk7",
+       "anos": "2017–2023",
+       "motores": "1.1, 1.0 EcoBoost/mHEV, 1.5 EcoBoost ST, 1.5 TDCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Focus",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "ford-focus-mk2",
+       "gen": "Mk2",
+       "anos": "2004–2011",
+       "motores": "1.4/1.6/1.8/2.0, 1.6/1.8/2.0 TDCi"
+      },
+      {
+       "id": "ford-focus-mk3",
+       "gen": "Mk3",
+       "anos": "2011–2018",
+       "motores": "1.0/1.5/1.6 EcoBoost, 1.6 Ti-VCT, 1.5/1.6/2.0 TDCi"
+      },
+      {
+       "id": "ford-focus-mk4",
+       "gen": "Mk4",
+       "anos": "2018–2025",
+       "motores": "1.0/1.5 EcoBoost, mHEV, 1.5/2.0 EcoBlue"
+      }
+     ]
+    },
+    {
+     "modelo": "Puma",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "ford-puma-j2k",
+       "gen": "J2K",
+       "anos": "2019–",
+       "motores": "1.0 EcoBoost mHEV, 1.5 EcoBoost ST, Gen-E eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Kuga",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "ford-kuga-i",
+       "gen": "I",
+       "anos": "2008–2012",
+       "motores": "2.5 Turbo, 2.0 TDCi"
+      },
+      {
+       "id": "ford-kuga-ii",
+       "gen": "II",
+       "anos": "2012–2019",
+       "motores": "1.5/1.6 EcoBoost, 2.0 TDCi"
+      },
+      {
+       "id": "ford-kuga-iii",
+       "gen": "III",
+       "anos": "2019–",
+       "motores": "1.5 EcoBoost, 2.5 FHEV/PHEV, 1.5/2.0 EcoBlue"
+      }
+     ]
+    },
+    {
+     "modelo": "Mondeo",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "ford-mondeo-mk4",
+       "gen": "Mk4",
+       "anos": "2007–2014",
+       "motores": "1.6/2.0/2.3, 2.0 EcoBoost, 1.6/1.8/2.0/2.2 TDCi"
+      },
+      {
+       "id": "ford-mondeo-mk5",
+       "gen": "Mk5",
+       "anos": "2014–2022",
+       "motores": "1.0/1.5/2.0 EcoBoost, 2.0 Hybrid, 1.5/2.0 TDCi"
+      }
+     ]
+    },
+    {
+     "modelo": "C-Max",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "ford-c-max-ii",
+       "gen": "II",
+       "anos": "2010–2019",
+       "motores": "1.0/1.5/1.6 EcoBoost, 1.6 Ti-VCT, 1.5/1.6/2.0 TDCi"
+      }
+     ]
+    },
+    {
+     "modelo": "EcoSport",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "ford-ecosport-ii",
+       "gen": "II",
+       "anos": "2013–2022",
+       "motores": "1.0 EcoBoost, 1.5 Ti-VCT, 1.5 TDCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Mustang Mach-E",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "ford-mustang-mach-e-i",
+       "gen": "I",
+       "anos": "2020–",
+       "motores": "Eléctrico 198–358 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Transit Connect/Courier",
+     "segmento": "Furgoneta",
+     "generaciones": [
+      {
+       "id": "ford-transit-connect-courier-ii",
+       "gen": "II",
+       "anos": "2013–2023",
+       "motores": "1.0 EcoBoost, 1.5/1.6 TDCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Ka/Ka+",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "ford-ka-ka-ii",
+       "gen": "II",
+       "anos": "2008–2016",
+       "motores": "1.2, 1.3 TDCi"
+      },
+      {
+       "id": "ford-ka-ka-ka",
+       "gen": "Ka+",
+       "anos": "2016–2020",
+       "motores": "1.2 Ti-VCT, 1.5 TDCi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Honda",
+   "pais": "Japón",
+   "modelos": [
+    {
+     "modelo": "Civic",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "honda-civic-fk-9",
+       "gen": "FK (9.ª)",
+       "anos": "2011–2017",
+       "motores": "1.4/1.8 i-VTEC, 1.6/2.2 i-DTEC"
+      },
+      {
+       "id": "honda-civic-fk-10",
+       "gen": "FK (10.ª)",
+       "anos": "2017–2021",
+       "motores": "1.0/1.5 VTEC Turbo, 2.0 Type R, 1.6 i-DTEC"
+      },
+      {
+       "id": "honda-civic-fl-11",
+       "gen": "FL (11.ª)",
+       "anos": "2022–",
+       "motores": "2.0 e:HEV, 2.0 Type R"
+      }
+     ]
+    },
+    {
+     "modelo": "Jazz",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "honda-jazz-ge",
+       "gen": "GE",
+       "anos": "2008–2015",
+       "motores": "1.2/1.4 i-VTEC, híbrido"
+      },
+      {
+       "id": "honda-jazz-gk",
+       "gen": "GK",
+       "anos": "2015–2020",
+       "motores": "1.3 i-VTEC"
+      },
+      {
+       "id": "honda-jazz-gr",
+       "gen": "GR",
+       "anos": "2020–",
+       "motores": "1.5 e:HEV"
+      }
+     ]
+    },
+    {
+     "modelo": "CR-V",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "honda-cr-v-re",
+       "gen": "RE",
+       "anos": "2006–2012",
+       "motores": "2.0 i-VTEC, 2.2 i-CTDi"
+      },
+      {
+       "id": "honda-cr-v-rm",
+       "gen": "RM",
+       "anos": "2012–2018",
+       "motores": "2.0 i-VTEC, 1.6/2.2 i-DTEC"
+      },
+      {
+       "id": "honda-cr-v-rw",
+       "gen": "RW",
+       "anos": "2018–2023",
+       "motores": "1.5 VTEC Turbo, 2.0 Hybrid"
+      },
+      {
+       "id": "honda-cr-v-rs",
+       "gen": "RS",
+       "anos": "2023–",
+       "motores": "2.0 e:HEV, e:PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "HR-V",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "honda-hr-v-ru",
+       "gen": "RU",
+       "anos": "2015–2021",
+       "motores": "1.5 i-VTEC, 1.6 i-DTEC"
+      },
+      {
+       "id": "honda-hr-v-rv",
+       "gen": "RV",
+       "anos": "2021–",
+       "motores": "1.5 e:HEV"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Hyundai",
+   "pais": "Corea del Sur",
+   "modelos": [
+    {
+     "modelo": "i10",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "hyundai-i10-ia",
+       "gen": "IA",
+       "anos": "2013–2019",
+       "motores": "1.0/1.2"
+      },
+      {
+       "id": "hyundai-i10-ac3",
+       "gen": "AC3",
+       "anos": "2019–",
+       "motores": "1.0/1.2"
+      }
+     ]
+    },
+    {
+     "modelo": "i20",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "hyundai-i20-gb",
+       "gen": "GB",
+       "anos": "2014–2020",
+       "motores": "1.0 T-GDi, 1.2/1.4, 1.1/1.4 CRDi"
+      },
+      {
+       "id": "hyundai-i20-bc3",
+       "gen": "BC3",
+       "anos": "2020–",
+       "motores": "1.0 T-GDi (48V), 1.2, 1.6 T-GDi N"
+      }
+     ]
+    },
+    {
+     "modelo": "i30",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "hyundai-i30-gd",
+       "gen": "GD",
+       "anos": "2011–2017",
+       "motores": "1.4/1.6 GDi, 1.6 CRDi"
+      },
+      {
+       "id": "hyundai-i30-pd",
+       "gen": "PD",
+       "anos": "2017–",
+       "motores": "1.0/1.4/1.5 T-GDi, 2.0 N, 1.6 CRDi"
+      }
+     ]
+    },
+    {
+     "modelo": "Kona",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "hyundai-kona-os",
+       "gen": "OS",
+       "anos": "2017–2023",
+       "motores": "1.0/1.6 T-GDi, 1.6 Hybrid, 1.6 CRDi, eléctrico"
+      },
+      {
+       "id": "hyundai-kona-sx2",
+       "gen": "SX2",
+       "anos": "2023–",
+       "motores": "1.0 T-GDi, 1.6 Hybrid, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Tucson",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "hyundai-tucson-tl",
+       "gen": "TL",
+       "anos": "2015–2020",
+       "motores": "1.6 GDi/T-GDi, 1.6/1.7/2.0 CRDi"
+      },
+      {
+       "id": "hyundai-tucson-nx4",
+       "gen": "NX4",
+       "anos": "2020–",
+       "motores": "1.6 T-GDi (mild/HEV/PHEV), 1.6 CRDi"
+      }
+     ]
+    },
+    {
+     "modelo": "ix35",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "hyundai-ix35-lm",
+       "gen": "LM",
+       "anos": "2010–2015",
+       "motores": "1.6 GDi, 2.0, 1.7/2.0 CRDi"
+      }
+     ]
+    },
+    {
+     "modelo": "Ioniq / Ioniq 5",
+     "segmento": "Compacto/SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "hyundai-ioniq-ioniq-5-ae-ioniq",
+       "gen": "AE (Ioniq)",
+       "anos": "2016–2022",
+       "motores": "1.6 Hybrid/PHEV, eléctrico"
+      },
+      {
+       "id": "hyundai-ioniq-ioniq-5-ne-ioniq-5",
+       "gen": "NE (Ioniq 5)",
+       "anos": "2021–",
+       "motores": "Eléctrico 125–239 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Santa Fe",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "hyundai-santa-fe-tm",
+       "gen": "TM",
+       "anos": "2018–2024",
+       "motores": "2.2 CRDi, 1.6 T-GDi HEV/PHEV"
+      },
+      {
+       "id": "hyundai-santa-fe-mx5",
+       "gen": "MX5",
+       "anos": "2024–",
+       "motores": "1.6 T-GDi HEV/PHEV"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Jaguar",
+   "pais": "Reino Unido",
+   "modelos": [
+    {
+     "modelo": "XE",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "jaguar-xe-x760",
+       "gen": "X760",
+       "anos": "2015–2024",
+       "motores": "2.0 Ingenium P/D"
+      }
+     ]
+    },
+    {
+     "modelo": "F-Pace",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "jaguar-f-pace-x761",
+       "gen": "X761",
+       "anos": "2016–",
+       "motores": "2.0 Ingenium P/D, 3.0 V6, P400e"
+      }
+     ]
+    },
+    {
+     "modelo": "E-Pace",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "jaguar-e-pace-x540",
+       "gen": "X540",
+       "anos": "2017–2024",
+       "motores": "2.0 Ingenium P/D, P300e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Jeep",
+   "pais": "EE. UU.",
+   "modelos": [
+    {
+     "modelo": "Renegade",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "jeep-renegade-bu",
+       "gen": "BU",
+       "anos": "2014–",
+       "motores": "1.0/1.3 Turbo, 1.4 MultiAir, 1.6/2.0 Multijet, 4xe"
+      }
+     ]
+    },
+    {
+     "modelo": "Compass",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "jeep-compass-mp",
+       "gen": "MP",
+       "anos": "2017–",
+       "motores": "1.3 Turbo, 1.4 MultiAir, 1.6/2.0 Multijet, 4xe"
+      }
+     ]
+    },
+    {
+     "modelo": "Avenger",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "jeep-avenger-i",
+       "gen": "I",
+       "anos": "2023–",
+       "motores": "1.2 Turbo, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Wrangler",
+     "segmento": "Todoterreno",
+     "generaciones": [
+      {
+       "id": "jeep-wrangler-jk",
+       "gen": "JK",
+       "anos": "2007–2018",
+       "motores": "3.6 V6, 2.8 CRD"
+      },
+      {
+       "id": "jeep-wrangler-jl",
+       "gen": "JL",
+       "anos": "2018–",
+       "motores": "2.0 Turbo, 2.2 Multijet, 4xe"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Kia",
+   "pais": "Corea del Sur",
+   "modelos": [
+    {
+     "modelo": "Picanto",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "kia-picanto-ta",
+       "gen": "TA",
+       "anos": "2011–2017",
+       "motores": "1.0/1.25"
+      },
+      {
+       "id": "kia-picanto-ja",
+       "gen": "JA",
+       "anos": "2017–",
+       "motores": "1.0/1.2, 1.0 T-GDi"
+      }
+     ]
+    },
+    {
+     "modelo": "Rio",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "kia-rio-ub",
+       "gen": "UB",
+       "anos": "2011–2017",
+       "motores": "1.2/1.4, 1.1/1.4 CRDi"
+      },
+      {
+       "id": "kia-rio-yb",
+       "gen": "YB",
+       "anos": "2017–2023",
+       "motores": "1.0 T-GDi, 1.2/1.4, 1.4 CRDi"
+      }
+     ]
+    },
+    {
+     "modelo": "Ceed",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "kia-ceed-jd",
+       "gen": "JD",
+       "anos": "2012–2018",
+       "motores": "1.0 T-GDi, 1.4/1.6 GDi, 1.4/1.6 CRDi"
+      },
+      {
+       "id": "kia-ceed-cd",
+       "gen": "CD",
+       "anos": "2018–",
+       "motores": "1.0/1.5 T-GDi, 1.6 CRDi, PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "Sportage",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "kia-sportage-sl",
+       "gen": "SL",
+       "anos": "2010–2015",
+       "motores": "1.6 GDi, 2.0, 1.7/2.0 CRDi"
+      },
+      {
+       "id": "kia-sportage-ql",
+       "gen": "QL",
+       "anos": "2015–2021",
+       "motores": "1.6 GDi/T-GDi, 1.6/1.7/2.0 CRDi"
+      },
+      {
+       "id": "kia-sportage-nq5",
+       "gen": "NQ5",
+       "anos": "2021–",
+       "motores": "1.6 T-GDi (mild/HEV/PHEV), 1.6 CRDi"
+      }
+     ]
+    },
+    {
+     "modelo": "Niro",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "kia-niro-de",
+       "gen": "DE",
+       "anos": "2016–2022",
+       "motores": "1.6 HEV/PHEV, e-Niro"
+      },
+      {
+       "id": "kia-niro-sg2",
+       "gen": "SG2",
+       "anos": "2022–",
+       "motores": "1.6 HEV/PHEV, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Stonic",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "kia-stonic-yb",
+       "gen": "YB",
+       "anos": "2017–",
+       "motores": "1.0 T-GDi (48V), 1.2/1.4, 1.6 CRDi"
+      }
+     ]
+    },
+    {
+     "modelo": "XCeed",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "kia-xceed-cd",
+       "gen": "CD",
+       "anos": "2019–",
+       "motores": "1.0/1.5 T-GDi, 1.6 CRDi, PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "EV6",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "kia-ev6-cv",
+       "gen": "CV",
+       "anos": "2021–",
+       "motores": "Eléctrico 125–430 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Sorento",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "kia-sorento-mq4",
+       "gen": "MQ4",
+       "anos": "2020–",
+       "motores": "2.2 CRDi, 1.6 T-GDi HEV/PHEV"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Lancia",
+   "pais": "Italia",
+   "modelos": [
+    {
+     "modelo": "Ypsilon",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "lancia-ypsilon-846",
+       "gen": "846",
+       "anos": "2011–2024",
+       "motores": "1.2, 0.9 TwinAir, 1.0 Hybrid, 1.3 Multijet"
+      },
+      {
+       "id": "lancia-ypsilon-v",
+       "gen": "V",
+       "anos": "2024–",
+       "motores": "1.2 Hybrid, eléctrico"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Land Rover",
+   "pais": "Reino Unido",
+   "modelos": [
+    {
+     "modelo": "Range Rover Evoque",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "land-rover-range-rover-evoque-l538",
+       "gen": "L538",
+       "anos": "2011–2019",
+       "motores": "2.0 Si4, 2.0/2.2 diésel"
+      },
+      {
+       "id": "land-rover-range-rover-evoque-l551",
+       "gen": "L551",
+       "anos": "2019–",
+       "motores": "P200/P250, D150/D180/D200, P300e"
+      }
+     ]
+    },
+    {
+     "modelo": "Discovery Sport",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "land-rover-discovery-sport-l550",
+       "gen": "L550",
+       "anos": "2014–",
+       "motores": "2.0 Ingenium P/D, P300e"
+      }
+     ]
+    },
+    {
+     "modelo": "Defender",
+     "segmento": "Todoterreno",
+     "generaciones": [
+      {
+       "id": "land-rover-defender-l663",
+       "gen": "L663",
+       "anos": "2020–",
+       "motores": "P300/P400, D200/D250/D300, P400e"
+      }
+     ]
+    },
+    {
+     "modelo": "Range Rover Sport",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "land-rover-range-rover-sport-l494",
+       "gen": "L494",
+       "anos": "2013–2022",
+       "motores": "3.0 V6, 5.0 V8, 3.0 SDV6, P400e"
+      },
+      {
+       "id": "land-rover-range-rover-sport-l461",
+       "gen": "L461",
+       "anos": "2022–",
+       "motores": "P400/P530, D300/D350, P460e/P550e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Lexus",
+   "pais": "Japón",
+   "modelos": [
+    {
+     "modelo": "UX",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "lexus-ux-za10",
+       "gen": "ZA10",
+       "anos": "2018–",
+       "motores": "250h / 300h híbrido, 300e eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "NX",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "lexus-nx-az10",
+       "gen": "AZ10",
+       "anos": "2014–2021",
+       "motores": "300h híbrido, 200t"
+      },
+      {
+       "id": "lexus-nx-az20",
+       "gen": "AZ20",
+       "anos": "2021–",
+       "motores": "350h, 450h+ PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "CT",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "lexus-ct-a10",
+       "gen": "A10",
+       "anos": "2011–2022",
+       "motores": "200h híbrido"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Mazda",
+   "pais": "Japón",
+   "modelos": [
+    {
+     "modelo": "Mazda2",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "mazda-mazda2-de",
+       "gen": "DE",
+       "anos": "2007–2014",
+       "motores": "1.3/1.5 MZR, 1.4/1.6 diésel"
+      },
+      {
+       "id": "mazda-mazda2-dj",
+       "gen": "DJ",
+       "anos": "2014–2024",
+       "motores": "1.5 Skyactiv-G, 1.5 Skyactiv-D"
+      },
+      {
+       "id": "mazda-mazda2-hybrid-xp210",
+       "gen": "Hybrid (XP210)",
+       "anos": "2022–",
+       "motores": "1.5 híbrido (base Toyota Yaris)"
+      }
+     ]
+    },
+    {
+     "modelo": "Mazda3",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "mazda-mazda3-bl",
+       "gen": "BL",
+       "anos": "2009–2013",
+       "motores": "1.6/2.0 MZR, 2.3 MPS, 1.6/2.2 diésel"
+      },
+      {
+       "id": "mazda-mazda3-bm-bn",
+       "gen": "BM/BN",
+       "anos": "2013–2019",
+       "motores": "1.5/2.0 Skyactiv-G, 1.5/2.2 Skyactiv-D"
+      },
+      {
+       "id": "mazda-mazda3-bp",
+       "gen": "BP",
+       "anos": "2019–",
+       "motores": "2.0/2.5 e-Skyactiv G/X, 1.8 Skyactiv-D"
+      }
+     ]
+    },
+    {
+     "modelo": "Mazda6",
+     "segmento": "Berlina/familiar",
+     "generaciones": [
+      {
+       "id": "mazda-mazda6-gh",
+       "gen": "GH",
+       "anos": "2007–2012",
+       "motores": "1.8/2.0/2.5 MZR, 2.0/2.2 diésel"
+      },
+      {
+       "id": "mazda-mazda6-gj-gl",
+       "gen": "GJ/GL",
+       "anos": "2012–2023",
+       "motores": "2.0/2.5 Skyactiv-G, 2.2 Skyactiv-D"
+      }
+     ]
+    },
+    {
+     "modelo": "CX-3",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "mazda-cx-3-dk",
+       "gen": "DK",
+       "anos": "2015–2022",
+       "motores": "2.0 Skyactiv-G, 1.5/1.8 Skyactiv-D"
+      }
+     ]
+    },
+    {
+     "modelo": "CX-30",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "mazda-cx-30-dm",
+       "gen": "DM",
+       "anos": "2019–",
+       "motores": "2.0/2.5 e-Skyactiv G/X, 1.8 Skyactiv-D"
+      }
+     ]
+    },
+    {
+     "modelo": "CX-5",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "mazda-cx-5-ke",
+       "gen": "KE",
+       "anos": "2012–2017",
+       "motores": "2.0/2.5 Skyactiv-G, 2.2 Skyactiv-D"
+      },
+      {
+       "id": "mazda-cx-5-kf",
+       "gen": "KF",
+       "anos": "2017–",
+       "motores": "2.0/2.5 Skyactiv-G, 2.2 Skyactiv-D"
+      }
+     ]
+    },
+    {
+     "modelo": "CX-60",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "mazda-cx-60-kh",
+       "gen": "KH",
+       "anos": "2022–",
+       "motores": "2.5 PHEV, 3.3 e-Skyactiv D"
+      }
+     ]
+    },
+    {
+     "modelo": "MX-5",
+     "segmento": "Roadster",
+     "generaciones": [
+      {
+       "id": "mazda-mx-5-nc",
+       "gen": "NC",
+       "anos": "2005–2015",
+       "motores": "1.8 MZR (126 cv), 2.0 MZR (160 cv)",
+       "mantenimiento": {
+        "bateria": "Panasonic 46B24L(S)-MF, 45 Ah, 330 A (equivalentes: Yuasa YBX5053, Varta B32)",
+        "aceite": "4,55 L con filtro (2.0, 6MT)",
+        "neumaticos": "205/50 R16 o 205/45 R17 · 2,0 bar",
+        "lamparas": "Carretera H9 (2005–08) / HB3 (2008–15) · Antiniebla H11",
+        "refrigerante": "Mazda FL22",
+        "verificado": true,
+        "fuente": "Datos verificados de la app (ver Mantenimiento)"
+       }
+      },
+      {
+       "id": "mazda-mx-5-nd",
+       "gen": "ND",
+       "anos": "2015–",
+       "motores": "1.5 Skyactiv-G, 2.0 Skyactiv-G"
+      }
+     ]
+    },
+    {
+     "modelo": "MX-30",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "mazda-mx-30-dr",
+       "gen": "DR",
+       "anos": "2020–",
+       "motores": "Eléctrico, R-EV (rotativo)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Mercedes-Benz",
+   "pais": "Alemania",
+   "modelos": [
+    {
+     "modelo": "Clase A",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "mercedes-benz-clase-a-w169",
+       "gen": "W169",
+       "anos": "2004–2012",
+       "motores": "A150/A170/A180/A200, A160/A180/A200 CDI"
+      },
+      {
+       "id": "mercedes-benz-clase-a-w176",
+       "gen": "W176",
+       "anos": "2012–2018",
+       "motores": "A160/A180/A200/A250, A45 AMG, A180d/A200d/A220d"
+      },
+      {
+       "id": "mercedes-benz-clase-a-w177",
+       "gen": "W177",
+       "anos": "2018–",
+       "motores": "A180/A200/A250, A35/A45 AMG, A180d/A200d, A250e"
+      }
+     ]
+    },
+    {
+     "modelo": "Clase B",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "mercedes-benz-clase-b-w246",
+       "gen": "W246",
+       "anos": "2011–2018",
+       "motores": "B180/B200, B180d/B200d/B220d"
+      },
+      {
+       "id": "mercedes-benz-clase-b-w247",
+       "gen": "W247",
+       "anos": "2018–",
+       "motores": "B180/B200, B180d/B200d, B250e"
+      }
+     ]
+    },
+    {
+     "modelo": "Clase C",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "mercedes-benz-clase-c-w204",
+       "gen": "W204",
+       "anos": "2007–2014",
+       "motores": "C180/C200/C250, C200 CDI/C220 CDI/C250 CDI"
+      },
+      {
+       "id": "mercedes-benz-clase-c-w205",
+       "gen": "W205",
+       "anos": "2014–2021",
+       "motores": "C180/C200/C300, C220d/C250d, C300e/C350e"
+      },
+      {
+       "id": "mercedes-benz-clase-c-w206",
+       "gen": "W206",
+       "anos": "2021–",
+       "motores": "C180/C200/C300, C220d/C300d, C300e"
+      }
+     ]
+    },
+    {
+     "modelo": "Clase E",
+     "segmento": "Berlina grande",
+     "generaciones": [
+      {
+       "id": "mercedes-benz-clase-e-w212",
+       "gen": "W212",
+       "anos": "2009–2016",
+       "motores": "E200/E250, E200 CDI/E220 CDI/E250 CDI/E350 CDI"
+      },
+      {
+       "id": "mercedes-benz-clase-e-w213",
+       "gen": "W213",
+       "anos": "2016–2023",
+       "motores": "E200/E300, E220d/E300d, E300e/E300de"
+      },
+      {
+       "id": "mercedes-benz-clase-e-w214",
+       "gen": "W214",
+       "anos": "2023–",
+       "motores": "E200, E220d, E300e"
+      }
+     ]
+    },
+    {
+     "modelo": "GLA",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "mercedes-benz-gla-x156",
+       "gen": "X156",
+       "anos": "2014–2019",
+       "motores": "GLA180/200/250, GLA200d/220d"
+      },
+      {
+       "id": "mercedes-benz-gla-h247",
+       "gen": "H247",
+       "anos": "2020–",
+       "motores": "GLA200, GLA200d, GLA250e"
+      }
+     ]
+    },
+    {
+     "modelo": "GLC",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "mercedes-benz-glc-x253",
+       "gen": "X253",
+       "anos": "2015–2022",
+       "motores": "GLC200/300, GLC220d/250d, GLC300e"
+      },
+      {
+       "id": "mercedes-benz-glc-x254",
+       "gen": "X254",
+       "anos": "2022–",
+       "motores": "GLC200/300, GLC220d, GLC300e"
+      }
+     ]
+    },
+    {
+     "modelo": "Vito/Clase V",
+     "segmento": "Furgoneta/monovolumen",
+     "generaciones": [
+      {
+       "id": "mercedes-benz-vito-clase-v-w447",
+       "gen": "W447",
+       "anos": "2014–",
+       "motores": "1.6/2.0/2.2 CDI, eVito"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "MG",
+   "pais": "China/Reino Unido",
+   "modelos": [
+    {
+     "modelo": "ZS",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "mg-zs-zs11",
+       "gen": "ZS11",
+       "anos": "2017–",
+       "motores": "1.0 T-GDI, 1.5, 1.5 Hybrid+, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "MG4",
+     "segmento": "Compacto eléctrico",
+     "generaciones": [
+      {
+       "id": "mg-mg4-eh32",
+       "gen": "EH32",
+       "anos": "2022–",
+       "motores": "Eléctrico 125–320 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "HS",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "mg-hs-as23",
+       "gen": "AS23",
+       "anos": "2019–",
+       "motores": "1.5 T-GDI, PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "MG3",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "mg-mg3-ii",
+       "gen": "II",
+       "anos": "2024–",
+       "motores": "1.5 Hybrid+"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "MINI",
+   "pais": "Reino Unido/Alemania",
+   "modelos": [
+    {
+     "modelo": "Mini 3/5 puertas",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "mini-mini-3-5-puertas-r56",
+       "gen": "R56",
+       "anos": "2006–2013",
+       "motores": "One/Cooper 1.4-1.6, Cooper S 1.6 Turbo, Cooper D"
+      },
+      {
+       "id": "mini-mini-3-5-puertas-f55-f56",
+       "gen": "F55/F56",
+       "anos": "2014–2024",
+       "motores": "One/Cooper 1.2-1.5, Cooper S 2.0, JCW, Cooper D, Cooper SE"
+      },
+      {
+       "id": "mini-mini-3-5-puertas-j01-f66",
+       "gen": "J01/F66",
+       "anos": "2024–",
+       "motores": "Cooper C/S, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Countryman",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "mini-countryman-r60",
+       "gen": "R60",
+       "anos": "2010–2016",
+       "motores": "One/Cooper 1.6, Cooper S, Cooper D/SD"
+      },
+      {
+       "id": "mini-countryman-f60",
+       "gen": "F60",
+       "anos": "2017–2024",
+       "motores": "One/Cooper 1.5, Cooper S 2.0, Cooper D/SD, SE ALL4"
+      },
+      {
+       "id": "mini-countryman-u25",
+       "gen": "U25",
+       "anos": "2024–",
+       "motores": "C, S, D, eléctrico"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Mitsubishi",
+   "pais": "Japón",
+   "modelos": [
+    {
+     "modelo": "ASX",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "mitsubishi-asx-ga",
+       "gen": "GA",
+       "anos": "2010–2023",
+       "motores": "1.6/1.8/2.0, 1.6/1.8/2.2 DI-D"
+      },
+      {
+       "id": "mitsubishi-asx-ii-base-captur",
+       "gen": "II (base Captur)",
+       "anos": "2023–",
+       "motores": "1.0/1.3 Turbo, Hybrid, PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "Outlander",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "mitsubishi-outlander-gf-gg",
+       "gen": "GF/GG",
+       "anos": "2012–2021",
+       "motores": "2.0/2.2/2.4, 2.2 DI-D, PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "Space Star",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "mitsubishi-space-star-a05a",
+       "gen": "A05A",
+       "anos": "2012–",
+       "motores": "1.0/1.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Nissan",
+   "pais": "Japón",
+   "modelos": [
+    {
+     "modelo": "Micra",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "nissan-micra-k13",
+       "gen": "K13",
+       "anos": "2010–2017",
+       "motores": "1.2 / 1.2 DIG-S"
+      },
+      {
+       "id": "nissan-micra-k14",
+       "gen": "K14",
+       "anos": "2017–2023",
+       "motores": "0.9 IG-T, 1.0, 1.0 IG-T, 1.5 dCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Juke",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "nissan-juke-f15",
+       "gen": "F15",
+       "anos": "2010–2019",
+       "motores": "1.6, 1.6 DIG-T, 1.2 DIG-T, 1.5 dCi"
+      },
+      {
+       "id": "nissan-juke-f16",
+       "gen": "F16",
+       "anos": "2019–",
+       "motores": "1.0 DIG-T, 1.6 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Qashqai",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "nissan-qashqai-j10",
+       "gen": "J10",
+       "anos": "2007–2013",
+       "motores": "1.6/2.0, 1.5/1.6/2.0 dCi"
+      },
+      {
+       "id": "nissan-qashqai-j11",
+       "gen": "J11",
+       "anos": "2013–2021",
+       "motores": "1.2/1.3/1.6 DIG-T, 1.5/1.6 dCi"
+      },
+      {
+       "id": "nissan-qashqai-j12",
+       "gen": "J12",
+       "anos": "2021–",
+       "motores": "1.3 DIG-T mild hybrid, e-Power"
+      }
+     ]
+    },
+    {
+     "modelo": "X-Trail",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "nissan-x-trail-t32",
+       "gen": "T32",
+       "anos": "2014–2022",
+       "motores": "1.6 DIG-T, 1.6/2.0 dCi"
+      },
+      {
+       "id": "nissan-x-trail-t33",
+       "gen": "T33",
+       "anos": "2022–",
+       "motores": "1.5 e-Power, mild hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Leaf",
+     "segmento": "Compacto eléctrico",
+     "generaciones": [
+      {
+       "id": "nissan-leaf-ze0",
+       "gen": "ZE0",
+       "anos": "2010–2017",
+       "motores": "Eléctrico 24–30 kWh"
+      },
+      {
+       "id": "nissan-leaf-ze1",
+       "gen": "ZE1",
+       "anos": "2017–",
+       "motores": "Eléctrico 40–62 kWh"
+      }
+     ]
+    },
+    {
+     "modelo": "Note",
+     "segmento": "Monovolumen pequeño",
+     "generaciones": [
+      {
+       "id": "nissan-note-e12",
+       "gen": "E12",
+       "anos": "2013–2017",
+       "motores": "1.2, 1.2 DIG-S, 1.5 dCi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Opel",
+   "pais": "Alemania",
+   "modelos": [
+    {
+     "modelo": "Corsa",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "opel-corsa-d",
+       "gen": "D",
+       "anos": "2006–2014",
+       "motores": "1.0/1.2/1.4, 1.6 Turbo, 1.3/1.7 CDTI"
+      },
+      {
+       "id": "opel-corsa-e",
+       "gen": "E",
+       "anos": "2014–2019",
+       "motores": "1.0 Turbo, 1.2/1.4, 1.3 CDTI"
+      },
+      {
+       "id": "opel-corsa-f",
+       "gen": "F",
+       "anos": "2019–",
+       "motores": "1.2 (PSA), 1.5 Diesel, Corsa-e"
+      }
+     ]
+    },
+    {
+     "modelo": "Astra",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "opel-astra-h",
+       "gen": "H",
+       "anos": "2004–2014",
+       "motores": "1.4/1.6/1.8, 1.3/1.7/1.9 CDTI"
+      },
+      {
+       "id": "opel-astra-j",
+       "gen": "J",
+       "anos": "2009–2015",
+       "motores": "1.4 Turbo, 1.6, 1.7/2.0 CDTI"
+      },
+      {
+       "id": "opel-astra-k",
+       "gen": "K",
+       "anos": "2015–2021",
+       "motores": "1.0/1.4 Turbo, 1.6 CDTI, 1.2/1.5 (2019+)"
+      },
+      {
+       "id": "opel-astra-l",
+       "gen": "L",
+       "anos": "2021–",
+       "motores": "1.2 Turbo, 1.5 Diesel, PHEV, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Mokka",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "opel-mokka-x",
+       "gen": "X",
+       "anos": "2012–2019",
+       "motores": "1.4 Turbo, 1.6, 1.6/1.7 CDTI"
+      },
+      {
+       "id": "opel-mokka-b",
+       "gen": "B",
+       "anos": "2020–",
+       "motores": "1.2 Turbo, 1.5 Diesel, Mokka-e"
+      }
+     ]
+    },
+    {
+     "modelo": "Crossland",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "opel-crossland-x",
+       "gen": "X",
+       "anos": "2017–2024",
+       "motores": "1.2 Turbo, 1.5/1.6 Diesel"
+      }
+     ]
+    },
+    {
+     "modelo": "Grandland",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "opel-grandland-x",
+       "gen": "X",
+       "anos": "2017–2024",
+       "motores": "1.2 Turbo, 1.5 Diesel, PHEV"
+      },
+      {
+       "id": "opel-grandland-ii",
+       "gen": "II",
+       "anos": "2024–",
+       "motores": "1.2 Hybrid, PHEV, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Insignia",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "opel-insignia-a",
+       "gen": "A",
+       "anos": "2008–2017",
+       "motores": "1.4/1.6/2.0 Turbo, 2.0 CDTI"
+      },
+      {
+       "id": "opel-insignia-b",
+       "gen": "B",
+       "anos": "2017–2022",
+       "motores": "1.5/2.0 Turbo, 1.6/2.0 CDTI"
+      }
+     ]
+    },
+    {
+     "modelo": "Zafira",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "opel-zafira-b",
+       "gen": "B",
+       "anos": "2005–2014",
+       "motores": "1.6/1.8, 1.7/1.9 CDTI"
+      },
+      {
+       "id": "opel-zafira-c-tourer",
+       "gen": "C (Tourer)",
+       "anos": "2011–2019",
+       "motores": "1.4/1.6 Turbo, 1.6/2.0 CDTI"
+      }
+     ]
+    },
+    {
+     "modelo": "Meriva",
+     "segmento": "Monovolumen pequeño",
+     "generaciones": [
+      {
+       "id": "opel-meriva-b",
+       "gen": "B",
+       "anos": "2010–2017",
+       "motores": "1.4 Turbo, 1.3/1.6/1.7 CDTI"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Peugeot",
+   "pais": "Francia",
+   "modelos": [
+    {
+     "modelo": "208",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "peugeot-208-i",
+       "gen": "I",
+       "anos": "2012–2019",
+       "motores": "1.0/1.2 PureTech, 1.6 THP, 1.4/1.6 HDi-BlueHDi"
+      },
+      {
+       "id": "peugeot-208-ii",
+       "gen": "II",
+       "anos": "2019–",
+       "motores": "1.2 PureTech, 1.5 BlueHDi, e-208 eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "308",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "peugeot-308-i-t7",
+       "gen": "I (T7)",
+       "anos": "2007–2013",
+       "motores": "1.4/1.6 VTi, 1.6 THP, 1.6/2.0 HDi"
+      },
+      {
+       "id": "peugeot-308-ii-t9",
+       "gen": "II (T9)",
+       "anos": "2013–2021",
+       "motores": "1.2 PureTech, 1.6 THP, 1.5/1.6/2.0 BlueHDi"
+      },
+      {
+       "id": "peugeot-308-iii-p5",
+       "gen": "III (P5)",
+       "anos": "2021–",
+       "motores": "1.2 PureTech/Hybrid, 1.5 BlueHDi, PHEV, e-308"
+      }
+     ]
+    },
+    {
+     "modelo": "2008",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "peugeot-2008-i",
+       "gen": "I",
+       "anos": "2013–2019",
+       "motores": "1.2 PureTech, 1.6 VTi, 1.6 BlueHDi"
+      },
+      {
+       "id": "peugeot-2008-ii",
+       "gen": "II",
+       "anos": "2019–",
+       "motores": "1.2 PureTech, 1.5 BlueHDi, e-2008"
+      }
+     ]
+    },
+    {
+     "modelo": "3008",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "peugeot-3008-i",
+       "gen": "I",
+       "anos": "2009–2016",
+       "motores": "1.6 VTi/THP, 1.6/2.0 HDi, HYbrid4"
+      },
+      {
+       "id": "peugeot-3008-ii",
+       "gen": "II",
+       "anos": "2016–2023",
+       "motores": "1.2 PureTech, 1.6 THP, 1.5/2.0 BlueHDi, Hybrid"
+      },
+      {
+       "id": "peugeot-3008-iii",
+       "gen": "III",
+       "anos": "2024–",
+       "motores": "1.2 Hybrid, PHEV, e-3008"
+      }
+     ]
+    },
+    {
+     "modelo": "5008",
+     "segmento": "SUV 7 plazas",
+     "generaciones": [
+      {
+       "id": "peugeot-5008-ii",
+       "gen": "II",
+       "anos": "2017–2023",
+       "motores": "1.2 PureTech, 1.6 THP, 1.5/2.0 BlueHDi"
+      },
+      {
+       "id": "peugeot-5008-iii",
+       "gen": "III",
+       "anos": "2024–",
+       "motores": "1.2 Hybrid, PHEV, e-5008"
+      }
+     ]
+    },
+    {
+     "modelo": "207",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "peugeot-207-i",
+       "gen": "I",
+       "anos": "2006–2014",
+       "motores": "1.4/1.6 VTi, 1.6 THP, 1.4/1.6 HDi"
+      }
+     ]
+    },
+    {
+     "modelo": "508",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "peugeot-508-i",
+       "gen": "I",
+       "anos": "2010–2018",
+       "motores": "1.6 THP, 1.6/2.0/2.2 HDi"
+      },
+      {
+       "id": "peugeot-508-ii",
+       "gen": "II",
+       "anos": "2018–",
+       "motores": "1.6 PureTech, 1.5/2.0 BlueHDi, Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Rifter/Partner",
+     "segmento": "Furgoneta/combi",
+     "generaciones": [
+      {
+       "id": "peugeot-rifter-partner-k9",
+       "gen": "K9",
+       "anos": "2018–",
+       "motores": "1.2 PureTech, 1.5 BlueHDi, eléctrico"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Porsche",
+   "pais": "Alemania",
+   "modelos": [
+    {
+     "modelo": "911",
+     "segmento": "Deportivo",
+     "generaciones": [
+      {
+       "id": "porsche-911-997",
+       "gen": "997",
+       "anos": "2004–2012",
+       "motores": "3.6/3.8 bóxer, turbo"
+      },
+      {
+       "id": "porsche-911-991",
+       "gen": "991",
+       "anos": "2011–2019",
+       "motores": "3.4/3.8 bóxer, 3.0/3.8 turbo"
+      },
+      {
+       "id": "porsche-911-992",
+       "gen": "992",
+       "anos": "2019–",
+       "motores": "3.0 biturbo, 4.0 GT3, T-Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Cayenne",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "porsche-cayenne-92a",
+       "gen": "92A",
+       "anos": "2010–2017",
+       "motores": "3.0/3.6 V6, 4.8 V8, 3.0/4.2 diésel, híbrido"
+      },
+      {
+       "id": "porsche-cayenne-9y0",
+       "gen": "9Y0",
+       "anos": "2017–",
+       "motores": "3.0 V6, 4.0 V8, E-Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Macan",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "porsche-macan-95b",
+       "gen": "95B",
+       "anos": "2014–2024",
+       "motores": "2.0 T, 2.9/3.0 V6"
+      },
+      {
+       "id": "porsche-macan-xab",
+       "gen": "XAB",
+       "anos": "2024–",
+       "motores": "Eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "718 Boxster/Cayman",
+     "segmento": "Deportivo",
+     "generaciones": [
+      {
+       "id": "porsche-718-boxster-cayman-982",
+       "gen": "982",
+       "anos": "2016–",
+       "motores": "2.0/2.5 turbo bóxer, 4.0 bóxer"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Renault",
+   "pais": "Francia",
+   "modelos": [
+    {
+     "modelo": "Clio",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "renault-clio-iii",
+       "gen": "III",
+       "anos": "2005–2012",
+       "motores": "1.2 16V/TCe, 1.4/1.6, 1.5 dCi"
+      },
+      {
+       "id": "renault-clio-iv",
+       "gen": "IV",
+       "anos": "2012–2019",
+       "motores": "0.9 TCe, 1.2 TCe, 1.5 dCi"
+      },
+      {
+       "id": "renault-clio-v",
+       "gen": "V",
+       "anos": "2019–",
+       "motores": "1.0 SCe/TCe, 1.3 TCe, 1.6 E-Tech híbrido, 1.5 Blue dCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Mégane",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "renault-m-gane-iii",
+       "gen": "III",
+       "anos": "2008–2016",
+       "motores": "1.2/1.4 TCe, 1.6 16V, 1.5/1.9 dCi"
+      },
+      {
+       "id": "renault-m-gane-iv",
+       "gen": "IV",
+       "anos": "2016–2023",
+       "motores": "1.2/1.3 TCe, 1.6 TCe, 1.5/1.6 dCi, E-Tech PHEV"
+      },
+      {
+       "id": "renault-m-gane-e-tech-electric",
+       "gen": "E-Tech Electric",
+       "anos": "2022–",
+       "motores": "Eléctrico 96–160 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Captur",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "renault-captur-i",
+       "gen": "I",
+       "anos": "2013–2019",
+       "motores": "0.9/1.2 TCe, 1.5 dCi"
+      },
+      {
+       "id": "renault-captur-ii",
+       "gen": "II",
+       "anos": "2019–",
+       "motores": "1.0/1.3 TCe, 1.6 E-Tech híbrido/PHEV, 1.5 Blue dCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Kadjar",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "renault-kadjar-i",
+       "gen": "I",
+       "anos": "2015–2022",
+       "motores": "1.2/1.3 TCe, 1.5/1.7 dCi"
+      }
+     ]
+    },
+    {
+     "modelo": "Austral",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "renault-austral-i",
+       "gen": "I",
+       "anos": "2022–",
+       "motores": "1.2 TCe mild hybrid, 1.2 E-Tech full hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Arkana",
+     "segmento": "SUV coupé",
+     "generaciones": [
+      {
+       "id": "renault-arkana-i",
+       "gen": "I",
+       "anos": "2019–",
+       "motores": "1.3 TCe mild hybrid, 1.6 E-Tech"
+      }
+     ]
+    },
+    {
+     "modelo": "Scénic",
+     "segmento": "Monovolumen/SUV",
+     "generaciones": [
+      {
+       "id": "renault-sc-nic-iii",
+       "gen": "III",
+       "anos": "2009–2016",
+       "motores": "1.2/1.4 TCe, 1.5/1.9 dCi"
+      },
+      {
+       "id": "renault-sc-nic-iv",
+       "gen": "IV",
+       "anos": "2016–2022",
+       "motores": "1.2/1.3 TCe, 1.5/1.7 dCi"
+      },
+      {
+       "id": "renault-sc-nic-e-tech-electric",
+       "gen": "E-Tech Electric",
+       "anos": "2024–",
+       "motores": "Eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Twingo",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "renault-twingo-ii",
+       "gen": "II",
+       "anos": "2007–2014",
+       "motores": "1.2 16V"
+      },
+      {
+       "id": "renault-twingo-iii",
+       "gen": "III",
+       "anos": "2014–2024",
+       "motores": "0.9 TCe, 1.0 SCe, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Zoe",
+     "segmento": "Urbano eléctrico",
+     "generaciones": [
+      {
+       "id": "renault-zoe-i",
+       "gen": "I",
+       "anos": "2012–2024",
+       "motores": "Eléctrico 22–52 kWh"
+      }
+     ]
+    },
+    {
+     "modelo": "Kangoo",
+     "segmento": "Furgoneta/combi",
+     "generaciones": [
+      {
+       "id": "renault-kangoo-ii",
+       "gen": "II",
+       "anos": "2008–2021",
+       "motores": "1.2 TCe, 1.6 16V, 1.5 dCi"
+      },
+      {
+       "id": "renault-kangoo-iii",
+       "gen": "III",
+       "anos": "2021–",
+       "motores": "1.3 TCe, 1.5 Blue dCi, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Laguna",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "renault-laguna-iii",
+       "gen": "III",
+       "anos": "2007–2015",
+       "motores": "2.0 16V/T, 1.5/2.0 dCi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "SEAT",
+   "pais": "España",
+   "modelos": [
+    {
+     "modelo": "Ibiza",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "seat-ibiza-6j",
+       "gen": "6J",
+       "anos": "2008–2017",
+       "motores": "1.2/1.4 MPI, 1.2 TSI, 1.4 TSI, 1.2/1.6 TDI"
+      },
+      {
+       "id": "seat-ibiza-6f-kj1",
+       "gen": "6F (KJ1)",
+       "anos": "2017–",
+       "motores": "1.0 MPI, 1.0 TSI, 1.5 TSI, 1.6 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "León",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "seat-le-n-1p",
+       "gen": "1P",
+       "anos": "2005–2012",
+       "motores": "1.4/1.6 MPI, 1.2/1.4/1.8/2.0 TSI, 1.6/1.9/2.0 TDI"
+      },
+      {
+       "id": "seat-le-n-5f",
+       "gen": "5F",
+       "anos": "2012–2020",
+       "motores": "1.2/1.4/1.5 TSI, 1.8/2.0 TSI, 1.6/2.0 TDI"
+      },
+      {
+       "id": "seat-le-n-kl",
+       "gen": "KL",
+       "anos": "2020–",
+       "motores": "1.0/1.5 TSI-eTSI, 2.0 TSI, 2.0 TDI, 1.4/1.5 e-Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Arona",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "seat-arona-kj7",
+       "gen": "KJ7",
+       "anos": "2017–",
+       "motores": "1.0 TSI, 1.5 TSI, 1.6 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Ateca",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "seat-ateca-kh7",
+       "gen": "KH7",
+       "anos": "2016–",
+       "motores": "1.0/1.5 TSI, 2.0 TSI, 1.6/2.0 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Tarraco",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "seat-tarraco-kn2",
+       "gen": "KN2",
+       "anos": "2018–2024",
+       "motores": "1.5/2.0 TSI, 2.0 TDI, 1.4 e-Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Alhambra",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "seat-alhambra-7n",
+       "gen": "7N",
+       "anos": "2010–2020",
+       "motores": "1.4/2.0 TSI, 2.0 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Toledo",
+     "segmento": "Berlina",
+     "generaciones": [
+      {
+       "id": "seat-toledo-kg3",
+       "gen": "KG3",
+       "anos": "2012–2019",
+       "motores": "1.0/1.2/1.4 TSI, 1.6 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Mii",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "seat-mii-kf1",
+       "gen": "KF1",
+       "anos": "2011–2021",
+       "motores": "1.0 MPI, eléctrico"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "smart",
+   "pais": "Alemania/China",
+   "modelos": [
+    {
+     "modelo": "fortwo",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "smart-fortwo-451",
+       "gen": "451",
+       "anos": "2007–2014",
+       "motores": "1.0 MHD/Turbo, 0.8 CDI, ED"
+      },
+      {
+       "id": "smart-fortwo-453",
+       "gen": "453",
+       "anos": "2014–2024",
+       "motores": "0.9 Turbo, 1.0, EQ eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "#1",
+     "segmento": "SUV pequeño eléctrico",
+     "generaciones": [
+      {
+       "id": "smart-1-hx11",
+       "gen": "HX11",
+       "anos": "2022–",
+       "motores": "Eléctrico 200–315 kW"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Suzuki",
+   "pais": "Japón",
+   "modelos": [
+    {
+     "modelo": "Swift",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "suzuki-swift-az",
+       "gen": "AZ",
+       "anos": "2017–2024",
+       "motores": "1.2 Dualjet (SHVS), 1.0 Boosterjet, 1.4 Boosterjet Sport"
+      },
+      {
+       "id": "suzuki-swift-azg",
+       "gen": "AZG",
+       "anos": "2024–",
+       "motores": "1.2 mild hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Vitara",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "suzuki-vitara-ly",
+       "gen": "LY",
+       "anos": "2015–",
+       "motores": "1.0/1.4 Boosterjet, 1.6, 1.5 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "S-Cross",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "suzuki-s-cross-jy",
+       "gen": "JY",
+       "anos": "2013–2021",
+       "motores": "1.0/1.4 Boosterjet, 1.6, 1.6 DDiS"
+      },
+      {
+       "id": "suzuki-s-cross-ii",
+       "gen": "II",
+       "anos": "2021–",
+       "motores": "1.4 Boosterjet mild hybrid, 1.5 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Ignis",
+     "segmento": "Urbano SUV",
+     "generaciones": [
+      {
+       "id": "suzuki-ignis-mf",
+       "gen": "MF",
+       "anos": "2016–",
+       "motores": "1.2 Dualjet (SHVS)"
+      }
+     ]
+    },
+    {
+     "modelo": "Jimny",
+     "segmento": "Todoterreno",
+     "generaciones": [
+      {
+       "id": "suzuki-jimny-jb74",
+       "gen": "JB74",
+       "anos": "2018–",
+       "motores": "1.5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Tesla",
+   "pais": "EE. UU.",
+   "modelos": [
+    {
+     "modelo": "Model 3",
+     "segmento": "Berlina eléctrica",
+     "generaciones": [
+      {
+       "id": "tesla-model-3-i",
+       "gen": "I",
+       "anos": "2019–2023",
+       "motores": "Eléctrico RWD / Long Range / Performance"
+      },
+      {
+       "id": "tesla-model-3-highland",
+       "gen": "Highland",
+       "anos": "2023–",
+       "motores": "Eléctrico RWD / Long Range / Performance"
+      }
+     ]
+    },
+    {
+     "modelo": "Model Y",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "tesla-model-y-i",
+       "gen": "I",
+       "anos": "2021–2025",
+       "motores": "Eléctrico RWD / Long Range / Performance"
+      },
+      {
+       "id": "tesla-model-y-juniper",
+       "gen": "Juniper",
+       "anos": "2025–",
+       "motores": "Eléctrico"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Toyota",
+   "pais": "Japón",
+   "modelos": [
+    {
+     "modelo": "Yaris",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "toyota-yaris-xp90",
+       "gen": "XP90",
+       "anos": "2005–2011",
+       "motores": "1.0/1.33 VVT-i, 1.4 D-4D"
+      },
+      {
+       "id": "toyota-yaris-xp130",
+       "gen": "XP130",
+       "anos": "2011–2020",
+       "motores": "1.0/1.33/1.5 VVT-i, 1.5 Hybrid, 1.4 D-4D"
+      },
+      {
+       "id": "toyota-yaris-xp210",
+       "gen": "XP210",
+       "anos": "2020–",
+       "motores": "1.5 Hybrid, 1.0/1.5 gasolina, GR 1.6 Turbo"
+      }
+     ]
+    },
+    {
+     "modelo": "Yaris Cross",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "toyota-yaris-cross-xp210",
+       "gen": "XP210",
+       "anos": "2021–",
+       "motores": "1.5 Hybrid, 1.5 gasolina"
+      }
+     ]
+    },
+    {
+     "modelo": "Corolla",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "toyota-corolla-e210",
+       "gen": "E210",
+       "anos": "2018–",
+       "motores": "1.2 Turbo, 1.8/2.0 Hybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Auris",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "toyota-auris-e150",
+       "gen": "E150",
+       "anos": "2006–2012",
+       "motores": "1.33/1.6 VVT-i, 1.8 Hybrid, 1.4/2.0 D-4D"
+      },
+      {
+       "id": "toyota-auris-e180",
+       "gen": "E180",
+       "anos": "2012–2018",
+       "motores": "1.2 Turbo, 1.33/1.6, 1.8 Hybrid, 1.4/1.6/2.0 D-4D"
+      }
+     ]
+    },
+    {
+     "modelo": "C-HR",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "toyota-c-hr-ax10",
+       "gen": "AX10",
+       "anos": "2016–2023",
+       "motores": "1.2 Turbo, 1.8/2.0 Hybrid"
+      },
+      {
+       "id": "toyota-c-hr-ax20",
+       "gen": "AX20",
+       "anos": "2023–",
+       "motores": "1.8/2.0 Hybrid, PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "RAV4",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "toyota-rav4-xa40",
+       "gen": "XA40",
+       "anos": "2013–2018",
+       "motores": "2.0 VVT-i, 2.5 Hybrid, 2.0/2.2 D-4D"
+      },
+      {
+       "id": "toyota-rav4-xa50",
+       "gen": "XA50",
+       "anos": "2018–",
+       "motores": "2.5 Hybrid, PHEV"
+      }
+     ]
+    },
+    {
+     "modelo": "Prius",
+     "segmento": "Berlina híbrida",
+     "generaciones": [
+      {
+       "id": "toyota-prius-xw30",
+       "gen": "XW30",
+       "anos": "2009–2015",
+       "motores": "1.8 Hybrid"
+      },
+      {
+       "id": "toyota-prius-xw50",
+       "gen": "XW50",
+       "anos": "2015–2022",
+       "motores": "1.8 Hybrid, Plug-in"
+      }
+     ]
+    },
+    {
+     "modelo": "Aygo / Aygo X",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "toyota-aygo-aygo-x-ab40",
+       "gen": "AB40",
+       "anos": "2014–2022",
+       "motores": "1.0 VVT-i"
+      },
+      {
+       "id": "toyota-aygo-aygo-x-ab70-aygo-x",
+       "gen": "AB70 (Aygo X)",
+       "anos": "2022–",
+       "motores": "1.0 VVT-i"
+      }
+     ]
+    },
+    {
+     "modelo": "Land Cruiser",
+     "segmento": "Todoterreno",
+     "generaciones": [
+      {
+       "id": "toyota-land-cruiser-j150",
+       "gen": "J150",
+       "anos": "2009–2024",
+       "motores": "2.8/3.0 D-4D, 4.0 V6"
+      },
+      {
+       "id": "toyota-land-cruiser-j250",
+       "gen": "J250",
+       "anos": "2024–",
+       "motores": "2.8 D-4D"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Volkswagen",
+   "pais": "Alemania",
+   "modelos": [
+    {
+     "modelo": "Polo",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "volkswagen-polo-6r-6c",
+       "gen": "6R/6C",
+       "anos": "2009–2017",
+       "motores": "1.2 MPI, 1.2/1.4 TSI, 1.2/1.4/1.6 TDI"
+      },
+      {
+       "id": "volkswagen-polo-aw",
+       "gen": "AW",
+       "anos": "2017–",
+       "motores": "1.0 MPI, 1.0/1.5 TSI, 2.0 TSI GTI, 1.6 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Golf",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "volkswagen-golf-mk5-1k",
+       "gen": "Mk5 (1K)",
+       "anos": "2003–2008",
+       "motores": "1.4/1.6 FSI, 1.4 TSI, 2.0 TFSI, 1.9/2.0 TDI"
+      },
+      {
+       "id": "volkswagen-golf-mk6-5k",
+       "gen": "Mk6 (5K)",
+       "anos": "2008–2012",
+       "motores": "1.2/1.4 TSI, 2.0 TSI, 1.6/2.0 TDI"
+      },
+      {
+       "id": "volkswagen-golf-mk7-5g",
+       "gen": "Mk7 (5G)",
+       "anos": "2012–2020",
+       "motores": "1.0/1.2/1.4/1.5 TSI, 2.0 TSI, 1.6/2.0 TDI, e-Golf"
+      },
+      {
+       "id": "volkswagen-golf-mk8-cd1",
+       "gen": "Mk8 (CD1)",
+       "anos": "2019–",
+       "motores": "1.0/1.5 TSI-eTSI, 2.0 TSI, 2.0 TDI, 1.4/1.5 eHybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "T-Roc",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "volkswagen-t-roc-a1",
+       "gen": "A1",
+       "anos": "2017–",
+       "motores": "1.0/1.5 TSI, 2.0 TSI, 1.6/2.0 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "T-Cross",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "volkswagen-t-cross-c1",
+       "gen": "C1",
+       "anos": "2018–",
+       "motores": "1.0/1.5 TSI, 1.6 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Tiguan",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "volkswagen-tiguan-5n",
+       "gen": "5N",
+       "anos": "2007–2016",
+       "motores": "1.4/2.0 TSI, 2.0 TDI"
+      },
+      {
+       "id": "volkswagen-tiguan-ad1",
+       "gen": "AD1",
+       "anos": "2016–2023",
+       "motores": "1.4/1.5/2.0 TSI, 2.0 TDI, 1.4 eHybrid"
+      },
+      {
+       "id": "volkswagen-tiguan-ct1",
+       "gen": "CT1",
+       "anos": "2024–",
+       "motores": "1.5 eTSI, 2.0 TSI, 2.0 TDI, 1.5 eHybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Passat",
+     "segmento": "Berlina/familiar",
+     "generaciones": [
+      {
+       "id": "volkswagen-passat-b6",
+       "gen": "B6",
+       "anos": "2005–2010",
+       "motores": "1.4 TSI, 1.6/2.0 FSI, 1.9/2.0 TDI"
+      },
+      {
+       "id": "volkswagen-passat-b7",
+       "gen": "B7",
+       "anos": "2010–2014",
+       "motores": "1.4/1.8 TSI, 1.6/2.0 TDI"
+      },
+      {
+       "id": "volkswagen-passat-b8",
+       "gen": "B8",
+       "anos": "2014–2023",
+       "motores": "1.4/1.5/2.0 TSI, 1.6/2.0 TDI, GTE"
+      },
+      {
+       "id": "volkswagen-passat-b9",
+       "gen": "B9",
+       "anos": "2024–",
+       "motores": "1.5 eTSI, 2.0 TSI, 2.0 TDI, 1.5 eHybrid"
+      }
+     ]
+    },
+    {
+     "modelo": "Touran",
+     "segmento": "Monovolumen",
+     "generaciones": [
+      {
+       "id": "volkswagen-touran-1t",
+       "gen": "1T",
+       "anos": "2003–2015",
+       "motores": "1.4 TSI, 1.6/1.9/2.0 TDI"
+      },
+      {
+       "id": "volkswagen-touran-5t",
+       "gen": "5T",
+       "anos": "2015–",
+       "motores": "1.0/1.2/1.4/1.5 TSI, 1.6/2.0 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "ID.3",
+     "segmento": "Compacto eléctrico",
+     "generaciones": [
+      {
+       "id": "volkswagen-id-3-e1",
+       "gen": "E1",
+       "anos": "2020–",
+       "motores": "Eléctrico 107–240 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "ID.4",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "volkswagen-id-4-e21",
+       "gen": "E21",
+       "anos": "2020–",
+       "motores": "Eléctrico 109–250 kW"
+      }
+     ]
+    },
+    {
+     "modelo": "Up!",
+     "segmento": "Urbano",
+     "generaciones": [
+      {
+       "id": "volkswagen-up-aa",
+       "gen": "AA",
+       "anos": "2011–2023",
+       "motores": "1.0 MPI, 1.0 TSI, eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "Taigo",
+     "segmento": "SUV coupé",
+     "generaciones": [
+      {
+       "id": "volkswagen-taigo-cs1",
+       "gen": "CS1",
+       "anos": "2021–",
+       "motores": "1.0/1.5 TSI"
+      }
+     ]
+    },
+    {
+     "modelo": "Touareg",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "volkswagen-touareg-7p",
+       "gen": "7P",
+       "anos": "2010–2018",
+       "motores": "3.0 TDI, 4.2 V8, híbrido"
+      },
+      {
+       "id": "volkswagen-touareg-cr",
+       "gen": "CR",
+       "anos": "2018–",
+       "motores": "3.0 TDI, 3.0 TSI, eHybrid"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Volvo",
+   "pais": "Suecia",
+   "modelos": [
+    {
+     "modelo": "V40",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "volvo-v40-525-526",
+       "gen": "525/526",
+       "anos": "2012–2019",
+       "motores": "T2/T3/T4/T5, D2/D3/D4"
+      }
+     ]
+    },
+    {
+     "modelo": "XC40",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "volvo-xc40-536",
+       "gen": "536",
+       "anos": "2017–",
+       "motores": "B3/B4, T3/T4/T5, D3/D4, Recharge eléctrico"
+      }
+     ]
+    },
+    {
+     "modelo": "XC60",
+     "segmento": "SUV",
+     "generaciones": [
+      {
+       "id": "volvo-xc60-156",
+       "gen": "156",
+       "anos": "2008–2017",
+       "motores": "T5/T6, D3/D4/D5"
+      },
+      {
+       "id": "volvo-xc60-246",
+       "gen": "246",
+       "anos": "2017–",
+       "motores": "B4/B5/B6, D4/D5, T6/T8 Recharge"
+      }
+     ]
+    },
+    {
+     "modelo": "XC90",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "volvo-xc90-256",
+       "gen": "256",
+       "anos": "2015–",
+       "motores": "B5/B6, D5, T8 Recharge"
+      }
+     ]
+    },
+    {
+     "modelo": "S60/V60",
+     "segmento": "Berlina/familiar",
+     "generaciones": [
+      {
+       "id": "volvo-s60-v60-y20-2",
+       "gen": "Y20 (2.ª)",
+       "anos": "2010–2018",
+       "motores": "T3/T4/T5, D2/D3/D4/D5"
+      },
+      {
+       "id": "volvo-s60-v60-z20-3",
+       "gen": "Z20 (3.ª)",
+       "anos": "2018–",
+       "motores": "B3/B4/B5, D3/D4, T6/T8 Recharge"
+      }
+     ]
+    },
+    {
+     "modelo": "EX30",
+     "segmento": "SUV pequeño eléctrico",
+     "generaciones": [
+      {
+       "id": "volvo-ex30-i",
+       "gen": "I",
+       "anos": "2023–",
+       "motores": "Eléctrico 200–315 kW"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "marca": "Škoda",
+   "pais": "Chequia",
+   "modelos": [
+    {
+     "modelo": "Fabia",
+     "segmento": "Utilitario",
+     "generaciones": [
+      {
+       "id": "skoda-fabia-5j",
+       "gen": "5J",
+       "anos": "2007–2014",
+       "motores": "1.2 MPI/TSI, 1.4 TDI, 1.6 TDI"
+      },
+      {
+       "id": "skoda-fabia-nj",
+       "gen": "NJ",
+       "anos": "2014–2021",
+       "motores": "1.0 MPI/TSI, 1.2 TSI, 1.4 TDI"
+      },
+      {
+       "id": "skoda-fabia-pj",
+       "gen": "PJ",
+       "anos": "2021–",
+       "motores": "1.0 MPI/TSI, 1.5 TSI"
+      }
+     ]
+    },
+    {
+     "modelo": "Octavia",
+     "segmento": "Compacto/familiar",
+     "generaciones": [
+      {
+       "id": "skoda-octavia-1z-mk2",
+       "gen": "1Z (Mk2)",
+       "anos": "2004–2013",
+       "motores": "1.2/1.4/1.8 TSI, 1.6/1.9/2.0 TDI"
+      },
+      {
+       "id": "skoda-octavia-5e-mk3",
+       "gen": "5E (Mk3)",
+       "anos": "2013–2020",
+       "motores": "1.0/1.2/1.4/1.5 TSI, 1.6/2.0 TDI"
+      },
+      {
+       "id": "skoda-octavia-nx-mk4",
+       "gen": "NX (Mk4)",
+       "anos": "2020–",
+       "motores": "1.0/1.5 TSI-eTSI, 2.0 TSI, 2.0 TDI, iV"
+      }
+     ]
+    },
+    {
+     "modelo": "Kamiq",
+     "segmento": "SUV pequeño",
+     "generaciones": [
+      {
+       "id": "skoda-kamiq-nw4",
+       "gen": "NW4",
+       "anos": "2019–",
+       "motores": "1.0/1.5 TSI, 1.6 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Karoq",
+     "segmento": "SUV compacto",
+     "generaciones": [
+      {
+       "id": "skoda-karoq-nu",
+       "gen": "NU",
+       "anos": "2017–",
+       "motores": "1.0/1.5 TSI, 2.0 TSI, 1.6/2.0 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Kodiaq",
+     "segmento": "SUV grande",
+     "generaciones": [
+      {
+       "id": "skoda-kodiaq-ns",
+       "gen": "NS",
+       "anos": "2016–2024",
+       "motores": "1.4/1.5/2.0 TSI, 2.0 TDI"
+      },
+      {
+       "id": "skoda-kodiaq-ps",
+       "gen": "PS",
+       "anos": "2024–",
+       "motores": "1.5 eTSI, 2.0 TSI, 2.0 TDI, iV"
+      }
+     ]
+    },
+    {
+     "modelo": "Superb",
+     "segmento": "Berlina/familiar",
+     "generaciones": [
+      {
+       "id": "skoda-superb-3t",
+       "gen": "3T",
+       "anos": "2008–2015",
+       "motores": "1.4/1.8 TSI, 1.6/2.0 TDI"
+      },
+      {
+       "id": "skoda-superb-3v",
+       "gen": "3V",
+       "anos": "2015–2023",
+       "motores": "1.4/1.5/2.0 TSI, 1.6/2.0 TDI, iV"
+      },
+      {
+       "id": "skoda-superb-b9",
+       "gen": "B9",
+       "anos": "2024–",
+       "motores": "1.5 eTSI, 2.0 TSI, 2.0 TDI, iV"
+      }
+     ]
+    },
+    {
+     "modelo": "Scala",
+     "segmento": "Compacto",
+     "generaciones": [
+      {
+       "id": "skoda-scala-nw1",
+       "gen": "NW1",
+       "anos": "2019–",
+       "motores": "1.0/1.5 TSI, 1.6 TDI"
+      }
+     ]
+    },
+    {
+     "modelo": "Enyaq",
+     "segmento": "SUV eléctrico",
+     "generaciones": [
+      {
+       "id": "skoda-enyaq-5a",
+       "gen": "5A",
+       "anos": "2021–",
+       "motores": "Eléctrico 109–250 kW"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

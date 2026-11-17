@@ -96,6 +96,7 @@ class PlanoPainter extends CustomPainter {
   final double margenSup, margenInf;
   final bool miniatura;
   final bool cromado;
+  final double grosor;
 
   PlanoPainter({
     required this.cam,
@@ -108,6 +109,7 @@ class PlanoPainter extends CustomPainter {
     this.margenInf = 58,
     this.miniatura = false,
     this.cromado = false,
+    this.grosor = 0.6,
   });
 
   Encaje encaje(Size size) =>
@@ -127,7 +129,7 @@ class PlanoPainter extends CustomPainter {
           ..moveTo(pa.dx, pa.dy)
           ..lineTo(pb.dx, pb.dy);
       }
-      canvas.drawPath(path, _stroke(Colores.linea, 0.6));
+      canvas.drawPath(path, _stroke(Colores.linea, grosor));
       return;
     }
 

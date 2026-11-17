@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../data/db.dart';
@@ -17,6 +19,39 @@ class PlanoScreenState extends State<PlanoScreen> {
   Vista _vista = vistas.first;
   Camara? _libre;
   bool _meca = true, _cable = true;
+  bool _tocandoPlano = false; // bloquea el desplazamiento de la lista mientras se gira el coche
+  Timer? _giroAuto;
+
+  Camara get _camActual => _libre ?? _vista.cam;
+
+  void _girar(double grados) {
+    final c = _camActual;
+    var y = c.yaw + grados;
+    y = ((y + 540) % 360) - 180;
+    setState(() => _libre = Camara(y, c.pitch, 1));
+  }
+
+  void _alternarGiroAuto() {
+    if (_giroAuto != null) {
+      _giroAuto!.cancel();
+      setState(() => _giroAuto = null);
+      return;
+    }
+    final c = _camActual;
+    setState(() => _libre = Camara(c.yaw, c.pitch < 15 ? 15 : c.pitch, 1));
+    _giroAuto = Timer.periodic(const Duration(milliseconds: 40), (_) => _girar(1.2));
+  }
+
+  void _pararGiroAuto() {
+    _giroAuto?.cancel();
+    _giroAuto = null;
+  }
+
+  @override
+  void dispose() {
+    _giroAuto?.cancel();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -44,7 +79,7 @@ class PlanoScreenState extends State<PlanoScreen> {
     final lista = [..._zonas]..sort((a, b) => a.estado.index.compareTo(b.estado.index));
     return RefreshIndicator(
       onRefresh: recargar,
-      child: ListView(padding: const EdgeInsets.fromLTRB(16, 12, 16, 28), children: [
+      child: ListView(physics: _tocandoPlano ? const NeverScrollableScrollPhysics() : null, padding: const EdgeInsets.fromLTRB(16, 12, 16, 28), children: [
         Row(children: [
           for (final e in Estado.values)
             Padding(
@@ -60,6 +95,7 @@ class PlanoScreenState extends State<PlanoScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 3),
                 child: InkWell(
                   onTap: () => setState(() {
+                    _pararGiroAuto();
                     _vista = v;
                     _libre = null;
                   }),
@@ -80,30 +116,42 @@ class PlanoScreenState extends State<PlanoScreen> {
             ),
         ]),
         const SizedBox(height: 8),
-        Row(children: [
-          const Text('GIRAR', style: TextStyle(fontSize: 11, fontFamily: 'monospace', color: Color(0xFFC4D6F0))),
-          Expanded(
-            child: Slider(
-              min: -180,
-              max: 180,
-              value: (_libre ?? _vista.cam).yaw.clamp(-180, 180).toDouble(),
-              onChanged: (y) => setState(() => _libre = Camara(y, (_libre ?? _vista.cam).pitch, 1)),
-            ),
+        Wrap(spacing: 6, runSpacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
+          IconButton.outlined(
+            tooltip: 'Girar a la izquierda',
+            icon: const Icon(Icons.rotate_left),
+            onPressed: () {
+              _pararGiroAuto();
+              _girar(-30);
+            },
           ),
+          IconButton.outlined(
+            tooltip: 'Girar a la derecha',
+            icon: const Icon(Icons.rotate_right),
+            onPressed: () {
+              _pararGiroAuto();
+              _girar(30);
+            },
+          ),
+          FilterChip(label: const Text('Girar solo'), selected: _giroAuto != null, onSelected: (_) => _alternarGiroAuto()),
           FilterChip(label: const Text('Mecánica'), selected: _meca, onSelected: (v) => setState(() => _meca = v)),
-          const SizedBox(width: 6),
           FilterChip(label: const Text('Cableado'), selected: _cable, onSelected: (v) => setState(() => _cable = v)),
-        ]),
-        Align(
-          alignment: Alignment.centerRight,
-          child: TextButton(
+          TextButton(
             onPressed: () => setState(() {
               estiloCromado.value = !estiloCromado.value;
             }),
-            child: Text(estiloCromado.value ? 'Ver Modelo 1' : 'Ver cromado'),
+            child: Text(estiloCromado.value ? 'Ver Azul simple' : 'Ver cromado'),
           ),
-        ),
-        SizedBox(
+        ]),
+        const SizedBox(height: 6),
+        Listener(
+          onPointerDown: (_) {
+            _pararGiroAuto();
+            setState(() => _tocandoPlano = true);
+          },
+          onPointerUp: (_) => setState(() => _tocandoPlano = false),
+          onPointerCancel: (_) => setState(() => _tocandoPlano = false),
+          child: SizedBox(
           height: 330,
           child: PlanoView(
             zonas: _zonas,
@@ -116,6 +164,7 @@ class PlanoScreenState extends State<PlanoScreen> {
             cableado: _cable,
             cromado: estiloCromado.value,
           ),
+        ),
         ),
         const SizedBox(height: 12),
         if (sel != null) _Ficha(zona: sel, onCambio: recargar),
