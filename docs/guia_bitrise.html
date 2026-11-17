@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía para dummies: Bitrise</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F6F8FC;--ink:#14213D;--muted:#4A5872;--line:#D8E0EE;--blue:#0F3A80;--blue2:#E7EEFA;--ok:#0E7A47;--okbg:#E3F5EB;--warn:#8A5A00;--warnbg:#FFF4D6;--bad:#A12626;--badbg:#FDE8E8;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+header{background:var(--blue);color:#fff;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:20px 20px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header .wrap{padding:44px 20px 36px}
+h1{font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 10px}
+header p{margin:0;color:#D6E4FA;max-width:640px}
+nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 20px}
+nav a{white-space:nowrap;text-decoration:none;color:var(--blue);font-size:14px;font-weight:500;padding:6px 10px;border-radius:6px;background:var(--blue2)}
+nav a:hover{background:#D6E2F7}
+main{padding:28px 0 60px}
+section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;margin:0 0 20px}
+h2{font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;font-size:24px;margin:0 0 4px;display:flex;align-items:center;gap:12px}
+.num{flex:none;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-size:16px}
+.time{color:var(--muted);font-size:14px;margin:0 0 16px}
+h3{font-size:17px;margin:22px 0 8px}
+ol,ul{padding-left:22px;margin:8px 0}
+li{margin:6px 0}
+code{font-family:'IBM Plex Mono',monospace;font-size:14px;background:var(--blue2);padding:1px 6px;border-radius:4px}
+.cmd{position:relative;margin:10px 0;background:#0B1E3F;color:#E6EEFB;border-radius:8px;padding:14px 92px 14px 16px;font-family:'IBM Plex Mono',monospace;font-size:14px;white-space:pre-wrap;word-break:break-word}
+.cmd button{position:absolute;top:8px;right:8px;min-height:32px;padding:0 12px;border:1px solid #4E6A99;border-radius:6px;background:#17325F;color:#fff;font:500 13px Inter,sans-serif;cursor:pointer}
+.cmd button:hover{background:#21437D}
+.note,.warn,.bad,.ok{border-radius:8px;padding:12px 14px;margin:12px 0;font-size:15px}
+.note{background:var(--blue2)}
+.warn{background:var(--warnbg);color:#4A3500}
+.bad{background:var(--badbg);color:#5E1414}
+.ok{background:var(--okbg);color:#0B4A2C}
+.note b,.warn b,.bad b,.ok b{display:block;margin-bottom:2px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--blue2);font-weight:600}
+.check{list-style:none;padding-left:0}
+.check li{display:flex;gap:10px;align-items:flex-start}
+.check input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--blue)}
+.check label{cursor:pointer}
+.tabs{display:flex;gap:6px;margin:12px 0 0}
+.tabs button{min-height:40px;padding:0 16px;border:1px solid var(--line);border-bottom:none;border-radius:8px 8px 0 0;background:#EEF2F8;color:var(--ink);font:600 14px Inter,sans-serif;cursor:pointer}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--blue);border-color:var(--blue)}
+.panel{border:1px solid var(--blue);border-radius:0 8px 8px 8px;padding:6px 16px 12px}
+.panel[hidden]{display:none}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:14px 0}
+.flow div{border:1px solid var(--line);border-radius:8px;padding:10px;background:#FAFCFF;font-size:14px}
+.flow b{display:block;color:var(--blue);font-family:'Space Grotesk',sans-serif}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 40px}
+a{color:var(--blue)}
+@media (max-width:560px){section{padding:18px}.cmd{padding-right:16px;padding-top:46px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Guía para dummies: compilar "Diagnóstico de Averías Fácil" con Bitrise</h1>
+<p>Bitrise compila la app en la nube. No necesitas instalar Flutter, Android Studio ni nada en tu ordenador: solo un navegador y tus cuentas de GitHub y Bitrise.</p>
+</div></header>
+
+<nav aria-label="Pasos"><div class="wrap">
+<a href="#antes">0 · Antes</a>
+<a href="#alta">1 · Alta</a>
+<a href="#app">2 · Añadir la app</a>
+<a href="#compilar">3 · Compilar</a>
+<a href="#apk">4 · Instalar el APK</a>
+<a href="#coche">5 · Probar en el coche</a>
+<a href="#errores">Si falla</a>
+<a href="#cambios">Cambios futuros</a>
+</div></nav>
+
+<main><div class="wrap">
+
+<section id="antes">
+<h2><span class="num">0</span>Antes de empezar</h2>
+<p class="time">Lectura: 2 minutos</p>
+<ul class="check">
+<li><input type="checkbox" id="b1"><label for="b1">El código ya está en GitHub: <b>github.com/enricgilargelaget/mx5diag</b>, rama <b>main</b>. <b>No tienes que subir nada a Bitrise</b>: Bitrise lo descarga solo de GitHub.</label></li>
+<li><input type="checkbox" id="b2"><label for="b2">Un <b>móvil Android</b> para instalar la app (iPhone lo dejaremos para más adelante: requiere cuenta de desarrollador de Apple).</label></li>
+<li><input type="checkbox" id="b3"><label for="b3">Tu adaptador <b>ELM327 Bluetooth</b> para probarla en el coche.</label></li>
+</ul>
+<h3>Tres palabras que verás en Bitrise</h3>
+<table>
+<tr><th>Palabra</th><th>Qué significa</th></tr>
+<tr><td><b>Build</b></td><td>Una compilación: Bitrise coge el código de GitHub y fabrica la app.</td></tr>
+<tr><td><b>Workflow</b></td><td>La receta de pasos que sigue. La nuestra se llama <b>android_apk</b> y ya está escrita en el archivo <code>bitrise.yml</code> del repositorio.</td></tr>
+<tr><td><b>Artifact</b> (artefacto)</td><td>El <b>resultado</b> que sale al final: el archivo <b>mx5diag.apk</b> para instalar. No es algo que tengas que subir tú.</td></tr>
+<tr><td><b>Stack / Machine</b></td><td>El ordenador virtual en la nube donde compila (por ejemplo "Mac Intel 14 GB" o "Ubuntu"). <b>No es tu ordenador</b>; no necesitas tener nada parecido.</td></tr>
+</table>
+</section>
+
+<section id="alta">
+<h2><span class="num">1</span>Darte de alta en Bitrise</h2>
+<p class="time">Tiempo: 3 minutos · Solo la primera vez</p>
+<ol>
+<li>Ve a <a href="https://bitrise.io">bitrise.io</a> y pulsa <b>Sign up</b> (o <b>Get started</b>).</li>
+<li>Elige <b>Sign up with GitHub</b> y acepta los permisos que pida.</li>
+<li>Si pregunta por un plan, elige el <b>gratuito</b> (Hobby / Free). Si pregunta nombre de "workspace", pon el que quieras, por ejemplo <code>enric</code>.</li>
+</ol>
+<div class="ok"><b>Listo cuando…</b>Ves el panel de Bitrise (Dashboard) con un botón para añadir apps.</div>
+</section>
+
+<section id="app">
+<h2><span class="num">2</span>Añadir la app a Bitrise</h2>
+<p class="time">Tiempo: 5 minutos · Solo la primera vez</p>
+<ol>
+<li>Pulsa <b>Add new app</b> (o <b>+ New project</b>). Si te ofrece un asistente "Web UI" o "Classic", elige el asistente web normal.</li>
+<li><b>Privacidad:</b> elige <b>Private</b>.</li>
+<li><b>Repositorio:</b> elige <b>GitHub</b> → <b>enricgilargelaget/mx5diag</b>. Si no aparece, pulsa el enlace para dar acceso a Bitrise a tus repositorios de GitHub y selecciónalo.</li>
+<li><b>Acceso al repositorio (SSH):</b> deja la opción automática (<b>Add own SSH</b> no hace falta) y pulsa <b>Next</b>.</li>
+<li><b>Rama (branch):</b> escribe <b>main</b>.</li>
+<li>Bitrise analizará el proyecto. Cuando pregunte por la configuración:
+<ul>
+<li>Si ofrece <b>"Use the bitrise.yml from repository"</b> (o "Store in repository"), <b>elige esa</b>. Es lo ideal: ya trae nuestra receta.</li>
+<li>Si solo ofrece su configuración automática de Flutter, acéptala; luego en el paso 3 te digo cómo usar la nuestra.</li>
+</ul></li>
+<li>Si pregunta por <b>Stack</b> o <b>máquina</b>, deja la que proponga (Mac o Ubuntu valen las dos para Android).</li>
+<li>Si pregunta por un <b>webhook</b>, pulsa <b>Register webhook</b>: así compilará solo cada vez que yo suba cambios a GitHub.</li>
+<li>Termina el asistente. Puede que lance una primera compilación automáticamente; no pasa nada.</li>
+</ol>
+<div class="note"><b>¿Te pide subir un archivo, un "keystore" o un "artifact"?</b>Sáltalo (Skip). Para probar en tu móvil no hace falta.</div>
+</section>
+
+<section id="compilar">
+<h2><span class="num">3</span>Lanzar la compilación</h2>
+<p class="time">Tiempo: 1 minuto + 5–15 minutos de espera</p>
+<ol>
+<li>En Bitrise abre la app <b>mx5diag</b>.</li>
+<li>Pulsa <b>Start build</b> (o <b>Run workflow</b>, arriba a la derecha).</li>
+<li>Rama: <b>main</b>. Workflow: <b>android_apk</b>.</li>
+<li>Pulsa <b>Start build</b> y espera. Verás los pasos ponerse en verde uno a uno:
+<div class="flow">
+<div><b>1</b>Git clone</div>
+<div><b>2</b>Instalar Flutter</div>
+<div><b>3</b>Preparar plataformas y permisos</div>
+<div><b>4</b>Pruebas</div>
+<div><b>5</b>Compilar APK</div>
+<div><b>6</b>Deploy</div>
+</div></li>
+</ol>
+<div class="warn"><b>¿No aparece el workflow "android_apk"?</b>Es que Bitrise usa su configuración en lugar de la nuestra. Ve a <b>Workflows</b> (o <b>Configuration</b>) → pestaña <b>bitrise.yml</b> → busca la opción <b>"Store in app repository"</b> / <b>"Use repository bitrise.yml"</b> y actívala. Si no la encuentras, mándame una captura de esa pantalla.</div>
+</section>
+
+<section id="apk">
+<h2><span class="num">4</span>Descargar e instalar el APK</h2>
+<p class="time">Tiempo: 3 minutos</p>
+<ol>
+<li>Cuando la compilación salga en <b>verde (Success)</b>, entra en ella y abre la pestaña <b>Artifacts</b>.</li>
+<li>Descarga <b>mx5diag.apk</b>. Lo más fácil: abre bitrise.io <b>desde el propio móvil Android</b> y descárgalo ahí directamente.</li>
+<li>Abre el archivo descargado. Android dirá que es de "origen desconocido": pulsa <b>Ajustes</b> → activa <b>Permitir de esta fuente</b> → vuelve atrás → <b>Instalar</b>.</li>
+<li>Si Google Play Protect avisa, pulsa <b>Más detalles → Instalar de todas formas</b> (es tu propia app, sin firmar para la tienda).</li>
+</ol>
+<div class="ok"><b>Listo cuando…</b>Se abre la app <b>Diagnóstico de Averías Fácil</b> con el coche cromado sobre fondo azul y las 5 pestañas abajo. El botón <b>Ver Modelo 1</b> cambia al estilo blueprint.</div>
+</section>
+
+<section id="coche">
+<h2><span class="num">5</span>Probar con el coche</h2>
+<p class="time">Tiempo: 5 minutos</p>
+<ol>
+<li>Enchufa el ELM327 en el conector OBD-II (bajo el salpicadero, lado del conductor) y pon el <b>contacto</b>.</li>
+<li><b>No</b> lo emparejes desde los Ajustes de Bluetooth del móvil.</li>
+<li>En la app: pestaña <b>OBD</b> → <b>Buscar adaptador OBD (BLE)</b> → acepta los permisos → toca el adaptador (suele llamarse <b>OBDII</b>).</li>
+<li>Prueba <b>Leer códigos</b>, <b>Medir batería</b> y <b>Datos en vivo</b>. Vuelve a la pestaña <b>Plano</b>: las piezas se colorean según lo leído.</li>
+</ol>
+<div class="warn"><b>Si la búsqueda no encuentra el adaptador</b>Probablemente tu ELM327 es de Bluetooth clásico, no BLE. Dímelo y adapto la app para Android con Bluetooth clásico.</div>
+</section>
+
+<section id="errores">
+<h2><span class="num">?</span>Si la compilación sale en rojo</h2>
+<ol>
+<li>Entra en la compilación fallida y haz clic en el <b>paso en rojo</b>.</li>
+<li>Baja hasta el final del registro y copia las <b>últimas 30–40 líneas</b> (o haz una captura).</li>
+<li>Pégamelas en el chat. Yo corrijo el código y lo subo a GitHub.</li>
+<li>En Bitrise pulsa <b>Rebuild</b> (o lanza otra vez <b>Start build</b>). Si registraste el webhook, empezará sola.</li>
+</ol>
+<table>
+<tr><th>Error típico</th><th>Qué hacer</th></tr>
+<tr><td>"Repository not found" o fallo en <b>Git clone</b></td><td>Bitrise no tiene acceso al repositorio: en la app → <b>Settings → Repository</b>, vuelve a conectar GitHub.</td></tr>
+<tr><td>Falla en <b>Pruebas</b> o <b>Compilar APK</b></td><td>Es un error de código: pásame el registro.</td></tr>
+<tr><td>"Out of build minutes"</td><td>Se han gastado los minutos gratuitos del mes: espera al mes siguiente o mejora el plan.</td></tr>
+</table>
+</section>
+
+<section id="cambios">
+<h2><span class="num">+</span>Cuando quieras cambios en la app</h2>
+<ol>
+<li>Pídemelos en el chat (por ejemplo "añade tal pantalla").</li>
+<li>Yo modifico el código y lo subo a GitHub.</li>
+<li>Bitrise compila solo (o pulsas <b>Start build</b>) y descargas el nuevo APK, que se instala encima del anterior <b>sin perder tu historial</b>.</li>
+</ol>
+</section>
+
+</div></main>
+<footer>Guía de Bitrise para el proyecto mx5diag · Las casillas se pueden marcar para seguir tu progreso.</footer>
+<script>
+document.querySelectorAll('.cmd').forEach(function(box){
+  var btn=box.querySelector('button');
+  btn.addEventListener('click',function(){
+    var text=Array.from(box.childNodes).filter(function(n){return n!==btn;}).map(function(n){return n.textContent;}).join('').trim();
+    var done=function(){btn.textContent='Copiado';setTimeout(function(){btn.textContent='Copiar';},1500);};
+    try{navigator.clipboard.writeText(text).then(done,function(){btn.textContent='Selecciona y copia';});}catch(e){btn.textContent='Selecciona y copia';}
+  });
+});
+document.querySelectorAll('.tabs').forEach(function(tl){
+  var tabs=tl.querySelectorAll('[role=tab]');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(o){o.setAttribute('aria-selected',o===t?'true':'false');document.getElementById(o.getAttribute('aria-controls')).hidden=o!==t;});
+    });
+  });
+});
+try{
+  document.querySelectorAll('.check input').forEach(function(c){
+    c.checked=localStorage.getItem('guia-'+c.id)==='1';
+    c.addEventListener('change',function(){try{localStorage.setItem('guia-'+c.id,c.checked?'1':'0');}catch(e){}});
+  });
+}catch(e){}
+</script>
+</body>
+</html>

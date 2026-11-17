@@ -6,7 +6,7 @@ import 'screens/mantenimiento_screen.dart';
 import 'screens/obd_screen.dart';
 import 'screens/plano_screen.dart';
 import 'screens/recambios_screen.dart';
-import 'viewer/plano_view.dart' show Colores;
+import 'viewer/plano_view.dart' show Colores, estiloCromado;
 
 void main() => runApp(const Mx5DiagApp());
 
@@ -16,16 +16,24 @@ class Mx5DiagApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final base = ThemeData.dark(useMaterial3: true);
-    return MaterialApp(
-      title: 'Plano de diagnóstico',
-      debugShowCheckedModeBanner: false,
-      theme: base.copyWith(
-        scaffoldBackgroundColor: Colores.fondo,
-        colorScheme: base.colorScheme.copyWith(primary: Colores.linea, onPrimary: const Color(0xFF0A2A5E), surface: const Color(0xFF0C2F69)),
-        appBarTheme: const AppBarTheme(backgroundColor: Colores.fondo, elevation: 0),
-        navigationBarTheme: const NavigationBarThemeData(backgroundColor: Color(0xFF0B2C63)),
-      ),
-      home: const Inicio(),
+    return ValueListenableBuilder<bool>(
+      valueListenable: estiloCromado,
+      builder: (context, cromado, _) {
+        // Cromado: azul más claro y suave. Modelo 1: azul blueprint original.
+        final fondo = cromado ? const Color(0xFF2F4C70) : Colores.fondo;
+        final barra = cromado ? const Color(0xFF243E60) : const Color(0xFF0B2C63);
+        return MaterialApp(
+          title: 'Diagnóstico de Averías Fácil',
+          debugShowCheckedModeBanner: false,
+          theme: base.copyWith(
+            scaffoldBackgroundColor: fondo,
+            colorScheme: base.colorScheme.copyWith(primary: Colores.linea, onPrimary: const Color(0xFF0A2A5E), surface: barra),
+            appBarTheme: AppBarTheme(backgroundColor: fondo, elevation: 0),
+            navigationBarTheme: NavigationBarThemeData(backgroundColor: barra),
+          ),
+          home: const Inicio(),
+        );
+      },
     );
   }
 }
@@ -41,7 +49,7 @@ class _InicioState extends State<Inicio> {
   final _elm = Elm327();
   final _plano = GlobalKey<PlanoScreenState>();
 
-  static const _titulos = ['Plano de diagnóstico', 'Códigos de avería', 'Mantenimiento', 'Recambios', 'OBD-II'];
+  static const _titulos = ['Diagnóstico de Averías Fácil', 'Códigos de avería', 'Mantenimiento', 'Recambios', 'OBD-II'];
 
   @override
   Widget build(BuildContext context) {

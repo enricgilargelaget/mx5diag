@@ -1,4 +1,4 @@
-# Plano de diagnóstico (Flutter · Android + iPhone)
+# Diagnóstico de Averías Fácil (Flutter · Android + iPhone)
 
 App de diagnóstico visual del coche: plano 3D tipo blueprint con zonas en rojo, amarillo y verde,
 lectura OBD-II con adaptador ELM327 Bluetooth LE y base de datos **100 % offline**.

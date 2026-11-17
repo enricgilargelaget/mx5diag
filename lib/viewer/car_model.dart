@@ -18,6 +18,10 @@ class CarModel {
   final List<Seg> mech = [];
   final List<Seg> wire = [];
   final List<Contorno> contornos = [];
+  /// Caras de la carrocería (cuadriláteros) para el acabado cromado.
+  final List<List<V3>> piel = [];
+  /// Contorno del cristal del parabrisas.
+  List<V3> cristal = [];
   String? _tag;
 
   static final CarModel instance = CarModel._build();
@@ -152,6 +156,15 @@ class CarModel {
       secs.add((l: lado(1), r: lado(-1), rim: rim));
     }
 
+    for (var i = 0; i < secs.length - 1; i++) {
+      for (final (a, b) in [(secs[i].l, secs[i + 1].l), (secs[i].r, secs[i + 1].r)]) {
+        for (var j = 0; j < a.length - 1; j++) {
+          final p0 = a[j], p1 = a[j + 1], p2 = b[j + 1], p3 = b[j];
+          if (p0 != null && p1 != null && p2 != null && p3 != null) piel.add([p0, p1, p2, p3]);
+        }
+      }
+    }
+
     for (var i = 0; i < secs.length; i++) {
       if (i % 4 != 0 && i != secs.length - 1) continue;
       final s = secs[i];
@@ -192,6 +205,7 @@ class CarModel {
         });
     _poly(body, parabrisas(1), closed: true);
     _poly(body, parabrisas(0.9), closed: true);
+    cristal = parabrisas(0.9);
 
     for (final sd in [1.0, -1.0]) {
       _poly(body, List.generate(17, (k) {

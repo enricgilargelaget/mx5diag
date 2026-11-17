@@ -84,6 +84,9 @@ class Encaje {
   }
 }
 
+/// Estilo del plano: true = cromado (por defecto), false = Modelo 1 (blueprint azul).
+final estiloCromado = ValueNotifier<bool>(true);
+
 class PlanoPainter extends CustomPainter {
   final Camara cam;
   final List<Zona> zonas;
@@ -92,6 +95,7 @@ class PlanoPainter extends CustomPainter {
   final String? cota;
   final double margenSup, margenInf;
   final bool miniatura;
+  final bool cromado;
 
   PlanoPainter({
     required this.cam,
@@ -103,6 +107,7 @@ class PlanoPainter extends CustomPainter {
     this.margenSup = 58,
     this.margenInf = 58,
     this.miniatura = false,
+    this.cromado = false,
   });
 
   Encaje encaje(Size size) =>
@@ -147,11 +152,13 @@ class PlanoPainter extends CustomPainter {
       return p;
     }
 
-    canvas.drawPath(lejos, _stroke(Colores.linea.withOpacity(0.3), 0.7));
-    if (mecanica) canvas.drawPath(trazar(modelo.mech.where((sg) => sg.$3 == null).toList()), _stroke(Colores.meca.withOpacity(0.9), 0.9));
+    if (cromado) _pintarCromado(canvas, e, modelo);
+    final lc = cromado ? const Color(0xFFEEF3FA) : Colores.linea;
+    canvas.drawPath(lejos, _stroke(lc.withOpacity(cromado ? 0.1 : 0.3), 0.7));
+    if (mecanica) canvas.drawPath(trazar(modelo.mech.where((sg) => sg.$3 == null).toList()), _stroke(cromado ? const Color(0xFF8792A3).withOpacity(0.7) : Colores.meca.withOpacity(0.9), 0.9));
     if (cableado) _discontinua(canvas, modelo.wire, e);
-    canvas.drawPath(medio, _stroke(Colores.linea.withOpacity(0.65), 0.9));
-    canvas.drawPath(cerca, _stroke(Colores.linea, 1.2));
+    canvas.drawPath(medio, _stroke(lc.withOpacity(cromado ? 0.32 : 0.65), cromado ? 0.7 : 0.9));
+    canvas.drawPath(cerca, _stroke(lc.withOpacity(cromado ? 0.6 : 1), cromado ? 0.9 : 1.2));
 
     // Piezas completas coloreadas (translúcidas) según el estado de su zona
     for (final z in zonas) {
@@ -207,8 +214,58 @@ class PlanoPainter extends CustomPainter {
     ..strokeWidth = w
     ..strokeCap = StrokeCap.round;
 
+  /// Carrocería con reflejo tipo cromo translúcido: cada cara refleja un "cielo" claro,
+  /// una banda oscura de horizonte o un "suelo" gris según su orientación.
+  void _pintarCromado(Canvas canvas, Encaje e, CarModel modelo) {
+    const tonos = [Color(0xFF3E4857), Color(0xFF5D6878), Color(0xFF8A96A8), Color(0xFF1C2430), Color(0xFFB9C6D8), Color(0xFFDCE5F1), Color(0xFFF2F6FB), Color(0xFFFFFFFF)];
+    const opac = [0.07, 0.15, 0.28];
+    final t = cam.yaw * math.pi / 180, f = cam.pitch * math.pi / 180;
+    final ct = math.cos(t), st = math.sin(t), cf = math.cos(f), sf = math.sin(f);
+
+    if (cam.pitch < 60 && cam.pitch > -10) {
+      final bb = e.caja;
+      final sombra = Rect.fromCenter(center: Offset(bb.center.dx, bb.bottom + 2), width: bb.width * 1.04, height: 20 + cam.pitch * 0.7);
+      canvas.drawOval(sombra, Paint()..shader = RadialGradient(colors: [Colors.black.withOpacity(0.55), Colors.black.withOpacity(0)]).createShader(sombra));
+    }
+
+    final grupos = <int, Path>{};
+    for (final q in modelo.piel) {
+      final a = q[0], b = q[1], d = q[3];
+      final ux = b.x - a.x, uy = b.y - a.y, uz = b.z - a.z, vx = d.x - a.x, vy = d.y - a.y, vz = d.z - a.z;
+      var nx = uy * vz - uz * vy, ny = uz * vx - ux * vz, nz = ux * vy - uy * vx;
+      final nl = math.sqrt(nx * nx + ny * ny + nz * nz);
+      if (nl == 0) continue;
+      nx /= nl;
+      ny /= nl;
+      nz /= nl;
+      final z1 = -nx * st + nz * ct;
+      var yu = ny * cf - z1 * sf, dn = z1 * cf + ny * sf;
+      if (dn < 0) {
+        yu = -yu;
+        dn = -dn;
+      }
+      final ry = 2 * dn * yu;
+      final rb = (((ry + 1) / 2) * 8).floor().clamp(0, 7);
+      final fb = dn > 0.7 ? 0 : (dn > 0.35 ? 1 : 2);
+      grupos.putIfAbsent(rb * 10 + fb, Path.new).addPolygon(q.map((p) => e.punto(p, cam)).toList(), true);
+    }
+    grupos.forEach((k, path) => canvas.drawPath(path, Paint()..color = tonos[k ~/ 10].withOpacity(opac[k % 10])));
+
+    final cristal = Path()..addPolygon(modelo.cristal.map((p) => e.punto(p, cam)).toList(), true);
+    final bc = cristal.getBounds();
+    canvas.drawPath(
+      cristal,
+      Paint()
+        ..shader = LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
+          const Color(0xFFCFE6FF).withOpacity(0.32),
+          const Color(0xFF7FA8D8).withOpacity(0.08),
+        ]).createShader(bc),
+    );
+  }
+
   @override
   bool shouldRepaint(PlanoPainter old) =>
+      old.cromado != cromado ||
       old.cam != cam || old.mecanica != mecanica || old.cableado != cableado || old.zonas != zonas || old.cota != cota || old.seleccion != seleccion;
 }
 
@@ -217,7 +274,7 @@ class PlanoView extends StatefulWidget {
   final List<Zona> zonas;
   final String? seleccion;
   final ValueChanged<String> onSeleccion;
-  final bool mecanica, cableado;
+  final bool mecanica, cableado, cromado;
   final Vista vista;
   final Camara? camLibre;
   final ValueChanged<Camara> onCamara;
@@ -232,6 +289,7 @@ class PlanoView extends StatefulWidget {
     this.seleccion,
     this.mecanica = true,
     this.cableado = true,
+    this.cromado = true,
   });
 
   @override
@@ -254,6 +312,7 @@ class _PlanoViewState extends State<PlanoView> {
         seleccion: widget.seleccion,
         mecanica: widget.mecanica,
         cableado: widget.cableado,
+        cromado: widget.cromado,
         cota: cota,
       );
       final e = painter.encaje(size);
@@ -271,7 +330,12 @@ class _PlanoViewState extends State<PlanoView> {
           widget.onCamara(_inicio!);
         },
         child: Container(
-          decoration: BoxDecoration(border: Border.all(color: Colors.white54), color: const Color(0x590A1E48)),
+          decoration: widget.cromado
+              ? BoxDecoration(
+                  border: Border.all(color: Colors.white38),
+                  gradient: const RadialGradient(center: Alignment(0, 0.1), radius: 0.9, colors: [Color(0x4D96B9E1), Color(0x66142846)]),
+                )
+              : BoxDecoration(border: Border.all(color: Colors.white54), color: const Color(0x590A1E48)),
           child: Stack(children: [
             Positioned.fill(child: CustomPaint(painter: painter)),
             Positioned.fill(child: CustomPaint(painter: _GuiasPainter(etiquetas))),

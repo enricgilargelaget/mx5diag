@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnóstico de Averías Fácil</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#fff;font:15px/1.5 Inter,system-ui,sans-serif;background-color:#0F3A80;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:20px 20px}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
+.mono{font-family:'IBM Plex Mono',monospace}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+h1{margin:0;font:600 clamp(22px,3.4vw,32px)/1.15 'Space Grotesk',Inter,sans-serif;letter-spacing:.02em;text-transform:uppercase}
+.sub{margin:4px 0 0;color:#C4D6F0;font-size:12px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:4px 10px;border-radius:4px;font-size:13px;font-weight:600}
+.layout{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.stage{flex:999 1 560px;min-width:0}
+.side{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;flex:1 1 360px}
+.thumb{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px 5px;min-height:58px;border-radius:4px;border:1px solid rgba(255,255,255,.35);background:rgba(6,30,72,.45);color:#fff;cursor:pointer;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase}
+.thumb[aria-pressed="true"]{border-color:#fff;background:rgba(255,255,255,.14)}
+.tog{min-height:36px;padding:0 12px;border-radius:4px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;font:500 12px Inter,sans-serif;cursor:pointer}
+.tog[aria-pressed="true"]{background:rgba(255,255,255,.18)}
+.range{display:flex;align-items:center;gap:10px;margin:0 0 10px}
+.range label{font:500 11px 'IBM Plex Mono',monospace;color:#C4D6F0;text-transform:uppercase}
+.range input{flex:1;accent-color:#DCEBFF;min-height:32px}
+#box{position:relative;border:1px solid rgba(255,255,255,.5);background:rgba(6,30,72,.35);touch-action:none;cursor:grab;user-select:none}
+#box:active{cursor:grabbing}
+#svg{display:block;width:100%}
+.hs{cursor:pointer}
+.hs:focus{outline:none}
+.hs:focus-visible path{stroke:#fff}
+@keyframes glow{0%,100%{stroke-opacity:.10}50%{stroke-opacity:.32}}
+.glow{animation:glow 1.4s ease-in-out infinite}
+.card{border:1px solid rgba(255,255,255,.5);border-radius:4px;background:rgba(6,30,72,.55);padding:16px}
+.card h2{margin:0;font:600 19px 'Space Grotesk',Inter,sans-serif}
+.lbl{font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#C4D6F0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.list{display:flex;flex-direction:column;gap:6px}
+.item{display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 12px;border-radius:4px;border:1px solid rgba(255,255,255,.28);background:rgba(6,30,72,.55);color:#fff;text-align:left;cursor:pointer;font:inherit;width:100%}
+.item[aria-current="true"]{border-color:#fff}
+.item .t{display:flex;flex-direction:column;flex:1;min-width:0}
+.item .t b{font-size:14px}
+.item .t span{font-size:12px;color:#C4D6F0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dotc{width:10px;height:10px;border-radius:50%;flex:none}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#C4D6F0;margin-top:8px}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:18px;border-top:1.5px solid}
+body.metal{background-color:#2F4C70;background-image:radial-gradient(ellipse at 50% 30%,rgba(120,160,206,.75),rgba(47,76,112,0) 70%),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:auto,20px 20px,20px 20px}
+body.metal #box{background:radial-gradient(ellipse at 50% 55%,rgba(150,185,225,.30),rgba(20,40,70,.40) 75%);border-color:rgba(255,255,255,.35)}
+body.metal .card,body.metal .item{background:rgba(16,32,56,.72)}
+footer{margin-top:24px;font-size:12px;color:#C4D6F0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Diagnóstico de Averías Fácil</h1>
+    <p class="sub mono">Roadster de ejemplo · datos de muestra · arrastra para girar en 3D</p>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+
+<div class="layout">
+  <div class="stage">
+    <div class="toolbar">
+      <div class="thumbs" id="thumbs" role="group" aria-label="Vistas"></div>
+      <button class="tog" id="tStyle" aria-pressed="true">Ver Modelo 1</button>
+      <button class="tog" id="tMech" aria-pressed="true">Mecánica</button>
+      <button class="tog" id="tWire" aria-pressed="true">Cableado</button>
+      <button class="tog" id="tSpin" aria-pressed="false">Girar solo</button>
+    </div>
+    <div class="range"><label for="yaw">Girar</label><input id="yaw" type="range" min="-180" max="180" step="1"></div>
+    <div id="box"><svg id="svg" role="img" aria-label="Plano 3D del coche con zonas de diagnóstico"></svg></div>
+    <div class="legend">
+      <span><i style="border-color:#DCEBFF"></i>Carrocería</span>
+      <span><i style="border-color:#A3ADBB"></i>Mecánica y luces</span>
+      <span><i style="border-color:#C3CBD6;border-top-style:dashed"></i>Cableado</span>
+    </div>
+  </div>
+  <aside class="side">
+    <div class="card" id="detail" aria-live="polite"></div>
+    <div class="row" style="padding:0 2px"><span class="lbl">Todas las zonas</span><span style="font-size:11px;color:#C4D6F0">Datos de ejemplo</span></div>
+    <div class="list" id="list"></div>
+  </aside>
+</div>
+<footer>Modelo wireframe de diseño propio (roadster genérico). Los estados y averías mostrados son de ejemplo.</footer>
+</div>
+
+<script>
+class Engine {
+  model() {
+    if (this._m) return this._m;
+    var body = [], mech = [], wire = [];
+    var PI2 = Math.PI * 2, PI = Math.PI;
+    var tag = null, loops = [];
+    function L(arr, a, b) { arr.push([a, b, tag]); }
+    function poly(arr, pts, closed) { for (var i = 0; i < pts.length - 1; i++) L(arr, pts[i], pts[i + 1]); if (closed) { L(arr, pts[pts.length - 1], pts[0]); if (tag) loops.push({ tag: tag, pts: pts }); } }
+    function circ(n, f) { var p = []; for (var i = 0; i < n; i++) { var a = i / n * PI2; p.push(f(Math.cos(a), Math.sin(a))); } return p; }
+    function sp(v, e) { return (v < 0 ? -1 : 1) * Math.pow(Math.abs(v), e); }
+    // Curva suave (Hermite) sobre puntos de control ordenados de mayor a menor x
+    function interp(c, x) {
+      if (x >= c[0][0]) return c[0][1];
+      if (x <= c[c.length - 1][0]) return c[c.length - 1][1];
+      var i = 0; while (!(x <= c[i][0] && x >= c[i + 1][0])) i++;
+      function m(k) { var a = c[Math.max(0, k - 1)], b = c[Math.min(c.length - 1, k + 1)]; return (b[1] - a[1]) / (b[0] - a[0]); }
+      var h = c[i + 1][0] - c[i][0], t = (x - c[i][0]) / h, t2 = t * t, t3 = t2 * t;
+      return (2 * t3 - 3 * t2 + 1) * c[i][1] + (t3 - 2 * t2 + t) * m(i) * h + (-2 * t3 + 3 * t2) * c[i + 1][1] + (t3 - t2) * m(i + 1) * h;
+    }
+    // Curva suave que pasa por puntos 3D (Catmull-Rom)
+    function smooth(pts, n) {
+      var out = [];
+      for (var i = 0; i < pts.length - 1; i++) {
+        var p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)];
+        for (var k = 0; k < n; k++) {
+          var t = k / n, t2 = t * t, t3 = t2 * t, q = [];
+          for (var d = 0; d < 3; d++) q.push(0.5 * ((2 * p1[d]) + (-p0[d] + p2[d]) * t + (2 * p0[d] - 5 * p1[d] + 4 * p2[d] - p3[d]) * t2 + (-p0[d] + 3 * p1[d] - 3 * p2[d] + p3[d]) * t3));
+          out.push(q);
+        }
+      }
+      out.push(pts[pts.length - 1]);
+      return out;
+    }
+    // Rectángulo redondeado (perfil en el plano y-z) extruido en x: cajas con esquinas redondeadas
+    function rrect(cy, cz, hy, hz, r) {
+      var p = [];
+      for (var ci = 0; ci < 4; ci++) {
+        var sy = ci < 2 ? 1 : -1, sz = (ci === 0 || ci === 3) ? 1 : -1;
+        for (var k = 0; k <= 4; k++) {
+          var a = (ci * 90 + k * 22.5) * PI / 180;
+          p.push([0, cy + sy * (hy - r) + r * Math.sin(a), cz + sz * (hz - r) + r * Math.cos(a)]);
+        }
+      }
+      return p;
+    }
+    function rbox(arr, x0, x1, y0, y1, z0, z1, rf) {
+      var cy = (y0 + y1) / 2, cz = (z0 + z1) / 2, hy = (y1 - y0) / 2, hz = (z1 - z0) / 2, r = Math.min(hy, hz) * (rf || 0.45);
+      var prof = rrect(cy, cz, hy, hz, r);
+      var a = prof.map(function (p) { return [x0, p[1], p[2]]; }), b = prof.map(function (p) { return [x1, p[1], p[2]]; });
+      poly(arr, a, true); poly(arr, b, true);
+      [2, 7, 12, 17].forEach(function (k) { L(arr, a[k], b[k]); });
+    }
+
+    // ---- Carrocería: secciones suaves con esquinas redondeadas ----
+    var TOP = [[2.03,.48],[1.95,.60],[1.75,.69],[1.45,.75],[1.17,.78],[0.80,.82],[0.42,.87],[0.0,.86],[-0.6,.88],[-1.16,.91],[-1.6,.92],[-1.88,.88],[-2.0,.80],[-2.04,.70]];
+    var SHY = [[2.03,.44],[1.95,.55],[1.75,.65],[1.45,.71],[1.17,.75],[0.80,.73],[0.30,.74],[-0.40,.77],[-1.16,.82],[-1.60,.81],[-1.88,.77],[-2.0,.71],[-2.04,.64]];
+    var HW  = [[2.03,.40],[1.98,.58],[1.88,.72],[1.65,.82],[1.40,.855],[1.17,.86],[0.85,.83],[0.30,.82],[-0.40,.83],[-0.90,.85],[-1.16,.86],[-1.55,.85],[-1.82,.78],[-1.97,.64],[-2.04,.42]];
+    var SIL = [[2.03,.34],[1.95,.26],[1.80,.22],[-1.75,.22],[-1.92,.27],[-2.04,.36]];
+    var AX = [1.17, -1.16], AR = 0.37, NE = 4;
+    function sill(x) {
+      var y = interp(SIL, x);
+      AX.forEach(function (xa) { var d = x - xa; if (Math.abs(d) < AR) y = Math.max(y, .31 + Math.sqrt(AR * AR - d * d)); });
+      return y;
+    }
+    function opening(x) { var u = (x + 0.09) / 0.51; if (Math.abs(u) >= 1) return -1; return .66 * Math.pow(1 - Math.pow(Math.abs(u), 5), 0.2); }
+
+    var secs = [];
+    for (var si = 0; si <= 82; si++) {
+      var x = 2.03 - si * 0.0496;
+      var top = interp(TOP, x), sy = interp(SHY, x), hw = interp(HW, x), sl = Math.min(sill(x), sy - .03), ow = opening(x);
+      var side = [], k;
+      var mk = function (sd) {
+        var pts = [[x, sl, sd * (hw - .045)], [x, (sl + sy) / 2, sd * (hw - .006)]];
+        for (k = 0; k <= 8; k++) {
+          var ph = k / 8 * PI / 2, z = hw * Math.pow(Math.cos(ph), 2 / NE), y = sy + (top - sy) * Math.pow(Math.sin(ph), 2 / NE);
+          pts.push(z < ow ? null : [x, y, sd * z]);
+        }
+        return pts;
+      };
+      var rim = null;
+      if (ow > 0) {
+        var cph = Math.acos(Math.min(1, Math.pow(ow / hw, NE / 2))), ry = sy + (top - sy) * Math.pow(Math.sin(cph), 2 / NE);
+        rim = { L: [x, ry, ow], R: [x, ry, -ow], Li: [x, ry - .06, ow - .015], Ri: [x, ry - .06, -ow + .015] };
+      }
+      secs.push({ x: x, L: mk(1), R: mk(-1), rim: rim });
+    }
+    var skin = [];
+    for (var qi = 0; qi < secs.length - 1; qi++) {
+      ['L', 'R'].forEach(function (sd) {
+        var A = secs[qi][sd], B = secs[qi + 1][sd];
+        for (var qj = 0; qj < A.length - 1; qj++) {
+          if (A[qj] && A[qj + 1] && B[qj + 1] && B[qj]) skin.push([A[qj], A[qj + 1], B[qj + 1], B[qj]]);
+        }
+      });
+    }
+    function ringOf(s) {
+      [s.L, s.R].forEach(function (side, sideIdx) {
+        var run = [];
+        for (var j = 0; j < side.length; j++) { if (side[j]) run.push(side[j]); else break; }
+        if (s.rim && run.length < side.length) run.push(sideIdx === 0 ? s.rim.L : s.rim.R);
+        poly(body, run, false);
+      });
+    }
+    secs.forEach(function (s, i) { if (i % 4 === 0 || i === secs.length - 1) ringOf(s); });
+    [0, 2, 4, 7, 10].forEach(function (j) {
+      ['L', 'R'].forEach(function (sd) {
+        for (var i = 0; i < secs.length - 1; i++) { var a = secs[i][sd][j], b = secs[i + 1][sd][j]; if (a && b) L(body, a, b); }
+      });
+    });
+    for (var i2 = 0; i2 < secs.length - 1; i2++) {
+      var a = secs[i2].rim, b = secs[i2 + 1].rim;
+      if (a && b) { L(body, a.L, b.L); L(body, a.R, b.R); L(body, a.Li, b.Li); L(body, a.Ri, b.Ri); }
+    }
+    L(body, secs[0].L[0], secs[0].R[0]);
+    L(body, secs[secs.length - 1].L[0], secs[secs.length - 1].R[0]);
+
+    // Parabrisas con esquinas redondeadas (marco + cristal)
+    function shield(scale) {
+      var pts = [];
+      for (var k = 0; k < 48; k++) {
+        var a = k / 48 * PI2, u = sp(Math.cos(a), 2 / 5) * scale, v = 0.5 + 0.5 * sp(Math.sin(a), 2 / 5) * scale;
+        var bow = 0.05 * (1 - u * u);
+        pts.push([0.42 - 0.40 * v - bow * 0.3, 0.875 + 0.31 * v + bow * 0.15, u * (0.66 - 0.06 * v)]);
+      }
+      return pts;
+    }
+    poly(body, shield(1), true);
+    poly(body, shield(0.9), true);
+    var glass = [shield(0.9)];
+    // Arcos antivuelco redondeados, reposacabezas, retrovisores
+    [1, -1].forEach(function (sd) {
+      var arc = [];
+      for (var k = 0; k <= 16; k++) { var a = k / 16 * PI; arc.push([-0.60, .86 + .26 * Math.pow(Math.sin(a), 0.6), sd * .36 + .19 * sp(Math.cos(a), 0.7)]); }
+      poly(body, arc, false);
+      var hr = rrect(1.04, sd * .36, .07, .11, .05);
+      var h1 = hr.map(function (p) { return [-0.47, p[1], p[2]]; }), h2 = hr.map(function (p) { return [-0.55, p[1], p[2]]; });
+      poly(body, h1, true); poly(body, h2, true);
+      var mir = circ(14, function (c, s) { return [0.33, .97 + .04 * s, sd * (.94 + .07 * c)]; });
+      poly(body, mir, true);
+      L(body, [0.34, .93, sd * .86], [0.33, .95, sd * .90]);
+    });
+    // Boca frontal ovalada
+    poly(body, circ(28, function (c, s) { return [1.99 - .02 * (1 - c * c), .38 + .065 * s, .30 * c]; }), true);
+
+    // ---- Ruedas: neumático con flanco redondeado ----
+    AX.forEach(function (xa) {
+      [1, -1].forEach(function (sd) {
+        tag = 'ruedas';
+        var rings = [[.29, .86], [.31, .83], [.31, .67], [.29, .64]].map(function (rz) {
+          return circ(32, function (c, s) { return [xa + rz[0] * c, .31 + rz[0] * s, sd * rz[1]]; });
+        });
+        rings.forEach(function (r) { poly(body, r, true); });
+        for (var k = 0; k < 32; k += 4) poly(body, [rings[0][k], rings[1][k], rings[2][k], rings[3][k]], false);
+        poly(body, circ(24, function (c, s) { return [xa + .21 * c, .31 + .21 * s, sd * .865]; }), true);
+        poly(body, circ(12, function (c, s) { return [xa + .05 * c, .31 + .05 * s, sd * .87]; }), true);
+        for (k = 0; k < 5; k++) { var an = k / 5 * PI2; L(body, [xa + .05 * Math.cos(an), .31 + .05 * Math.sin(an), sd * .87], [xa + .2 * Math.cos(an), .31 + .2 * Math.sin(an), sd * .865]); }
+        tag = xa < 0 ? 'frenos_tras' : null;
+        poly(mech, circ(24, function (c, s) { return [xa + .17 * c, .31 + .17 * s, sd * .70]; }), true);
+        var cal = []; for (k = 0; k <= 6; k++) { var bb = 2.1 + k * 0.12; cal.push([xa + .19 * Math.cos(bb), .31 + .19 * Math.sin(bb), sd * .70]); } poly(mech, cal, false);
+        tag = xa > 0 ? 'susp_del' : 'susp_tras';
+        var h = []; for (k = 0; k <= 48; k++) { var t = k / 9 * PI2; h.push([xa + .055 * Math.cos(t), .40 + .38 * k / 48, sd * .58 + .055 * Math.sin(t)]); } poly(mech, h, false);
+        L(mech, [xa, .31, sd * .62], [xa, .84, sd * .58]);
+        poly(mech, circ(20, function (c, s) { return [xa + .065 * c, .59 + .21 * s, sd * .58]; }), true);
+        tag = null;
+      });
+    });
+
+    // ---- Mecánica con aristas redondeadas ----
+    tag = 'motor';
+    rbox(mech, 0.55, 1.05, .30, .70, -.28, .28, .35);
+    rbox(mech, 0.60, 1.00, .70, .79, -.18, .18, .8);
+    tag = null;
+    rbox(mech, 1.74, 1.80, .28, .60, -.42, .42, .3);
+    tag = 'transmision';
+    rbox(mech, 0.05, 0.55, .26, .50, -.15, .15, .6);
+    L(mech, [0.05, .38, 0], [-1.06, .36, 0]);
+    rbox(mech, -1.26, -1.06, .24, .46, -.14, .14, .9);
+    L(mech, [-1.16, .31, .14], [-1.16, .31, .65]);
+    L(mech, [-1.16, .31, -.14], [-1.16, .31, -.65]);
+    tag = null;
+    rbox(mech, -0.90, -0.64, .40, .74, -.42, .42, .5);
+    tag = 'bateria';
+    rbox(mech, 1.42, 1.64, .46, .68, -.68, -.42, .25);
+    L(mech, [1.47, .68, -.47], [1.47, .71, -.47]);
+    L(mech, [1.59, .68, -.63], [1.59, .71, -.63]);
+    tag = 'escape';
+    // ---- Escape completo: colector, catalizador, tubo central por el túnel, silencioso trasero transversal y doble salida ----
+    poly(mech, smooth([[0.95,.52,-.30],[0.80,.40,-.34],[0.62,.26,-.30],[0.45,.19,-.18]], 6), false);
+    rbox(mech, 0.10, 0.45, .14, .26, -.24, -.10, 1);
+    poly(mech, smooth([[0.10,.20,-.17],[-0.40,.18,-.12],[-1.00,.18,-.10],[-1.40,.19,-.10],[-1.58,.22,0]], 6), false);
+    rbox(mech, -1.86, -1.58, .15, .31, -.56, .56, .9);
+    [1, -1].forEach(function (sd) {
+      poly(mech, smooth([[-1.86,.22,sd*.46],[-1.96,.22,sd*.47],[-2.08,.23,sd*.48]], 4), false);
+      poly(mech, circ(16, function (c, s) { return [-2.08, .23 + .045 * s, sd * .48 + .045 * c]; }), true);
+      poly(mech, circ(16, function (c, s) { return [-2.08, .23 + .032 * s, sd * .48 + .032 * c]; }), true);
+    });
+    tag = 'motor';
+    // ---- Cárter de aceite bajo el motor ----
+    rbox(mech, 0.58, 1.02, .17, .30, -.22, .22, .6);
+    L(mech, [0.80, .17, .10], [0.80, .13, .10]);
+    tag = null;
+    // ---- Subchasis delantero y trasero ----
+    rbox(mech, 0.95, 1.40, .20, .27, -.55, .55, .5);
+    rbox(mech, -1.40, -0.95, .21, .28, -.55, .55, .5);
+    // ---- Bajos: suelo cerrado con esquinas redondeadas, travesaños y túnel central ----
+    var fl = [];
+    for (var kf = 0; kf < 64; kf++) { var af = kf / 64 * PI2; fl.push([-0.02 + 1.86 * sp(Math.cos(af), 0.25), .20, .58 * sp(Math.sin(af), 0.25)]); }
+    poly(body, fl, true);
+    [1.45, 0.62, -0.35, -0.95, -1.50].forEach(function (xc) { L(body, [xc, .20, -.56], [xc, .20, .56]); });
+    var tun = function (x) { return [[x, .20, -.17], [x, .42, -.11], [x, .42, .11], [x, .20, .17]]; };
+    poly(body, tun(0.45), false); poly(body, tun(-1.0), false);
+    [0, 1, 2, 3].forEach(function (k) { L(body, tun(0.45)[k], tun(-1.0)[k]); });
+    tag = 'direccion';
+    poly(mech, circ(24, function (c, s) { return [0.05 + .04 * s, .95 + .17 * c, .36 + .17 * s]; }), true);
+    L(mech, [0.05, .95, .36], [1.25, .32, .36]);
+    L(mech, [1.25, .32, -.62], [1.25, .32, .62]);
+    // Luces redondeadas (gris)
+    [1, -1].forEach(function (sd) {
+      tag = 'faros';
+      poly(mech, circ(24, function (c, s) { var xx = 1.80 + .13 * c; return [xx, .66 + (1.80 - xx) * .30, sd * (.58 + .11 * s)]; }), true);
+      tag = 'pilotos';
+      poly(mech, circ(20, function (c, s) { return [-2.0 + .015 * c, .76 + .055 * s, sd * (.55 + .11 * c)]; }), true);
+      tag = null;
+      poly(mech, circ(16, function (c, s) { return [1.97, .30 + .035 * s, sd * (.50 + .06 * c)]; }), true);
+    });
+
+    // ---- Cableado (curvas suaves) ----
+    poly(wire, smooth([[1.59,.71,-.63],[1.66,.64,-.62],[1.72,.66,-.62]], 6), false);
+    poly(wire, smooth([[1.47,.71,-.47],[1.40,.66,-.20],[1.50,.62,.30],[1.72,.66,.62]], 6), false);
+    poly(wire, smooth([[1.47,.71,-.47],[1.10,.72,-.30],[0.90,.74,-.15]], 6), false);
+    poly(wire, smooth([[1.40,.66,-.20],[1.0,.40,-.60],[0.40,.24,-.60],[-1.40,.30,-.60],[-1.85,.70,-.50],[-1.98,.76,-.55]], 6), false);
+    poly(wire, smooth([[-1.40,.30,-.60],[-1.75,.55,0],[-1.98,.76,.55]], 6), false);
+
+    tag = null;
+    this._m = { body: body, mech: mech, wire: wire, loops: loops, skin: skin, glass: glass };
+    return this._m;
+  }
+
+  proj(p, c) {
+    var t = c.yaw * Math.PI / 180, f = c.pitch * Math.PI / 180;
+    var X1 = p[0] * Math.cos(t) + p[2] * Math.sin(t);
+    var Z1 = -p[0] * Math.sin(t) + p[2] * Math.cos(t);
+    var Yu = p[1] * Math.cos(f) - Z1 * Math.sin(f);
+    var D = Z1 * Math.cos(f) + p[1] * Math.sin(f);
+    var m = 1 + (c.persp || 0) * D * 0.09;
+    return [-X1 * m, -Yu * m, D];
+  }
+
+  draw(cam, W, top, h, margin, full) {
+    var self = this, M = this.model();
+    var minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9, minD = 1e9, maxD = -1e9;
+    M.body.forEach(function (sg) { [sg[0], sg[1]].forEach(function (p) {
+      var q = self.proj(p, cam);
+      if (q[0] < minX) minX = q[0]; if (q[0] > maxX) maxX = q[0];
+      if (q[1] < minY) minY = q[1]; if (q[1] > maxY) maxY = q[1];
+      if (q[2] < minD) minD = q[2]; if (q[2] > maxD) maxD = q[2];
+    }); });
+    var s = Math.min((W - 2 * margin) / (maxX - minX), h / (maxY - minY));
+    var ox = W / 2 - s * (minX + maxX) / 2, oy = top + h / 2 - s * (minY + maxY) / 2;
+    function tp(p) { var q = self.proj(p, cam); return [ox + s * q[0], oy + s * q[1], q[2]]; }
+    function f1(v) { return v.toFixed(1); }
+    function seg(a, b) { return 'M' + f1(a[0]) + ' ' + f1(a[1]) + 'L' + f1(b[0]) + ' ' + f1(b[1]); }
+    var out = { tp: tp, bb: [ox + s * minX, oy + s * minY, ox + s * maxX, oy + s * maxY] };
+    if (!full) { out.d = M.body.map(function (sg) { return seg(tp(sg[0]), tp(sg[1])); }).join(''); return out; }
+    var far = [], mid = [], near = [], span = (maxD - minD) || 1, parts = {};
+    function part(t) { return parts[t] || (parts[t] = { d: [], fill: [] }); }
+    M.body.forEach(function (sg) {
+      var a = tp(sg[0]), b = tp(sg[1]);
+      if (sg[2]) { part(sg[2]).d.push(seg(a, b)); return; }
+      var d = ((a[2] + b[2]) / 2 - minD) / span;
+      (d > 0.62 ? near : d > 0.38 ? mid : far).push(seg(a, b));
+    });
+    out.bodyFar = far.join(''); out.bodyMid = mid.join(''); out.bodyNear = near.join('');
+    var mech = [];
+    M.mech.forEach(function (sg) { var x = seg(tp(sg[0]), tp(sg[1])); if (sg[2]) part(sg[2]).d.push(x); else mech.push(x); });
+    out.mech = mech.join('');
+    M.loops.forEach(function (l) { part(l.tag).fill.push(l.pts.map(function (p, i) { var q = tp(p); return (i ? 'L' : 'M') + f1(q[0]) + ' ' + f1(q[1]); }).join('') + 'Z'); });
+    out.parts = {};
+    Object.keys(parts).forEach(function (k) { out.parts[k] = { d: parts[k].d.join(''), fill: parts[k].fill.join('') }; });
+    out.skin = []; out.glass = '';
+    if (self.metal) {
+      var bk = {}, ct = Math.cos(cam.yaw * Math.PI / 180), stt = Math.sin(cam.yaw * Math.PI / 180), cf = Math.cos(cam.pitch * Math.PI / 180), sf = Math.sin(cam.pitch * Math.PI / 180);
+      M.skin.forEach(function (q) {
+        var a = q[0], b = q[1], d = q[3];
+        var ux = b[0] - a[0], uy = b[1] - a[1], uz = b[2] - a[2], vx = d[0] - a[0], vy = d[1] - a[1], vz = d[2] - a[2];
+        var nx = uy * vz - uz * vy, ny = uz * vx - ux * vz, nz = ux * vy - uy * vx, nl = Math.sqrt(nx * nx + ny * ny + nz * nz) || 1;
+        nx /= nl; ny /= nl; nz /= nl;
+        var X1 = nx * ct + nz * stt, Z1 = -nx * stt + nz * ct, Yu = ny * cf - Z1 * sf, Dn = Z1 * cf + ny * sf;
+        if (Dn < 0) { Yu = -Yu; Dn = -Dn; }
+        var ry = 2 * Dn * Yu, rb = Math.max(0, Math.min(7, Math.floor((ry + 1) / 2 * 8))), fb = Dn > 0.7 ? 0 : Dn > 0.35 ? 1 : 2, key = rb + '_' + fb;
+        var pp = q.map(tp);
+        (bk[key] || (bk[key] = [])).push('M' + f1(pp[0][0]) + ' ' + f1(pp[0][1]) + 'L' + f1(pp[1][0]) + ' ' + f1(pp[1][1]) + 'L' + f1(pp[2][0]) + ' ' + f1(pp[2][1]) + 'L' + f1(pp[3][0]) + ' ' + f1(pp[3][1]) + 'Z');
+      });
+      out.skin = Object.keys(bk).map(function (k) { var x = k.split('_'); return { rb: +x[0], fb: +x[1], d: bk[k].join('') }; });
+      out.glass = M.glass.map(function (pts) { return pts.map(function (p, i) { var q = tp(p); return (i ? 'L' : 'M') + f1(q[0]) + ' ' + f1(q[1]); }).join('') + 'Z'; }).join('');
+    }
+    out.wire = M.wire.map(function (sg) { return seg(tp(sg[0]), tp(sg[1])); }).join('');
+    return out;
+  }
+
+
+}
+var eng = new Engine();
+var STATUS = {
+  rojo: { color: '#FF6B6B', ink: '#1B0606', label: 'Actuar ya', rank: 0 },
+  amarillo: { color: '#FFD23F', ink: '#1E1600', label: 'Vigilar', rank: 1 },
+  verde: { color: '#3BE38A', ink: '#04170C', label: 'Correcto', rank: 2 }
+};
+var VIEWS = {
+  '3d': { yaw: -35, pitch: 22, persp: 1, label: '3D', name: 'VISTA 3/4 · ARRASTRA PARA GIRAR' },
+  lateral: { yaw: 0, pitch: 0, persp: 0, label: 'Lateral', name: 'ALZADO LATERAL IZQ.', dim: 'LONGITUD ≈ 4.000 mm' },
+  superior: { yaw: 0, pitch: 90, persp: 0, label: 'Planta', name: 'PLANTA', dim: 'LONGITUD ≈ 4.000 mm' },
+  frontal: { yaw: -90, pitch: 0, persp: 0, label: 'Frente', name: 'ALZADO FRONTAL', dim: 'ANCHURA ≈ 1.720 mm' },
+  trasera: { yaw: 90, pitch: 0, persp: 0, label: 'Trasera', name: 'ALZADO POSTERIOR', dim: 'ANCHURA ≈ 1.720 mm' },
+  inferior: { yaw: 0, pitch: -90, persp: 0, label: 'Bajos', name: 'VISTA INFERIOR (BAJOS)', dim: 'LONGITUD ≈ 4.000 mm' }
+};
+var DATA = [
+  { id: 'faros', name: 'Faros delanteros', short: 'Faro izq.', status: 'rojo', p: [1.80, .68, .58], finding: 'Luz de cruce izquierda fundida', action: 'Sustituir la lámpara de cruce izquierda', source: 'Revisión manual' },
+  { id: 'susp_del', name: 'Suspensión delantera', short: 'Amort. del. dch.', status: 'rojo', p: [1.17, .62, -.58], finding: 'Fuga de aceite en el amortiguador delantero derecho', action: 'Cambiar amortiguadores delanteros (por pares) y alinear', source: 'Inspección visual' },
+  { id: 'motor', name: 'Motor', short: 'Motor P0171', status: 'amarillo', p: [0.80, .78, 0], finding: 'Código P0171: mezcla pobre, banco 1', action: 'Revisar fugas de admisión y limpiar el sensor MAF', source: 'OBD-II' },
+  { id: 'direccion', name: 'Dirección', short: 'Dirección', status: 'amarillo', p: [1.25, .32, .45], finding: 'Holgura leve en rótula axial izquierda', action: 'Vigilar y revisar en el próximo alineado', source: 'Inspección en taller' },
+  { id: 'transmision', name: 'Transmisión', short: 'Transmisión', status: 'verde', p: [0.30, .50, 0], finding: 'Sin códigos; cambio suave', action: 'Ninguna', source: 'OBD-II e historial' },
+  { id: 'susp_tras', name: 'Suspensión trasera', short: 'Susp. trasera', status: 'verde', p: [-1.16, .62, .58], finding: 'Sin fugas ni ruidos', action: 'Ninguna', source: 'Inspección visual' },
+  { id: 'frenos_tras', name: 'Frenos traseros', short: 'Frenos tras.', status: 'amarillo', p: [-1.16, .31, -.70], finding: 'Pastillas al 30 % de vida útil', action: 'Planificar cambio de pastillas', source: 'Medición manual' },
+  { id: 'bateria', name: 'Batería', short: 'Batería', status: 'verde', p: [1.53, .70, -.55], finding: '12,6 V en reposo; arranque correcto', action: 'Ninguna', source: 'OBD-II' },
+  { id: 'pilotos', name: 'Pilotos traseros', short: 'Pilotos', status: 'verde', p: [-2.0, .76, -.55], finding: 'Todos los pilotos funcionan', action: 'Ninguna', source: 'Revisión manual' },
+  { id: 'ruedas', name: 'Neumáticos', short: 'Neumáticos', status: 'amarillo', p: [-1.16, .58, .86], finding: 'Trasero izquierdo con 2,5 mm de dibujo; el resto, correcto', action: 'Cambiar los dos traseros pronto (mínimo legal 1,6 mm)', source: 'Medición manual' },
+  { id: 'escape', name: 'Escape (doble salida)', short: 'Escape', status: 'verde', p: [-1.72, .23, 0], finding: 'Sin fugas; soportes y silencioso en buen estado', action: 'Ninguna', source: 'Inspección visual' }
+];
+var st = { metal: true, view: '3d', yaw: -35, pitch: 22, sel: 'susp_del', mech: true, wire: true, spin: false };
+var $ = function (id) { return document.getElementById(id); };
+function f1(v) { return v.toFixed(1); }
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+function cam() { return st.view === 'libre' ? { yaw: st.yaw, pitch: st.pitch, persp: 1 } : VIEWS[st.view]; }
+
+function render() {
+  var box = $('box'), W = Math.max(300, box.clientWidth - 2), H = W < 560 ? 360 : Math.min(560, Math.round(W * 0.62));
+  var small = W < 560, cw = small ? 104 : 132, ch = small ? 36 : 40;
+  var c = cam(), vdef = VIEWS[st.view] || { name: 'VISTA LIBRE · ' + Math.round(st.yaw) + '°' };
+  var hasDim = !!vdef.dim, top = ch + 22, h = H - top - (hasDim ? ch + 50 : ch + 22);
+  eng.metal = st.metal;
+  var P = eng.draw(c, W, top, h, small ? 20 : 40, true);
+  var o = [], MT = st.metal, LC = MT ? '#EEF3FA' : '#DCEBFF';
+  if (MT) {
+    var CH = ['#3E4857', '#5D6878', '#8A96A8', '#1C2430', '#B9C6D8', '#DCE5F1', '#F2F6FB', '#FFFFFF'], FO = [0.07, 0.15, 0.28];
+    o.push('<defs><radialGradient id="sh" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>' +
+      '<linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFE6FF" stop-opacity="0.32"/><stop offset="1" stop-color="#7FA8D8" stop-opacity="0.08"/></linearGradient></defs>');
+    if (c.pitch < 60 && c.pitch > -10) o.push('<ellipse cx="' + f1((P.bb[0] + P.bb[2]) / 2) + '" cy="' + f1(P.bb[3] + 2) + '" rx="' + f1((P.bb[2] - P.bb[0]) * 0.52) + '" ry="' + f1(10 + c.pitch * 0.35) + '" fill="url(#sh)"/>');
+    P.skin.forEach(function (sk) { o.push('<path d="' + sk.d + '" fill="' + CH[sk.rb] + '" fill-opacity="' + FO[sk.fb] + '" stroke="none"/>'); });
+    o.push('<path d="' + P.glass + '" fill="url(#gl)" stroke="none"/>');
+  }
+  o.push('<path d="' + P.bodyFar + '" fill="none" stroke="' + LC + '" stroke-width="0.7" stroke-opacity="' + (MT ? 0.1 : 0.3) + '" stroke-linecap="round"/>');
+  if (st.mech) o.push('<path d="' + P.mech + '" fill="none" stroke="' + (MT ? '#8792A3' : '#A3ADBB') + '" stroke-width="0.9" stroke-opacity="' + (MT ? 0.7 : 0.9) + '" stroke-linecap="round" stroke-linejoin="round"/>');
+  if (st.wire) o.push('<path d="' + P.wire + '" fill="none" stroke="#C3CBD6" stroke-width="0.8" stroke-dasharray="3 2"/>');
+  o.push('<path d="' + P.bodyMid + '" fill="none" stroke="' + LC + '" stroke-width="' + (MT ? 0.7 : 0.9) + '" stroke-opacity="' + (MT ? 0.32 : 0.65) + '" stroke-linecap="round"/>');
+  o.push('<path d="' + P.bodyNear + '" fill="none" stroke="' + LC + '" stroke-opacity="' + (MT ? 0.6 : 1) + '" stroke-width="' + (MT ? 0.9 : 1.25) + '" stroke-linecap="round" stroke-linejoin="round"/>');
+  if (hasDim) {
+    var bb = P.bb, y = bb[3] + 16;
+    o.push('<path fill="none" stroke="#DCEBFF" stroke-width="0.8" d="M' + f1(bb[0]) + ' ' + f1(y) + 'L' + f1(bb[2]) + ' ' + f1(y) +
+      'M' + f1(bb[0]) + ' ' + f1(bb[3] + 3) + 'L' + f1(bb[0]) + ' ' + f1(y + 5) + 'M' + f1(bb[2]) + ' ' + f1(bb[3] + 3) + 'L' + f1(bb[2]) + ' ' + f1(y + 5) +
+      'M' + f1(bb[0]) + ' ' + f1(y) + 'l6 -3M' + f1(bb[0]) + ' ' + f1(y) + 'l6 3M' + f1(bb[2]) + ' ' + f1(y) + 'l-6 -3M' + f1(bb[2]) + ' ' + f1(y) + 'l-6 3"/>');
+    o.push('<text x="' + f1((bb[0] + bb[2]) / 2) + '" y="' + f1(y + 14) + '" fill="#DCEBFF" font-family="IBM Plex Mono, monospace" font-size="11" text-anchor="middle">' + vdef.dim + '</text>');
+  }
+  var zones = DATA.map(function (z) { var q = P.tp(z.p); return Object.assign({}, z, STATUS[z.status], { sx: q[0], sy: q[1] }); });
+  var issues = zones.filter(function (z) { return z.status !== 'verde'; }).sort(function (a, b) { return a.sy - b.sy; });
+  var nTop = Math.ceil(issues.length / 2), bands = [issues.slice(0, nTop), issues.slice(nTop)], lead = [], labels = [];
+  bands.forEach(function (band, bi) {
+    band.sort(function (a, b) { return a.sx - b.sx; });
+    band.forEach(function (z, i) {
+      var lx = Math.max(cw / 2 + 4, Math.min(W - cw / 2 - 4, W * (i + 0.5) / band.length));
+      var ty = bi === 0 ? 6 : H - ch - 6, edge = bi === 0 ? ch + 6 : H - ch - 6, elbow = bi === 0 ? ch + 14 : H - ch - 14, end = bi === 0 ? z.sy - 9 : z.sy + 9;
+      lead.push('M' + f1(lx) + ' ' + edge + 'L' + f1(lx) + ' ' + elbow + 'L' + f1(z.sx) + ' ' + elbow + 'L' + f1(z.sx) + ' ' + f1(end));
+      var on = z.id === st.sel;
+      labels.push('<g class="hs" data-id="' + z.id + '" tabindex="0" role="button" aria-label="' + esc(z.name + ': ' + z.label) + '">' +
+        '<rect x="' + f1(lx - cw / 2) + '" y="' + ty + '" width="' + cw + '" height="' + ch + '" rx="3" fill="rgba(9,40,94,0.92)" stroke="' + (on ? '#fff' : 'rgba(255,255,255,0.55)') + '"/>' +
+        '<text x="' + f1(lx - cw / 2 + 7) + '" y="' + (ty + (small ? 15 : 17)) + '" fill="#fff" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="' + (small ? 10 : 11) + '">' + esc(z.short.toUpperCase()) + '</text>' +
+        '<circle cx="' + f1(lx - cw / 2 + 10) + '" cy="' + (ty + ch - (small ? 11 : 12)) + '" r="3.5" fill="' + z.color + '"/>' +
+        '<text x="' + f1(lx - cw / 2 + 18) + '" y="' + (ty + ch - (small ? 7.5 : 8)) + '" fill="#DCEBFF" font-family="Inter, sans-serif" font-size="' + (small ? 10 : 11) + '">' + z.label + '</text></g>');
+    });
+  });
+  o.push('<path d="' + lead.join('') + '" fill="none" stroke="#fff" stroke-width="0.9" stroke-opacity="0.85"/>');
+  zones.forEach(function (z) {
+    var on = z.id === st.sel, pt = P.parts[z.id], ok = z.status === 'verde';
+    var g = '<g class="hs" data-id="' + z.id + '" tabindex="0" role="button" aria-label="' + esc(z.name + ': ' + z.label) + '">';
+    if (pt) {
+      g += '<path d="' + pt.fill + '" fill="' + z.color + '" fill-opacity="' + (on ? 0.28 : ok ? 0.09 : 0.18) + '" stroke="none"/>' +
+        '<path class="' + (z.status === 'rojo' ? 'glow' : '') + '" d="' + pt.d + '" fill="none" stroke="' + z.color + '" stroke-width="' + (on ? 8 : 6) + '" stroke-opacity="' + (ok ? 0.07 : 0.16) + '" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<path d="' + pt.d + '" fill="none" stroke="' + (on ? '#FFFFFF' : z.color) + '" stroke-width="' + (on ? 1.8 : 1.3) + '" stroke-linecap="round" stroke-linejoin="round"/>';
+    }
+    g += '<circle cx="' + f1(z.sx) + '" cy="' + f1(z.sy) + '" r="20" fill="transparent"/></g>';
+    o.push(g);
+  });
+  o.push(labels.join(''));
+  o.push('<text x="' + (W - 8) + '" y="' + (H - 6) + '" fill="#C4D6F0" font-family="IBM Plex Mono, monospace" font-size="10" text-anchor="end">' + vdef.name + '</text>');
+  var svg = $('svg');
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  svg.setAttribute('height', H);
+  svg.innerHTML = o.join('');
+
+  $('yaw').value = Math.round(c.yaw);
+  $('tMech').setAttribute('aria-pressed', st.mech);
+  $('tStyle').textContent = st.metal ? 'Ver Modelo 1' : 'Ver cromado';
+  document.body.classList.toggle('metal', st.metal);
+  $('tWire').setAttribute('aria-pressed', st.wire);
+  $('tSpin').setAttribute('aria-pressed', st.spin);
+  Array.prototype.forEach.call(document.querySelectorAll('.thumb'), function (b) { b.setAttribute('aria-pressed', b.dataset.k === st.view); });
+  renderSide(zones);
+}
+
+function renderSide(zones) {
+  var sel = zones.filter(function (z) { return z.id === st.sel; })[0];
+  $('detail').innerHTML = '<div class="row"><h2>' + esc(sel.name) + '</h2><span class="chip" style="background:' + sel.color + ';color:' + sel.ink + '">' + sel.label + '</span></div>' +
+    '<p style="margin:10px 0">' + esc(sel.finding) + '</p><div class="lbl">Acción recomendada</div><div style="margin:2px 0 10px;color:#E8F0FB">' + esc(sel.action) + '</div>' +
+    '<div class="mono" style="font-size:12px;color:#C4D6F0">Fuente: ' + esc(sel.source) + '</div>';
+  $('list').innerHTML = zones.slice().sort(function (a, b) { return a.rank - b.rank; }).map(function (z) {
+    return '<button class="item" data-id="' + z.id + '" aria-current="' + (z.id === st.sel) + '"><span class="dotc" style="background:' + z.color + '"></span>' +
+      '<span class="t"><b>' + esc(z.name) + '</b><span>' + esc(z.finding) + '</span></span><span class="chip" style="font-size:11px;padding:2px 7px;background:' + z.color + ';color:' + z.ink + '">' + z.label + '</span></button>';
+  }).join('');
+}
+
+function init() {
+  var n = { rojo: 0, amarillo: 0, verde: 0 };
+  DATA.forEach(function (z) { n[z.status]++; });
+  $('chips').innerHTML = ['rojo', 'amarillo', 'verde'].map(function (k) {
+    return '<span class="chip" style="background:' + STATUS[k].color + ';color:' + STATUS[k].ink + '">' + n[k] + ' ' + STATUS[k].label.toLowerCase() + '</span>';
+  }).join('');
+  $('thumbs').innerHTML = ['3d', 'lateral', 'superior', 'frontal', 'trasera', 'inferior'].map(function (k) {
+    return '<button class="thumb" data-k="' + k + '"><svg viewBox="0 0 58 30" width="50" height="26" aria-hidden="true"><path d="' + eng.draw(VIEWS[k], 58, 2, 26, 2, false).d + '" fill="none" stroke="#DCEBFF" stroke-width="0.6"/></svg>' + VIEWS[k].label + '</button>';
+  }).join('');
+  $('thumbs').addEventListener('click', function (e) { var b = e.target.closest('.thumb'); if (!b) return; st.view = b.dataset.k; st.spin = false; render(); });
+  $('tStyle').onclick = function () { st.metal = !st.metal; render(); };
+  $('tMech').onclick = function () { st.mech = !st.mech; render(); };
+  $('tWire').onclick = function () { st.wire = !st.wire; render(); };
+  $('tSpin').onclick = function () { st.spin = !st.spin; if (st.spin) { var c = cam(); st.view = 'libre'; st.yaw = c.yaw; st.pitch = Math.max(c.pitch, 15); spin(); } render(); };
+  $('yaw').oninput = function () { var c = cam(); st.view = 'libre'; st.yaw = Number(this.value); st.pitch = c.pitch; render(); };
+  function pick(e) { var g = e.target.closest('[data-id]'); if (g) { st.sel = g.dataset.id; render(); } }
+  $('svg').addEventListener('click', function (e) { if (!dragMoved) pick(e); });
+  $('svg').addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(e); } });
+  $('list').addEventListener('click', pick);
+  var drag = null, dragMoved = false;
+  $('box').addEventListener('pointerdown', function (e) { var c = cam(); drag = { x: e.clientX, y: e.clientY, yaw: c.yaw, pitch: c.pitch }; dragMoved = false; });
+  window.addEventListener('pointermove', function (e) {
+    if (!drag) return;
+    var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!dragMoved && Math.abs(dx) + Math.abs(dy) < 5) return;
+    dragMoved = true; st.spin = false;
+    var y = drag.yaw - dx * 0.6; y = ((y + 540) % 360) - 180;
+    st.view = 'libre'; st.yaw = y; st.pitch = Math.max(-90, Math.min(90, drag.pitch + dy * 0.4));
+    render();
+  });
+  window.addEventListener('pointerup', function () { drag = null; setTimeout(function () { dragMoved = false; }, 0); });
+  window.addEventListener('resize', render);
+  render();
+}
+function spin() {
+  if (!st.spin) return;
+  st.yaw = ((st.yaw + 0.6 + 540) % 360) - 180;
+  render();
+  requestAnimationFrame(spin);
+}
+init();
+</script>
+</body>
+</html>

@@ -94,6 +94,15 @@ class PlanoScreenState extends State<PlanoScreen> {
           const SizedBox(width: 6),
           FilterChip(label: const Text('Cableado'), selected: _cable, onSelected: (v) => setState(() => _cable = v)),
         ]),
+        Align(
+          alignment: Alignment.centerRight,
+          child: TextButton(
+            onPressed: () => setState(() {
+              estiloCromado.value = !estiloCromado.value;
+            }),
+            child: Text(estiloCromado.value ? 'Ver Modelo 1' : 'Ver cromado'),
+          ),
+        ),
         SizedBox(
           height: 330,
           child: PlanoView(
@@ -105,6 +114,7 @@ class PlanoScreenState extends State<PlanoScreen> {
             onCamara: (c) => setState(() => _libre = c),
             mecanica: _meca,
             cableado: _cable,
+            cromado: estiloCromado.value,
           ),
         ),
         const SizedBox(height: 12),
