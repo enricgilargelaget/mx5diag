@@ -22,6 +22,13 @@ if 'BLUETOOTH_SCAN' not in s:
     s = re.sub(r'(<manifest[^>]*>)', r'\1' + perms, s, count=1)
     m.write_text(s)
 
+# --- Android: nombre bajo el icono ---
+NOMBRE = 'Diagnóstico de Averías Fácil'
+m = pathlib.Path('android/app/src/main/AndroidManifest.xml')
+s = m.read_text()
+s = re.sub(r'android:label="[^"]*"', 'android:label="%s"' % NOMBRE, s, count=1)
+m.write_text(s)
+
 # --- Android: minSdk 21 como mínimo ---
 for g in [pathlib.Path('android/app/build.gradle.kts'), pathlib.Path('android/app/build.gradle')]:
     if g.exists():
@@ -34,6 +41,9 @@ for g in [pathlib.Path('android/app/build.gradle.kts'), pathlib.Path('android/ap
 p = pathlib.Path('ios/Runner/Info.plist')
 if p.exists():
     t = p.read_text()
+    t = re.sub(r'(<key>CFBundleDisplayName</key>\s*<string>)[^<]*(</string>)', lambda x: x.group(1) + NOMBRE + x.group(2), t)
+    t = re.sub(r'(<key>CFBundleName</key>\s*<string>)[^<]*(</string>)', lambda x: x.group(1) + NOMBRE + x.group(2), t)
+    p.write_text(t)
     if 'NSBluetoothAlwaysUsageDescription' not in t:
         t = t.replace('<dict>', '<dict>\n\t<key>NSBluetoothAlwaysUsageDescription</key>\n\t<string>Para conectar con el adaptador OBD-II del coche.</string>', 1)
         p.write_text(t)
