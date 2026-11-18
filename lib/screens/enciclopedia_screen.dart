@@ -9,9 +9,17 @@ import '../data/db.dart';
 /// Coche elegido por el usuario (se muestra en la cabecera).
 final miCoche = ValueNotifier<String>('Mazda MX-5 NC (2005–2015)');
 
+/// Identificador de la generación elegida (el MX-5 NC tiene datos propios verificados).
+final miCocheId = ValueNotifier<String>('mazda-mx-5-nc');
+
+/// Texto para buscar recambios del coche elegido (marca, modelo y generación).
+final miCocheBusqueda = ValueNotifier<String>('Mazda MX-5 NC');
+
 Future<void> cargarMiCoche() async {
   final v = await AppDb.instance.meta('mi_coche');
   if (v != null) miCoche.value = v;
+  miCocheId.value = await AppDb.instance.meta('mi_coche_id') ?? miCocheId.value;
+  miCocheBusqueda.value = await AppDb.instance.meta('mi_coche_q') ?? miCocheBusqueda.value;
 }
 
 class Generacion {
@@ -145,6 +153,10 @@ class _EnciclopediaScreenState extends State<EnciclopediaScreen> {
               onPressed: () async {
                 final v = '${g.titulo} (${g.anos})';
                 await AppDb.instance.setMeta('mi_coche', v);
+                await AppDb.instance.setMeta('mi_coche_id', g.id);
+                await AppDb.instance.setMeta('mi_coche_q', g.titulo);
+                miCocheId.value = g.id;
+                miCocheBusqueda.value = g.titulo;
                 miCoche.value = v;
                 if (ctx.mounted) Navigator.pop(ctx);
               },

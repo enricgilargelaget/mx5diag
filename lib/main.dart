@@ -28,16 +28,79 @@ class Mx5DiagApp extends StatelessWidget {
           title: 'Diagnóstico de Averías Fácil',
           debugShowCheckedModeBanner: false,
           theme: base.copyWith(
-            scaffoldBackgroundColor: fondo,
+            // El fondo (color, cuadrícula y marco) lo pinta el builder de abajo, detrás de todas las pantallas.
+            scaffoldBackgroundColor: Colors.transparent,
             colorScheme: base.colorScheme.copyWith(primary: Colores.linea, onPrimary: const Color(0xFF0A2A5E), surface: barra),
-            appBarTheme: AppBarTheme(backgroundColor: fondo, elevation: 0),
+            appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent, surfaceTintColor: Colors.transparent, elevation: 0, scrolledUnderElevation: 0),
             navigationBarTheme: NavigationBarThemeData(backgroundColor: barra),
           ),
+          builder: (context, child) => Stack(children: [
+            Positioned.fill(child: CustomPaint(painter: _FondoPainter(fondo, cromado))),
+            child ?? const SizedBox(),
+            const Positioned.fill(child: IgnorePointer(child: CustomPaint(painter: _MarcoPainter()))),
+          ]),
           home: const SplashScreen(),
         );
       },
     );
   }
+}
+
+/// Fondo de toda la app: color base, luz suave (cromado) y cuadrícula blanca tipo plano.
+class _FondoPainter extends CustomPainter {
+  final Color fondo;
+  final bool cromado;
+  const _FondoPainter(this.fondo, this.cromado);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final r = Offset.zero & size;
+    canvas.drawRect(r, Paint()..color = fondo);
+    if (cromado) {
+      canvas.drawRect(
+        r,
+        Paint()
+          ..shader = RadialGradient(
+            center: const Alignment(0, -0.45),
+            radius: 0.9,
+            colors: [const Color(0xFF78A0CE).withOpacity(0.55), const Color(0xFF78A0CE).withOpacity(0)],
+          ).createShader(r),
+      );
+    }
+    final linea = Paint()
+      ..color = Colors.white.withOpacity(0.10)
+      ..strokeWidth = 1;
+    const paso = 18.0;
+    for (double x = 0; x <= size.width; x += paso) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), linea);
+    }
+    for (double y = 0; y <= size.height; y += paso) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), linea);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_FondoPainter old) => old.fondo != fondo || old.cromado != cromado;
+}
+
+/// Marco blanco interior a 2 mm de los bordes de la pantalla (≈ 12,6 px lógicos).
+class _MarcoPainter extends CustomPainter {
+  const _MarcoPainter();
+  static const sangrado = 12.6;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(
+      Rect.fromLTRB(sangrado, sangrado, size.width - sangrado, size.height - sangrado),
+      Paint()
+        ..color = Colors.white.withOpacity(0.85)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.2,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_MarcoPainter old) => false;
 }
 
 /// Pantalla de inicio: el coche en wireframe, pequeño y latiendo, mientras se prepara la base de datos.
