@@ -37,6 +37,14 @@ for f in ['android/app/src/main/res/drawable/launch_background.xml', 'android/ap
         t = re.sub(r'<item android:drawable="[^"]*"\s*/>', '<item><color android:color="#2F4C70" /></item>', t, count=1)
         lb.write_text(t)
 
+# --- Icono de la app (el coche en wireframe de la pantalla de inicio) ---
+import shutil
+for carpeta, tam in {'mdpi': 48, 'hdpi': 72, 'xhdpi': 96, 'xxhdpi': 144, 'xxxhdpi': 192}.items():
+    d = pathlib.Path('android/app/src/main/res/mipmap-' + carpeta)
+    if d.exists():
+        shutil.copy('tool/icono/ic_%d.png' % tam, d / 'ic_launcher.png')
+# iPhone: el icono de 1024 se usará cuando preparemos la versión iOS.
+
 # --- Android: minSdk 21 como mínimo ---
 for g in [pathlib.Path('android/app/build.gradle.kts'), pathlib.Path('android/app/build.gradle')]:
     if g.exists():
